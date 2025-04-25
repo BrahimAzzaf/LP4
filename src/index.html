@@ -1,0 +1,2158 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <!-- box icon -->
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <!-- END box icon -->
+  <!-- SwiperJS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</head>
+
+<body class="font-montserrat">
+  <!-- Pre Header -->
+  <div class="w-full bg-[#2147a8] py-3"></div>
+  <!-- Header -->
+  <header class="container mx-auto px-4 md:px-6 lg:px-8 relative z-50">
+    <div class="flex items-center justify-between gap-2 h-16 relative">
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden sm:flex md:gap-4 text-base font-medium text-[#343947]">
+        <a href="#" class="hover:text-gray-700 transition">The Capsule</a>
+        <a href="#" class="hover:text-gray-700 transition">Reviews</a>
+        <a href="#" class="hover:text-gray-700 transition">Compare</a>
+      </nav>
+
+      <!-- Logo -->
+      <div class="absolute left-1/2 transform -translate-x-1/2 sm:static sm:translate-x-0 sm:left-0">
+        <img src="../images/logo.png" alt="Vital Planet Logo" class="h-16 sm:h-20 cursor-pointer" />
+      </div>
+
+      <!-- Desktop Right Section -->
+      <div class="hidden sm:flex items-center gap-6 text-base font-medium text-[#343947]">
+        <a href="#" class="hover:text-gray-700 transition">Compare</a>
+        <button class="border border-[#C0D2FF] px-4 py-1 rounded-full hover:bg-[#C0D2FF]/10 transition">Buy Now</button>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button id="hamburgerBtn" class="sm:hidden z-50 relative focus:outline-none ml-auto" aria-label="Toggle Menu"
+        aria-expanded="false">
+        <svg id="hamburgerIcon" class="block" width="30" height="18" viewBox="0 0 30 18" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <rect x="9" width="21" height="2" rx="1" fill="#414042" />
+          <rect y="8" width="30" height="2" rx="1" fill="#414042" />
+          <rect x="9" y="16" width="21" height="2" rx="1" fill="#414042" />
+        </svg>
+        <svg id="closeIcon" class="hidden" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 5L12 12M12 12L19 5M12 12L5 19M12 12L19 19" stroke="black" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </button>
+      <!-- Mobile Menu -->
+      <div id="mobileMenu"
+        class="sm:hidden hidden absolute top-full left-0 w-full bg-white shadow-md p-6 z-40 transition-all duration-300 ease-in-out">
+        <nav class="flex flex-col items-center gap-4 text-base font-medium text-[#343947]">
+          <a href="#" class="hover:text-gray-700 transition">The Capsule</a>
+          <a href="#" class="hover:text-gray-700 transition">Reviews</a>
+          <a href="#" class="hover:text-gray-700 transition">Compare</a>
+          <button class="border border-[#C0D2FF] w-full px-4 py-1 rounded-full hover:bg-[#C0D2FF]/10 transition">Buy
+            Now</button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Script -->
+  <script>
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const hamburgerIcon = document.getElementById('hamburgerIcon');
+    const closeIcon = document.getElementById('closeIcon');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    function toggleMenu() {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      hamburgerIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+      hamburgerBtn.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+    }
+
+    hamburgerBtn.addEventListener('click', toggleMenu);
+
+    // Optional: Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!hamburgerBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+        if (!mobileMenu.classList.contains('hidden')) {
+          toggleMenu();
+        }
+      }
+    });
+  </script>
+
+
+
+
+
+  <!--  Product section  -->
+  <div class="container  mx-auto sm:flex   justify-between gap-8  w-full  my-8 border-t border-[#C0CFF1]">
+
+    <!-- Gallery Column -->
+    <div id="product-gallery" class="w-full pt-8" data-carousel data-carousel-arrows="true" data-carousel-thumbs="true"
+      data-carousel-drag="true">
+      <!-- Main viewport with aria roles for accessibility -->
+      <div class="relative overflow-hidden rounded-lg" role="region" aria-roledescription="carousel"
+        aria-label="Product images">
+        <!-- Main image container with proper preloading -->
+        <div class="carousel-inner flex transition-transform duration-300 ease-out" aria-live="polite">
+          <!-- slides with proper loading attributes -->
+          <img src="../images/thumbnail1.svg"
+            class="carousel-slide w-full flex-shrink-0 border border-gray-100 object-cover h-[400px] lg:h-full"
+            alt="Product view 1" loading="eager" data-index="0" />
+          <img src="../images/thumbnail2.svg"
+            class="carousel-slide w-full flex-shrink-0 border border-gray-100 object-cover h-[400px] lg:h-full"
+            alt="Product view 2" loading="lazy" data-index="1" />
+          <img src="../images/thumbnail3.svg"
+            class="carousel-slide w-full flex-shrink-0 border border-gray-100 object-cover h-[400px] lg:h-full"
+            alt="Product view 3" loading="lazy" data-index="2" />
+          <img src="../images/thumbnail4.svg"
+            class="carousel-slide w-full flex-shrink-0 border border-gray-100 object-cover h-[400px] lg:h-full"
+            alt="Product view 4" loading="lazy" data-index="3" />
+          <img src="../images/thumbnail5.svg"
+            class="carousel-slide w-full flex-shrink-0 border border-gray-100 object-cover h-[400px] lg:h-full"
+            alt="Product view 5" loading="lazy" data-index="4" />
+        </div>
+
+        <!-- Navigation arrows with improved accessibility -->
+        <button
+          class="hidden absolute top-1/2 -translate-y-1/2 left-2 bg-white p-3 rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400 hover:bg-gray-100"
+          data-carousel-prev aria-label="Previous slide">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+              clip-rule="evenodd" />
+          </svg>
+        </button>
+        <button
+          class="hidden absolute top-1/2 -translate-y-1/2 right-2 bg-white p-3 rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400 hover:bg-gray-100"
+          data-carousel-next aria-label="Next slide">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+              clip-rule="evenodd" />
+          </svg>
+        </button>
+
+        <!-- Progress indicator -->
+        <div class="absolute bottom-6 left-0 right-0 flex justify-center gap-1">
+          <span class="carousel-indicator bg-gray-300 rounded-full w-2 h-2" data-active="true"></span>
+          <span class="carousel-indicator bg-gray-300 rounded-full w-2 h-2"></span>
+          <span class="carousel-indicator bg-gray-300 rounded-full w-2 h-2"></span>
+          <span class="carousel-indicator bg-gray-300 rounded-full w-2 h-2"></span>
+          <span class="carousel-indicator bg-gray-300 rounded-full w-2 h-2"></span>
+        </div>
+      </div>
+
+      <!-- Thumbnails with proper keyboard navigation and hover effects -->
+      <div
+        class="mt-4 flex items-center justify-start gap-4 overflow-x-auto scroll-smooth hide-scrollbar py-2 w-full px-2"
+        data-carousel-thumbnails role="tablist" aria-label="Product thumbnails">
+        <img src="../images/thumbnail1.svg"
+          class="thumbnail w-14 h-14 object-cover rounded cursor-pointer ring-2 ring-transparent hover:ring-blue-400 opacity-60 transition-all"
+          data-carousel-index="0" alt="Thumbnail 1" role="tab" tabindex="0" />
+        <img src="../images/thumbnail2.svg"
+          class="thumbnail w-14 h-14 object-cover rounded cursor-pointer ring-2 ring-transparent hover:ring-blue-400 opacity-60 transition-all"
+          data-carousel-index="1" alt="Thumbnail 2" role="tab" tabindex="0" />
+        <img src="../images/thumbnail3.svg"
+          class="thumbnail w-14 h-14 object-cover rounded cursor-pointer ring-2 ring-transparent hover:ring-blue-400 opacity-60 transition-all"
+          data-carousel-index="2" alt="Thumbnail 3" role="tab" tabindex="0" />
+        <img src="../images/thumbnail4.svg"
+          class="thumbnail w-14 h-14 object-cover rounded cursor-pointer ring-2 ring-transparent hover:ring-blue-400 opacity-60 transition-all"
+          data-carousel-index="3" alt="Thumbnail 4" role="tab" tabindex="0" />
+        <img src="../images/thumbnail5.svg"
+          class="thumbnail w-14 h-14 object-cover rounded cursor-pointer ring-2 ring-transparent hover:ring-blue-400 opacity-60 transition-all"
+          data-carousel-index="4" alt="Thumbnail 5" role="tab" tabindex="0" />
+      </div>
+
+      <style>
+        /* Hide scrollbar while maintaining scroll functionality */
+        .hide-scrollbar {
+          /* For Firefox */
+          scrollbar-width: none;
+          /* For IE and Edge */
+          -ms-overflow-style: none;
+        }
+
+        /* For Chrome, Safari, and newer Edge */
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
+          width: 0;
+          height: 0;
+        }
+      </style>
+
+      <script>
+        class Carousel {
+          constructor(root) {
+            try {
+              // Core elements
+              this.root = root;
+              this.inner = root.querySelector('.carousel-inner');
+              this.slides = Array.from(root.querySelectorAll('.carousel-slide'));
+              this.prevBtn = root.querySelector('[data-carousel-prev]');
+              this.nextBtn = root.querySelector('[data-carousel-next]');
+              this.thumbs = Array.from(root.querySelectorAll('.thumbnail'));
+              this.indicators = Array.from(root.querySelectorAll('.carousel-indicator'));
+              this.loader = root.querySelector('.carousel-loader');
+
+              // Validate required elements
+              if (!this.inner || this.slides.length === 0) {
+                throw new Error('Carousel requires .carousel-inner and at least one .carousel-slide');
+              }
+
+              // State
+              this.total = this.slides.length;
+              this.idx = 0;
+              this.animating = false;
+              this.touchStartX = 0;
+              this.touchEndX = 0;
+              this.swipeThreshold = 50;
+              this.autoplayTimer = null;
+              this.slideWidth = 0;
+              this.resizeObserver = null;
+
+              // Configuration from data attributes
+              this.options = {
+                arrows: root.dataset.carouselArrows === 'true',
+                thumbs: root.dataset.carouselThumbs === 'true',
+                drag: root.dataset.carouselDrag === 'true',
+                autoplay: root.dataset.carouselAutoplay === 'true',
+                autoplaySpeed: parseInt(root.dataset.carouselSpeed || '5000', 10),
+                transitionDuration: parseInt(root.dataset.carouselTransition || '300', 10),
+                loop: root.dataset.carouselLoop !== 'false',
+                keyboard: true,
+                a11y: true,
+                lazyLoad: root.dataset.carouselLazyLoad !== 'false',
+                preloadCount: parseInt(root.dataset.carouselPreload || '2', 10)
+              };
+
+              // Check if Internet Explorer or old Edge for special handling
+              this.isOldBrowser = /MSIE|Trident|Edge\/(?:12|13|14|15|16|17)/.test(navigator.userAgent);
+
+              // Initialize
+              this._setup();
+              this._bindEvents();
+              this.goto(0, false); // No animation on init
+
+              // Add to window resize handling
+              this._setupResizeObserver();
+
+              // Preload adjacent images
+              if (this.options.lazyLoad) {
+                this._preloadAdjacentImages(0);
+              }
+
+              // Start autoplay if configured
+              if (this.options.autoplay) {
+                this._startAutoplay();
+              }
+
+              // Signal initialization complete
+              this.root.classList.add('carousel-ready');
+
+              // Register for cleanup on page unload
+              window.addEventListener('beforeunload', () => this.destroy());
+            } catch (error) {
+              console.error('Carousel initialization error:', error);
+              this._showFallback();
+            }
+          }
+
+          // Setup DOM elements
+          _setup() {
+            // Prepare container
+            this.root.classList.add('carousel-initialized');
+            this.inner.style.transition = `transform ${this.options.transitionDuration}ms ease-out`;
+
+            // Set up slides
+            this.slides.forEach((slide, i) => {
+              slide.setAttribute('aria-hidden', i !== 0);
+              slide.setAttribute('tabindex', i === 0 ? '0' : '-1');
+
+              if (this.options.a11y) {
+                slide.setAttribute('role', 'tabpanel');
+                slide.setAttribute('aria-roledescription', 'slide');
+                slide.setAttribute('aria-label', `Slide ${i + 1} of ${this.total}`);
+              }
+
+              // Show only the first slide initially
+              slide.style.opacity = i === 0 ? '1' : '0.4';
+
+              // Handle image loading
+              if (i > this.options.preloadCount) {
+                const src = slide.getAttribute('src');
+                slide.setAttribute('data-src', src);
+                slide.removeAttribute('src');
+              }
+
+              // Set default transform
+              if (this.isOldBrowser) {
+                slide.style.display = i === 0 ? 'block' : 'none';
+              }
+            });
+
+            // Set up navigation arrows
+            if (this.options.arrows) {
+              if (this.prevBtn) {
+                this.prevBtn.classList.remove('hidden');
+                if (this.options.a11y) {
+                  this.prevBtn.setAttribute('aria-label', 'Previous slide');
+                  this.prevBtn.setAttribute('role', 'button');
+                }
+              }
+
+              if (this.nextBtn) {
+                this.nextBtn.classList.remove('hidden');
+                if (this.options.a11y) {
+                  this.nextBtn.setAttribute('aria-label', 'Next slide');
+                  this.nextBtn.setAttribute('role', 'button');
+                }
+              }
+            }
+
+            // Set up thumbnails
+            if (!this.options.thumbs) {
+              const thumbsContainer = this.root.querySelector('[data-carousel-thumbnails]');
+              if (thumbsContainer) thumbsContainer.classList.add('hidden');
+            } else if (this.thumbs.length > 0) {
+              // Set up thumbnails
+              this.thumbs.forEach((thumb, i) => {
+                if (!thumb.dataset.carouselIndex) {
+                  thumb.dataset.carouselIndex = i.toString();
+                }
+
+                // First thumbnail should be active
+                if (i === 0) {
+                  thumb.classList.add('opacity-100');
+                  thumb.classList.add('ring-blue-400');
+                  thumb.setAttribute('aria-selected', 'true');
+                } else {
+                  thumb.setAttribute('aria-selected', 'false');
+                }
+
+                if (this.options.a11y) {
+                  thumb.setAttribute('role', 'tab');
+                  thumb.setAttribute('aria-label', `Go to slide ${i + 1}`);
+                  thumb.setAttribute('tabindex', '0');
+                }
+              });
+            }
+
+            // Set up indicators
+            if (this.indicators.length > 0) {
+              this.indicators[0].classList.add('bg-blue-500');
+              this.indicators[0].classList.remove('bg-gray-300');
+              this.indicators[0].setAttribute('data-active', 'true');
+            }
+
+            // Ensure container has proper position for absolute positioning
+            if (getComputedStyle(this.root).position === 'static') {
+              this.root.style.position = 'relative';
+            }
+
+            // Calculate slide widths for accurate positioning
+            this._updateSlideWidth();
+          }
+
+          // Bind all event handlers
+          _bindEvents() {
+            // Navigation buttons
+            if (this.options.arrows) {
+              if (this.prevBtn) {
+                this.prevBtn.addEventListener('click', e => {
+                  e.preventDefault();
+                  this.prev();
+                });
+              }
+
+              if (this.nextBtn) {
+                this.nextBtn.addEventListener('click', e => {
+                  e.preventDefault();
+                  this.next();
+                });
+              }
+            }
+
+            // Thumbnail navigation
+            if (this.options.thumbs && this.thumbs.length) {
+              this.thumbs.forEach(thumb => {
+                // Click handler
+                thumb.addEventListener('click', e => {
+                  e.preventDefault();
+                  const index = parseInt(e.currentTarget.dataset.carouselIndex, 10);
+                  if (!isNaN(index)) {
+                    this.goto(index);
+                  }
+                });
+
+                // Keyboard navigation
+                thumb.addEventListener('keydown', e => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    const index = parseInt(e.currentTarget.dataset.carouselIndex, 10);
+                    if (!isNaN(index)) {
+                      this.goto(index);
+                    }
+                  } else if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    const nextThumb = this.thumbs[Math.min(parseInt(e.currentTarget.dataset.carouselIndex, 10) + 1, this.total - 1)];
+                    if (nextThumb) nextThumb.focus();
+                  } else if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    const prevThumb = this.thumbs[Math.max(parseInt(e.currentTarget.dataset.carouselIndex, 10) - 1, 0)];
+                    if (prevThumb) prevThumb.focus();
+                  }
+                });
+              });
+            }
+
+            // Touch/drag functionality
+            if (this.options.drag) {
+              this._bindTouchEvents();
+            }
+
+            // Keyboard navigation
+            if (this.options.keyboard) {
+              this.root.setAttribute('tabindex', '0');
+              this.root.addEventListener('keydown', e => {
+                if (document.activeElement === this.root || this.root.contains(document.activeElement)) {
+                  if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    this.prev();
+                  } else if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    this.next();
+                  } else if (e.key === 'Home') {
+                    e.preventDefault();
+                    this.goto(0);
+                  } else if (e.key === 'End') {
+                    e.preventDefault();
+                    this.goto(this.total - 1);
+                  }
+                }
+              });
+            }
+
+            // Focus handling
+            this.root.addEventListener('focusin', () => {
+              if (this.autoplayTimer) {
+                this._pauseAutoplay();
+              }
+            });
+
+            this.root.addEventListener('focusout', e => {
+              if (!this.root.contains(e.relatedTarget) && this.options.autoplay) {
+                this._startAutoplay();
+              }
+            });
+
+            // Visibility change handling
+            document.addEventListener('visibilitychange', () => {
+              if (document.hidden && this.autoplayTimer) {
+                this._pauseAutoplay();
+              } else if (!document.hidden && this.options.autoplay) {
+                this._startAutoplay();
+              }
+            });
+
+            // Image load error handling
+            this.slides.forEach(slide => {
+              slide.addEventListener('error', () => {
+                slide.src = 'path/to/fallback-image.svg'; // Replace with actual fallback
+                slide.classList.add('carousel-error');
+              });
+
+              slide.addEventListener('load', () => {
+                slide.classList.add('carousel-loaded');
+              });
+            });
+
+            // Handle click on indicators
+            this.indicators.forEach((indicator, i) => {
+              indicator.addEventListener('click', () => {
+                this.goto(i);
+              });
+            });
+          }
+
+          // Touch and swipe handling
+          _bindTouchEvents() {
+            // Common handler for touch and mouse events
+            const handleStart = (e) => {
+              if (this.animating) return;
+
+              this.touchStartX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
+              this.touchStartY = e.type.includes('touch') ? e.touches[0].clientY : e.clientY;
+
+              // Reset transition during drag
+              this.inner.style.transition = 'none';
+
+              // Pause autoplay during interaction
+              if (this.autoplayTimer) {
+                this._pauseAutoplay();
+              }
+            };
+
+            const handleMove = (e) => {
+              if (this.animating || this.touchStartX === 0) return;
+
+              const clientX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
+              const clientY = e.type.includes('touch') ? e.touches[0].clientY : e.clientY;
+
+              // Calculate horizontal and vertical distance
+              const xDiff = this.touchStartX - clientX;
+              const yDiff = this.touchStartY - clientY;
+
+              // Detect if scrolling vertically (don't interfere with page scroll)
+              if (Math.abs(yDiff) > Math.abs(xDiff)) {
+                return;
+              }
+
+              // Prevent default to stop page scroll during swipe
+              e.preventDefault();
+
+              // Calculate drag position
+              const dragOffset = -this.idx * this.slideWidth + (-xDiff);
+
+              // Apply transform with boundaries if not looping
+              if (!this.options.loop) {
+                if (dragOffset > 0 || dragOffset < -((this.total - 1) * this.slideWidth)) {
+                  return; // Don't allow dragging past ends
+                }
+              }
+
+              this.inner.style.transform = `translateX(${dragOffset}px)`;
+            };
+
+            const handleEnd = (e) => {
+              if (this.animating || this.touchStartX === 0) return;
+
+              // Restore transition
+              this.inner.style.transition = `transform ${this.options.transitionDuration}ms ease-out`;
+
+              const clientX = e.type.includes('touch') ?
+                (e.changedTouches && e.changedTouches[0] ? e.changedTouches[0].clientX : this.touchStartX) :
+                e.clientX;
+
+              const diff = this.touchStartX - clientX;
+
+              // Detect swipe direction if it exceeds threshold
+              if (Math.abs(diff) > this.swipeThreshold) {
+                if (diff > 0) {
+                  this.next();
+                } else {
+                  this.prev();
+                }
+              } else {
+                // Not enough movement, snap back to current slide
+                this.goto(this.idx);
+              }
+
+              // Reset touch coordinates
+              this.touchStartX = 0;
+              this.touchStartY = 0;
+
+              // Restart autoplay if needed
+              if (this.options.autoplay) {
+                this._startAutoplay();
+              }
+            };
+
+            // Touch events
+            this.inner.addEventListener('touchstart', handleStart, { passive: true });
+            this.inner.addEventListener('touchmove', handleMove, { passive: false });
+            this.inner.addEventListener('touchend', handleEnd);
+
+            // Mouse events
+            this.inner.addEventListener('mousedown', handleStart);
+            document.addEventListener('mousemove', handleMove);
+            document.addEventListener('mouseup', handleEnd);
+          }
+
+          // Update slide width on resize
+          _updateSlideWidth() {
+            if (this.inner) {
+              this.slideWidth = this.inner.offsetWidth;
+
+              // Update transform for current position
+              if (!this.isOldBrowser) {
+                this.inner.style.transform = `translateX(${-this.idx * this.slideWidth}px)`;
+              }
+            }
+          }
+
+          // Handle responsive resize
+          _setupResizeObserver() {
+            // Use ResizeObserver if available for better performance
+            if (window.ResizeObserver) {
+              this.resizeObserver = new ResizeObserver(this._debounce(() => {
+                this._updateSlideWidth();
+                this.updatePosition(false);
+              }, 200));
+
+              this.resizeObserver.observe(this.root);
+            } else {
+              // Fallback to window resize
+              this._handleResize = this._debounce(() => {
+                this._updateSlideWidth();
+                this.updatePosition(false);
+              }, 200);
+
+              window.addEventListener('resize', this._handleResize);
+            }
+          }
+
+          // Preload adjacent images
+          _preloadAdjacentImages(currentIndex) {
+            // Determine which slides should be preloaded
+            const preloadIndexes = [];
+
+            // Current slide + next slides up to preloadCount
+            for (let i = currentIndex; i < Math.min(currentIndex + this.options.preloadCount + 1, this.slides.length); i++) {
+              preloadIndexes.push(i);
+            }
+
+            // Previous slides up to preloadCount
+            for (let i = Math.max(currentIndex - this.options.preloadCount, 0); i < currentIndex; i++) {
+              preloadIndexes.push(i);
+            }
+
+            // Preload the determined slides
+            preloadIndexes.forEach(index => {
+              const slide = this.slides[index];
+              if (slide && slide.hasAttribute('data-src') && !slide.hasAttribute('src')) {
+                slide.setAttribute('src', slide.getAttribute('data-src'));
+                slide.removeAttribute('data-src');
+              }
+            });
+          }
+
+          // Show loading state
+          _showLoading() {
+            if (this.loader) {
+              this.loader.classList.remove('hidden');
+            }
+          }
+
+          // Hide loading state
+          _hideLoading() {
+            if (this.loader) {
+              this.loader.classList.add('hidden');
+            }
+          }
+
+          // Fallback in case of error
+          _showFallback() {
+            // Show just the first slide and hide the carousel controls
+            if (this.slides && this.slides.length > 0) {
+              this.slides.forEach((slide, i) => {
+                slide.style.display = i === 0 ? 'block' : 'none';
+              });
+            }
+
+            // Hide controls
+            if (this.prevBtn) this.prevBtn.style.display = 'none';
+            if (this.nextBtn) this.nextBtn.style.display = 'none';
+
+            const thumbsContainer = this.root.querySelector('[data-carousel-thumbnails]');
+            if (thumbsContainer) thumbsContainer.style.display = 'none';
+
+            // Show error message
+            const error = document.createElement('div');
+            error.className = 'text-red-500 p-4 text-center';
+            console.log() = 'There was an issue loading the image gallery. Please refresh the page.';
+
+            if (this.root) {
+              this.root.appendChild(error);
+            }
+          }
+
+          // Update carousel position
+          updatePosition(animate = true) {
+            if (!this.inner || this.isDestroyed) return;
+
+            try {
+              // Update slide width in case it changed
+              this._updateSlideWidth();
+
+              // Set transition only if animating
+              this.inner.style.transition = animate ?
+                `transform ${this.options.transitionDuration}ms ease-out` : 'none';
+
+              if (this.isOldBrowser) {
+                // For IE and old Edge, use display:none/block instead of transform
+                this.slides.forEach((slide, i) => {
+                  slide.style.display = i === this.idx ? 'block' : 'none';
+                });
+              } else {
+                // Modern browsers use transform
+                const offset = -this.idx * this.slideWidth;
+                this.inner.style.transform = `translateX(${offset}px)`;
+              }
+
+              // Update slide opacity for smooth transitions
+              this.slides.forEach((slide, i) => {
+                slide.style.opacity = i === this.idx ? '1' : '0.4';
+                slide.setAttribute('aria-hidden', i !== this.idx);
+              });
+
+              // Update accessibility attributes
+              this._updateA11y();
+
+              // Highlight the active thumbnail
+              this._highlightThumb();
+
+              // Update indicators
+              this._updateIndicators();
+
+              // Preload adjacent images if lazy loading is enabled
+              if (this.options.lazyLoad) {
+                this._preloadAdjacentImages(this.idx);
+              }
+
+              // Emit custom event that can be listened to
+              this.root.dispatchEvent(new CustomEvent('carousel:slide', {
+                detail: { index: this.idx, total: this.total }
+              }));
+            } catch (error) {
+              console.error('Error updating carousel position:', error);
+              this._showFallback();
+            }
+          }
+
+          // Update indicators
+          _updateIndicators() {
+            if (this.indicators && this.indicators.length) {
+              this.indicators.forEach((indicator, i) => {
+                if (i === this.idx) {
+                  indicator.classList.add('bg-blue-500');
+                  indicator.classList.remove('bg-gray-300');
+                  indicator.setAttribute('data-active', 'true');
+                } else {
+                  indicator.classList.remove('bg-blue-500');
+                  indicator.classList.add('bg-gray-300');
+                  indicator.setAttribute('data-active', 'false');
+                }
+              });
+            }
+          }
+
+          // Update ARIA attributes
+          _updateA11y() {
+            if (!this.options.a11y) return;
+
+            // Update slides
+            this.slides.forEach((slide, i) => {
+              const isActive = i === this.idx;
+              slide.setAttribute('aria-hidden', !isActive);
+              slide.setAttribute('tabindex', isActive ? '0' : '-1');
+            });
+
+            // Update navigation state
+            if (this.prevBtn) {
+              const isDisabled = !this.options.loop && this.idx === 0;
+              this.prevBtn.setAttribute('aria-disabled', isDisabled);
+              this.prevBtn.setAttribute('tabindex', isDisabled ? '-1' : '0');
+
+              if (isDisabled) {
+                this.prevBtn.classList.add('opacity-50', 'cursor-default');
+              } else {
+                this.prevBtn.classList.remove('opacity-50', 'cursor-default');
+              }
+            }
+
+            if (this.nextBtn) {
+              const isDisabled = !this.options.loop && this.idx === this.total - 1;
+              this.nextBtn.setAttribute('aria-disabled', isDisabled);
+              this.nextBtn.setAttribute('tabindex', isDisabled ? '-1' : '0');
+
+              if (isDisabled) {
+                this.nextBtn.classList.add('opacity-50', 'cursor-default');
+              } else {
+                this.nextBtn.classList.remove('opacity-50', 'cursor-default');
+              }
+            }
+
+            // Update the carousel's live region to announce the slide change
+            this.root.setAttribute('aria-live', 'polite');
+            this.root.setAttribute('aria-atomic', 'true');
+          }
+
+          // Highlight the active thumbnail
+          _highlightThumb() {
+            if (!this.options.thumbs || !this.thumbs.length || this.isDestroyed) return;
+
+            try {
+              this.thumbs.forEach((thumb, i) => {
+                // Toggle active state
+                if (i === this.idx) {
+                  thumb.classList.add('opacity-100');
+                  thumb.classList.add('ring-blue-400');
+                  thumb.setAttribute('aria-selected', 'true');
+                } else {
+                  thumb.classList.remove('opacity-100');
+                  thumb.classList.remove('ring-blue-400');
+                  thumb.setAttribute('aria-selected', 'false');
+                }
+              });
+            } catch (error) {
+              console.error('Error highlighting thumbnail:', error);
+            }
+          }
+
+          // Autoplay controls
+          _startAutoplay() {
+            if (!this.options.autoplay || this.isDestroyed) return;
+
+            this._pauseAutoplay(); // Clear any existing timer
+
+            this.autoplayTimer = setInterval(() => {
+              this.next();
+            }, this.options.autoplaySpeed);
+          }
+
+          _pauseAutoplay() {
+            if (this.autoplayTimer) {
+              clearInterval(this.autoplayTimer);
+              this.autoplayTimer = null;
+            }
+          }
+
+          // Utility: Debounce function
+          _debounce(func, wait) {
+            let timeout;
+            return function (...args) {
+              clearTimeout(timeout);
+              timeout = setTimeout(() => func.apply(this, args), wait);
+            };
+          }
+
+          // Public navigation methods
+          goto(n, animate = true) {
+            if (this.animating || this.isDestroyed) return;
+
+            try {
+              // Show loading state
+              this._showLoading();
+
+              // Handle looping
+              if (n < 0) {
+                n = this.options.loop ? this.total - 1 : 0;
+              } else if (n >= this.total) {
+                n = this.options.loop ? 0 : this.total - 1;
+              }
+
+              // Set current index
+              this.idx = n;
+
+              // If animating, set a flag to prevent rapid clicking
+              if (animate) {
+                this.animating = true;
+                setTimeout(() => {
+                  this.animating = false;
+                  this._hideLoading();
+                }, this.options.transitionDuration + 50);
+              } else {
+                this._hideLoading();
+              }
+
+              // Update the carousel visually
+              this.updatePosition(animate);
+            } catch (error) {
+              console.error('Error navigating to slide:', error);
+              this._hideLoading();
+              this._showFallback();
+            }
+          }
+
+          prev(animate = true) {
+            this.goto(this.idx - 1, animate);
+          }
+
+          next(animate = true) {
+            this.goto(this.idx + 1, animate);
+          }
+
+          // Control methods
+          play() {
+            if (this.isDestroyed) return;
+
+            this._startAutoplay();
+            this.root.dataset.carouselAutoplay = 'true';
+            this.options.autoplay = true;
+          }
+
+          pause() {
+            if (this.isDestroyed) return;
+
+            this._pauseAutoplay();
+            this.root.dataset.carouselAutoplay = 'false';
+            this.options.autoplay = false;
+          }
+
+          // Reset to initial state
+          reset() {
+            if (this.isDestroyed) return;
+
+            this.goto(0, false);
+            this.pause();
+            this._updateSlideWidth();
+          }
+
+          // Refresh carousel (e.g., after DOM changes)
+          refresh() {
+            if (this.isDestroyed) return;
+
+            // Re-cache elements
+            this.slides = Array.from(this.root.querySelectorAll('.carousel-slide'));
+            this.thumbs = Array.from(this.root.querySelectorAll('.thumbnail'));
+            this.total = this.slides.length;
+
+            // Ensure current index is valid
+            if (this.idx >= this.total) {
+              this.idx = Math.max(0, this.total - 1);
+            }
+
+            // Re-setup
+            this._setup();
+            this.updatePosition(false);
+          }
+
+          // Destroy and clean up
+          destroy() {
+            if (this.isDestroyed) return;
+
+            // Mark as destroyed to prevent further operations
+            this.isDestroyed = true;
+
+            // Stop autoplay
+            this._pauseAutoplay();
+
+            // Remove ResizeObserver
+            if (this.resizeObserver) {
+              this.resizeObserver.disconnect();
+              this.resizeObserver = null;
+            } else {
+              window.removeEventListener('resize', this._handleResize);
+            }
+
+            // Reset styles
+            if (this.inner) {
+              this.inner.style.transform = '';
+              this.inner.style.transition = '';
+            }
+
+            // Remove classes
+            if (this.root) {
+              this.root.classList.remove('carousel-initialized', 'carousel-ready');
+            }
+
+            // Could remove event listeners here but not strictly necessary
+            // as they will be garbage collected when elements are removed
+          }
+        }
+
+        // Initialize carousels on DOMContentLoaded
+        document.addEventListener('DOMContentLoaded', () => {
+          try {
+            // Find all carousel elements
+            const carousels = document.querySelectorAll('[data-carousel]');
+
+            // Log how many were found
+            if (carousels.length) {
+              console.log(`Initializing ${carousels.length} carousels`);
+            }
+
+            // Initialize each carousel
+            carousels.forEach(el => {
+              try {
+                new Carousel(el);
+              } catch (err) {
+                console.error(`Error initializing carousel:`, err);
+              }
+            });
+          } catch (err) {
+            console.error('Error in carousel initialization:', err);
+          }
+        });
+
+        // Add styles for carousel transitions
+        document.head.insertAdjacentHTML('beforeend', `
+            <style>
+                .carousel-slide {
+                    transition: opacity 0.3s ease-out;
+                }
+                
+                .carousel-indicator[data-active="true"] {
+                    transform: scale(1.2);
+                    transition: all 0.3s ease;
+                }
+                
+                .thumbnail {
+                    transition: opacity 0.3s ease, transform 0.2s ease;
+                }
+                
+                .thumbnail:hover {
+                    transform: scale(1.05);
+                }
+                
+                .thumbnail[aria-selected="true"] {
+                    opacity: 1 !important;
+                    transform: scale(1.1);
+                    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+                }
+            </style>
+            `);
+      </script>
+    </div>
+
+
+
+
+
+
+    <div class="flex flex-col gap-4   sm:w-[604px] p-4 text-[#404D6A]">
+      <div class="font-madani ">
+        <h1 class="sm:text-4xl pb-4  text-xl font-bold  capitalize">Command Your Gut Health And Rule Your Life with
+          Women's Daily 55+ Probiotic</h1>
+        <span class="text-base inline-flex gap-2 font-semibold uppercase">
+          <svg width="19" height="29" viewBox="0 0 19 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M0.277344 14.2151V21.6178H18.7842V14.2151H0.277344ZM11.3814 18.8418H10.4561V19.7671C10.4561 20.0126 10.3586 20.2479 10.1851 20.4215C10.0115 20.595 9.77618 20.6925 9.53076 20.6925C9.28535 20.6925 9.04998 20.595 8.87645 20.4215C8.70291 20.2479 8.60542 20.0126 8.60542 19.7671V18.8418H7.68008C7.43466 18.8418 7.1993 18.7443 7.02576 18.5708C6.85223 18.3972 6.75474 18.1619 6.75474 17.9165C6.75474 17.671 6.85223 17.4357 7.02576 17.2621C7.1993 17.0886 7.43466 16.9911 7.68008 16.9911H8.60542V16.0658C8.60542 15.8204 8.70291 15.585 8.87645 15.4115C9.04998 15.2379 9.28535 15.1404 9.53076 15.1404C9.77618 15.1404 10.0115 15.2379 10.1851 15.4115C10.3586 15.585 10.4561 15.8204 10.4561 16.0658V16.9911H11.3814C11.6269 16.9911 11.8622 17.0886 12.0358 17.2621C12.2093 17.4357 12.3068 17.671 12.3068 17.9165C12.3068 18.1619 12.2093 18.3972 12.0358 18.5708C11.8622 18.7443 11.6269 18.8418 11.3814 18.8418Z"
+              fill="#404D6A" />
+            <path
+              d="M0.277344 25.3192C0.278152 26.0552 0.570885 26.7608 1.09132 27.2812C1.61175 27.8017 2.31737 28.0944 3.05337 28.0952H16.0082C16.7442 28.0944 17.4498 27.8017 17.9702 27.2812C18.4906 26.7608 18.7834 26.0552 18.7842 25.3192V23.4685H0.277344V25.3192Z"
+              fill="#404D6A" />
+            <path
+              d="M14.1575 0.334961H4.90405C4.393 0.334961 3.97871 0.749251 3.97871 1.2603V4.03633C3.97871 4.54738 4.393 4.96167 4.90405 4.96167H14.1575C14.6685 4.96167 15.0828 4.54738 15.0828 4.03633V1.2603C15.0828 0.749251 14.6685 0.334961 14.1575 0.334961Z"
+              fill="#404D6A" />
+            <path
+              d="M13.2321 7.7377V5.88701H5.82939V7.7377C4.51864 7.74028 3.25097 8.206 2.25029 9.05259C1.24961 9.89919 0.580318 11.0722 0.360625 12.3644H18.7009C18.4812 11.0722 17.8119 9.89919 16.8112 9.05259C15.8106 8.206 14.5429 7.74028 13.2321 7.7377Z"
+              fill="#404D6A" />
+          </svg>
+          Women's Daily-55 Probiotic</span>
+
+      </div>
+
+      <div class="flex items-center mt-2  justify-center gap-3 w-fit ">
+        <div class="flex -space-x-3  ">
+          <img class="inline-block h-10  w-10 rounded-full border-2 border-white" src="../images/person1.png"
+            alt="user">
+          <img class="inline-block h-10  w-10 rounded-full border-2 border-white" src="../images/person2.png"
+            alt="user">
+          <img class="inline-block h-10 w-10 rounded-full border-2 border-white" src="../images/person3.png" alt="user">
+          <img class="inline-block h-10 w-10 rounded-full border-2 border-white" src="../images/person4.png" alt="user">
+        </div>
+        <p class="text-sm  gap-1"><span class="font-bold flex capitalize gap-2">rated<span
+              class="flex items-center gap-2 text-xs font-medium px-1 rounded-lg bg-[#EACB27] text-white "><box-icon
+                name='star' type='solid' color='#ffffff' class="size-[18px]"></box-icon>4.8</span></span> by 3546 Happy
+          customers</p>
+      </div>
+      <div class="">
+        <p class="text-[#404D6A]">Make the first step towards a balanced digestion</p>
+      </div>
+
+      <div class="grid lg:grid-cols-2    gap-2 py-2 ">
+        <div class="">
+          <ul class="sm:text-base text-sm  font-normal   text-[#373D51] sm:text-medium    ">
+            <li class="flex mb-2 items-center gap-2 w-[190px]">
+              <img src="../images/icon1.png" alt="Icon"><span class="text-wrap px-3">60 billion live cultures</span>
+            </li>
+            <li class="flex mb-2 items-center gap-2 w-[190px]">
+              <img src="../images/icon2.png" alt="Icon"><span class="text-wrap px-3">7 plant-based prebiotics</span>
+            </li>
+            <li class="flex mb-2 items-center gap-2 w-[190px]">
+              <img src="../images/icon3.png" alt="Icon"><span class="text-wrap px-3">Immune Health Support </span>
+            </li>
+          </ul>
+        </div>
+        <div class="">
+
+          <ul class="sm:text-base text-sm  font-normal   text-[#373D51] sm:text-medium     ">
+            <li class="flex mb-2 items-center gap-2   w-[190px]">
+              <img src="../images/icon1.png" alt="Icon"><span class="text-wrap px-3">60 strains of probiotics</span>
+            </li>
+            <li class="flex mb-2 items-center gap-2 w-[190px]">
+              <img src="../images/icon2.png" alt="Icon"><span class="text-wrap px-3">Digestive Balance</span>
+            </li>
+            <li class="flex mb-2 items-center gap-2 w-[190px]">
+              <img src="../images/icon3.png" alt="Icon"><span class="text-wrap px-3">Vaginal Health </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!--  -->
+
+      <div class="  mb-4 bg-[#FAFCFF]   rounded-2xl border-2 border-[#C0CFF1] divide-y-2 divide-[#C0CFF1]">
+        <div class="p-4">
+          <div class="">
+            <input id="default-radio-1" type="radio" value="" name="default-radio"
+              class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+            <label for="default-radio-1" class="ms-2 text-sm font-medium text-gray-900 ">One time purchase</label>
+          </div>
+
+          <div class="gap-4 my-4 flex flex-col items-center ">
+            <div class="lg:w-full w-fit py-2">
+              <div class="flex justify-between items-center   gap-6 w-fit ">
+                <p class="text-xl font-semibold text-wrap flex flex-col  ">$47.99
+                  <span class="font-normal">60 tablets</span>
+                </p>
+                <label class="flex gap-2  pb-4 items-center  ">
+                  <div class=" "> QTY</div>
+                  <select
+                    class="block py-1 px-3 rounded-md border  border-[#D6D6D6] shadow-sm focus:border-gray-500 focus:ring focus:ring-gray-200 focus:ring-opacity-50">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+            <button
+              class="flex items-center justify-around  sm:mt-0 mt-2 lg:w-full w-fit  cursor-pointer   mx-auto  sm:text-base text-xs sm:font-medium   uppercase    p-4  rounded-4xl text-white bg-[#39B54A] hover:bg-[#73cd7fda]">
+              <p class="text-wrap">
+                Boost Your Immunity Today
+              </p>
+              <svg width="14" height="16" class="sm:block hidden" viewBox="0 0 14 21" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 2L11 10.5L2 19" stroke="white" stroke-width="2" />
+              </svg>
+            </button>
+          </div>
+          <div class="grid lg:grid-cols-3 grid-cols-2  gap-1 w-full">
+            <div class="flex items-center   gap-2 text-gray-500     justify-evenly p-2">
+              <img src="../images/money_back_icon.svg" alt="">
+              <p class="text-xs">30 Day Money-Back Guarantee</p>
+            </div>
+
+            <div class="flex items-center   gap-4 text-gray-500     justify-evenly p-2">
+              <img src="../images/shipping_truck_icon.svg" alt="">
+              <p class="text-xs">Free shipping</p>
+            </div>
+
+            <div class="flex items-center   gap-2 text-gray-500     justify-evenly p-2">
+              <img src="../images/support_icon.svg" alt="">
+              <p class="text-xs">Customer support</p>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="flex items-center p-4  bg-[#FFFFFF] rounded-2xl">
+          <input checked id="default-radio-2" type="radio" value="" name="default-radio"
+            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+          <label for="default-radio-2" class="ms-2 text-sm font-medium text-gray-900 ">Checked state</label>
+        </div>
+      </div>
+
+
+      <div class="relative bg-[#FAFCFF] border-2 border-[#C0CFF1]  rounded-2xl sm:w-11/12 rounded-tr-2xl p-2 font-sans">
+        <!-- Banner Triangle -->
+        <div
+          class="absolute top-0 right-0 w-24 h-10 border-t-[35px] border-l-[35px] border-t-[#404D6A] border-l-transparent rounded-tr-2xl z-1">
+        </div>
+
+        <!-- Text on the banner -->
+        <div class="absolute top-[5px] right-[18px] text-white text-base font-semibold z-[2] uppercase ">
+          FREE
+        </div>
+        <div class="flex  items-center gap-4 p-2">
+          <div class=""><img src="../images/small_img_product.png" alt=""></div>
+          <div class="text-[#404D6A]">
+            <p class="sm:text-xl font-semibold">Free gift</p>
+            <p class="sm:text-base font-normal">Vital Lax supplement <span
+                class="bg-[#BFCFF1] px-1 rounded-md text-[#404D6A] font-semibold">$5.00</span></p>
+            <p class="sm:text-base font-normal">The Great Gut Extinction Book <span
+                class="bg-[#BFCFF1] px-1 rounded-md text-[#404D6A] font-semibold">$19.99</span></p>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+    </div>
+  </div>
+
+  <!-- END Product section  -->
+
+  <!-- Desktop Version -->
+  <div
+    class="hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 w-full bg-[#E8EDF8] p-4 rounded-md container mx-auto">
+    <!-- Feature Item -->
+    <div class="flex items-center gap-3 text-[#404D6A]">
+      <img src="../images/glutten_free_icon.svg" alt="Gluten-Free" class="w-8 h-8" />
+      <p class="text-xs font-bold uppercase">Gluten-Free</p>
+    </div>
+    <div class="flex items-center gap-3 text-[#404D6A]">
+      <img src="../images/Vegan_icon.svg" alt="Vegan" class="w-8 h-8" />
+      <p class="text-xs font-bold uppercase">Vegan</p>
+    </div>
+    <div class="flex items-center gap-3 text-[#404D6A]">
+      <img src="../images/No_refrigeration_icon.svg" alt="No Refrigeration" class="w-8 h-8" />
+      <p class="text-xs font-bold uppercase">No Refrigeration Required</p>
+    </div>
+    <div class="flex items-center gap-3 text-[#404D6A]">
+      <img src="../images/capsules_icon.svg" alt="Delayed Release" class="w-8 h-8" />
+      <p class="text-xs font-bold uppercase">Delayed Release</p>
+    </div>
+    <div class="flex items-center gap-3 text-[#404D6A]">
+      <img src="../images/woman_for_women_icon.svg" alt="By a Woman for Women" class="w-8 h-8" />
+      <p class="text-xs font-bold uppercase">By a Woman for Women</p>
+    </div>
+    <div class="flex items-center gap-3 text-[#404D6A]">
+      <img src="../images/Shelf_stable_product_icon.svg" alt="Shelf-Stable" class="w-8 h-8" />
+      <p class="text-xs font-bold uppercase">Shelf-Stable</p>
+    </div>
+  </div>
+
+  <!-- Mobile Version (Slider) -->
+  <div class="sm:hidden bg-[#E8EDF8] p-4 rounded-md container mx-auto">
+    <div id="mobileSlider" class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar scroll-smooth">
+      <!-- Slide Group -->
+      <div class="min-w-full flex justify-between gap-4 snap-center px-2">
+        <div class="flex flex-col items-center text-[#1F3C88] w-1/3">
+          <img src="../images/glutten_free_icon.svg" alt="Gluten-Free" class="w-10 h-10 mb-2" />
+          <p class="text-xs font-bold uppercase text-center">Gluten-Free</p>
+        </div>
+        <div class="flex flex-col items-center text-[#1F3C88] w-1/3">
+          <img src="../images/Vegan_icon.svg" alt="Vegan" class="w-10 h-10 mb-2" />
+          <p class="text-xs font-bold uppercase text-center">Vegan</p>
+        </div>
+        <div class="flex flex-col items-center text-[#1F3C88] w-1/3">
+          <img src="../images/No_refrigeration_icon.svg" alt="No Refrigeration Required" class="w-10 h-10 mb-2" />
+          <p class="text-xs font-bold uppercase text-center">No Refrigeration</p>
+        </div>
+      </div>
+
+      <div class="min-w-full flex justify-between gap-4 snap-center px-2">
+        <div class="flex flex-col items-center text-[#1F3C88] w-1/3">
+          <img src="../images/capsules_icon.svg" alt="Delayed Release" class="w-10 h-10 mb-2" />
+          <p class="text-xs font-bold uppercase text-center">Delayed Release</p>
+        </div>
+        <div class="flex flex-col items-center text-[#1F3C88] w-1/3">
+          <img src="../images/woman_for_women_icon.svg" alt="By a Woman for Women" class="w-10 h-10 mb-2" />
+          <p class="text-xs font-bold uppercase text-center">By a Woman for Women</p>
+        </div>
+        <div class="flex flex-col items-center text-[#1F3C88] w-1/3">
+          <img src="../images/Shelf_stable_product_icon.svg" alt="Shelf-Stable" class="w-10 h-10 mb-2" />
+          <p class="text-xs font-bold uppercase text-center">Shelf-Stable</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dots Placeholder (Dynamic via JS if needed) -->
+    <div id="dots" class="flex justify-center gap-2 mt-4"></div>
+  </div>
+
+
+
+  <!--  -->
+  <div class="container mx-auto p-4 border-b border-gray-200 max-w-6xl">
+    <div class="flex flex-col sm:flex-row items-center gap-4 py-4">
+
+      <!-- Image -->
+      <img src="../images/Emily.png" alt="Emily W"
+        class="hidden sm:block rounded-full w-[69px] h-[69px] object-cover" />
+
+      <!-- Testimonial Text -->
+      <p class="text-[#404D6A] text-xs sm:text-base font-medium sm:font-normal text-center sm:text-left">
+        “I have tried cheaper probiotics with lower potency with no noticeable difference in how I feel. Then my friend
+        recommended Vital Flora, The owner recommended it. I was hesitant due to the price, but I tried it. This is the
+        only probiotic I will use now. It has significantly reduced my stomach pain and constipation and I just feel
+        better. I take one nightly. I am also immunocompromised. Although you can buy much cheaper probiotics, this one
+        is a great value, since it has higher potency and actually works!”
+        <br />
+        <span class="font-semibold block mt-2">
+          Emily W, San Diego, CA
+          <box-icon name="star" type="solid" color="#fbea04" class="inline-block w-[18px] h-[18px]"></box-icon>
+          <box-icon name="star" type="solid" color="#fbea04" class="inline-block w-[18px] h-[18px]"></box-icon>
+          <box-icon name="star" type="solid" color="#fbea04" class="inline-block w-[18px] h-[18px]"></box-icon>
+          <box-icon name="star" type="solid" color="#fbea04" class="inline-block w-[18px] h-[18px]"></box-icon>
+          <box-icon name="star" type="solid" color="#fbea04" class="inline-block w-[18px] h-[18px]"></box-icon>
+        </span>
+      </p>
+    </div>
+  </div>
+
+  <!-- ABOUT THE PRODUCT -->
+  <section class="w-full px-4 py-8">
+    <!-- Heading and Mobile Image -->
+    <div class="flex flex-col sm:flex-row items-center gap-4">
+      <img src="../images/product_packaging.png" alt="" class="sm:hidden block w-[153px] h-auto" />
+      <div class="text-center sm:text-left lg:px-10">
+        <p
+          class="text-3xl sm:text-4xl font-semibold italic uppercase bg-gradient-to-r from-blue-900 via-blue-700 to-green-700 bg-clip-text text-transparent">
+          Start Your
+        </p>
+        <p
+          class="text-3xl sm:text-4xl font-semibold italic uppercase bg-gradient-to-r from-green-500 to-green-500 bg-clip-text text-transparent">
+          Journey
+        </p>
+        <p
+          class="text-2xl sm:text-4xl font-extrabold italic uppercase bg-gradient-to-r from-blue-900 via-blue-700 to-green-700 bg-clip-text text-transparent">
+          to a Comfo<span class="bg-gradient-to-r from-green-500 to-green-500 bg-clip-text text-transparent">rtable
+            Life</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <div
+      class="grid lg:grid-cols-2 grid-cols-1 gap-4 mt-6 bg-no-repeat bg-[url('../images/bg_product_packaging.png')] bg-right-top">
+      <!-- Text Content -->
+      <div class="flex flex-col gap-4">
+        <!-- Feature 1 -->
+        <div class="flex items-start gap-4 p-4 bg-[#F4F7FF] rounded-md shadow-sm">
+          <img src="../images/Emily.png" alt="" class="w-[69px] h-[69px] rounded-full object-cover" />
+          <p class="text-sm sm:text-base text-[#404D6A]">
+            <span class="font-semibold">Bloating Woes:</span> That uncomfortable, I've-eaten-three-Thanksgiving-dinners
+            feeling? Vital Flora Women’s Daily-55 Probiotic has your back — or better yet, your gut!
+          </p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="flex items-start gap-4 p-4 bg-[#F4F7FF] rounded-md shadow-sm">
+          <img src="../images/Emily.png" alt="" class="w-[69px] h-[69px] rounded-full object-cover" />
+          <p class="text-sm sm:text-base text-[#404D6A]">
+            <span class="font-semibold">IBS - The Uninvited Guest:</span> Feeling like your gut is at war? This
+            probiotic eases those IBS skirmishes and restores balance.
+          </p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="flex items-start gap-4 p-4 bg-[#F4F7FF] rounded-md shadow-sm">
+          <img src="../images/Emily.png" alt="" class="w-[69px] h-[69px] rounded-full object-cover" />
+          <p class="text-sm sm:text-base text-[#404D6A]">
+            <span class="font-semibold">When Energy Checks Out:</span> More sloth than cheetah? Get back to high-energy
+            days with Vital Flora.
+          </p>
+        </div>
+      </div>
+      <!-- Desktop Image -->
+      <div class="hidden lg:block">
+        <img src="../images/product_packaging.png" alt="Product Packaging" class="w-full h-auto object-contain" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Container Section -->
+  <section class="w-full px-4 py-8">
+    <div class="grid sm:grid-cols-2 grid-cols-1 gap-6 items-center">
+      <!-- Image -->
+      <div>
+        <img src="../images/happy_senior_woman_laughing.png" alt="Happy Senior Woman"
+          class="w-full h-auto object-cover rounded-md" />
+      </div>
+
+      <!-- Features List -->
+      <div class="flex flex-col gap-6">
+        <!-- Insomnia -->
+        <div class="flex items-start gap-4 p-4 bg-[#F4F7FF] rounded-md shadow-md">
+          <img src="../images/Insomnia.png" alt="Insomnia" class="w-[69px] h-[69px] rounded-full object-cover" />
+          <p class="text-sm sm:text-base text-[#404D6A]">
+            <span class="font-semibold">The Insomnia Chronicles:</span> Up all night counting sheep? Vital Flora
+            improves gut health and escorts you to dreamland.
+          </p>
+        </div>
+
+        <!-- Mood Swings -->
+        <div class="flex items-start gap-4 p-4 bg-[#F4F7FF] rounded-md shadow-md">
+          <img src="../images/Mood_Swings.png" alt="Mood Swings" class="w-[69px] h-[69px] rounded-full object-cover" />
+          <p class="text-sm sm:text-base text-[#404D6A]">
+            <span class="font-semibold">Mood Swings Galore:</span> Feeling up and down? Vital Flora is the seat belt for
+            your emotional roller coaster.
+          </p>
+        </div>
+
+        <!-- Weight Loss -->
+        <div class="flex items-start gap-4 p-4 bg-[#F4F7FF] rounded-md shadow-md">
+          <img src="../images/Weight_Loss.png" alt="Weight Loss" class="w-[69px] h-[69px] rounded-full object-cover" />
+          <p class="text-sm sm:text-base text-[#404D6A]">
+            <span class="font-semibold">Weight Loss Rebellion:</span> Stubborn belly fat staging a protest? Call in
+            Vital Flora to restore order.
+          </p>
+        </div>
+
+        <!-- Skin Trouble -->
+        <div class="flex items-start gap-4 p-4 bg-[#F4F7FF] rounded-md shadow-md">
+          <img src="../images/Skin_Trouble.png" alt="Skin Trouble"
+            class="w-[69px] h-[69px] rounded-full object-cover" />
+          <p class="text-sm sm:text-base text-[#404D6A]">
+            <span class="font-semibold">Skin Trouble Central:</span> Vital Flora helps bring out your inner glow by
+            tackling the root from within.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--  Gut Health Champion Section  -->
+  <section class="bg-[#214695]">
+    <div class=" pt-[30px] pb-[20px]
+            flex flex-col lg:flex-row">
+
+      <!-- Left Section -->
+      <div class="w-full lg:w-[45%] flex flex-col items-start 
+              lg:pl-[110px] pt-[40px] text-white 
+              bg-[url('/images/Left.svg')] bg-no-repeat bg-left-top 
+              bg-[length:140px] sm:bg-[length:200px] md:bg-[length:260px] mx-auto">
+        <div class="pb-10 sm:w-xs sm:px-10">
+          <h1 class="text-3xl font-semibold sm:text-start text-center text-white">The Science Behind Your Gut Health
+            Champion</h1>
+        </div>
+
+
+        <div class="relative w-[90%] max-w-[515.27px] h-auto aspect-[515.27/414.54]">
+
+          <!-- Gradient background div, hidden on tablet and mobile -->
+          <div class="absolute top-[10px] left-[10px] w-full h-full 
+                bg-[#436BC1] rounded-full blur-[35px] z-0 hidden md:block"></div>
+
+          <!-- Image with responsive height adjustments -->
+          <img src="../images/Dig.png" class="relative w-full sm:pl-0 pl-16  z-10 object-contain lg:h-full
+                md:h-[420.27px] h-[327.21px]" alt="Description" />
+
+        </div>
+
+      </div>
+
+      <!-- Right Section -->
+      <div class="w-full lg:w-[55%] 
+lg:bg-[url('../images/Right.svg')] 
+lg:bg-no-repeat lg:bg-right-top 
+lg:bg-[length:260px]">
+
+        <!-- Right content goes here -->
+        <div
+          class="flex flex-col space-y-7 md:space-y-6 lg:space-y-5 p-6 md:p-8 lg:p-10 text-white font-['Montserrat']">
+          <!-- Item 1 -->
+          <div class="flex items-start lg:items-center gap-4">
+            <img src="../images/Vector.svg" alt="Icon 1"
+              class="h-[41.07px] md:w-[47.38px] md:h-[47.38px] lg:w-[53.69px] lg:h-[53.69px]" />
+            <p class="text-[14px] md:text-[16px] lg:text-[18px]">
+              <span class="text-[14px] md:text-[18px] lg:text-[20px] font-bold">Harness the power of 60 billion live
+                cultures</span>
+              It's like having an army of friendly bacteria ready to protect your gut. A healthy gut,a healthy you.
+            </p>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="flex items-start lg:items-center gap-4">
+            <img src="../images/Vector-1.svg" alt="Icon 2"
+              class="w-[41.07px] h-[41.07px] md:w-[47.38px] md:h-[47.38px] lg:w-[53.69px] lg:h-[53.69px]" />
+            <p class="text-[14px] md:text-[16px] lg:text-[18px]">
+              <span class="text-[14px] md:text-[18px] lg:text-[20px] font-bold">The perfect variety of strains you
+                need</span>
+              With 60 different clinically researched strains, your digestive system won't know what hit it. And guess
+              what? It's going to love it.
+            </p>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="flex items-start lg:items-center gap-4">
+            <img src="../images/Vector-2.svg" alt="Icon 3"
+              class="w-[41.07px] h-[41.07px] md:w-[47.38px] md:h-[47.38px] lg:w-[53.69px] lg:h-[53.69px]" />
+            <p class="text-[14px] md:text-[16px] lg:text-[18px]">
+              <span class="text-[14px] md:text-[18px] lg:text-[20px] font-bold">In our unique formula</span> we have
+              included lactobacillus strains to support your immunity and urinary tract health, and Bifido strains for
+              colon health and functioning of the gut-to-brain connection.
+            </p>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="flex items-start lg:items-center gap-4">
+            <img src="../images/Vector-3.svg" alt="Icon 4"
+              class="w-[41.07px] h-[41.07px] md:w-[47.38px] md:h-[47.38px] lg:w-[53.69px] lg:h-[53.69px]" />
+            <p class="text-[14px] md:text-[16px] lg:text-[18px]">
+              <span class="text-[14px] md:text-[18px] lg:text-[20px] font-bold">With non-GMO, gluten-free, vegan
+                ingredients, your lifestyle and diet preferences are respected</span> A perfect companion for your
+              healthy
+              lifestyle.
+            </p>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="flex items-start lg:items-center gap-4">
+            <img src="../images/Vector-4.svg" alt="Icon 5"
+              class="pl-2 md:pl-4 lg:pl-4 w-[41.07px] h-[41.07px] md:w-[47.38px] md:h-[47.38px] lg:w-[53.69px] lg:h-[53.69px]" />
+            <p class="text-[14px] md:text-[16px] lg:text-[18px]">
+              <span class="text-[14px] md:text-[18px] lg:text-[20px] font-bold">Convenience and effectiveness wrapped in
+                one.</span> No need for refrigeration, and designed for easy use. Vital Flora understands your busy
+              life.
+            </p>
+          </div>
+
+          <!-- Boost Button -->
+          <div class="pt-5">
+            <button class="mt-6 flex items-center justify-center gap-3 mx-auto
+  w-fit px-4 h-[50.52px] text-[16px]
+  md:w-[412.225px] md:h-[58.275px] md:text-[18.5px]
+  lg:w-[487.45px] lg:h-[66.03px] lg:text-[21px]
+  bg-gradient-to-b from-[#39B54A] to-[#35A244] 
+  text-white font-bold leading-[153.9%] rounded-full
+  shadow-[0px_4px_4px_rgba(0,0,0,0.25)]">
+
+              Boost Your Immunity Today
+
+              <!-- Icon: visible only on tablet and desktop -->
+              <img src="../images/Butt.svg" alt="Icon" class="hidden md:block w-6 h-6" />
+            </button>
+
+          </div>
+        </div>
+
+
+
+      </div>
+
+  </section>
+  <!-- END  Gut Health Champion Section  -->
+
+  <section class="bg-amber-50 w-full  py-4 ">
+    <div class="lg:flex md:flex-row  mx-auto w-full">
+      <!-- Left side with title and hand image -->
+      <div class=" flex flex-col  items-center pt-8 lg:w-1/3 w-full justify-between md:gap-8">
+        <h2 class="text-blue-900 text-xl text-left lg:text-3xl font-medium p-10  ">
+          Unveiling the Superior
+          Probiotic Choice
+        </h2>
+        <div class=" w-full justify-end hidden md:block">
+          <img alt="Hand holding a Vital Flora probiotic bottle" class=" object-contain  " src="../images/Back.png" />
+        </div>
+      </div>
+
+      <!-- Table container - takes up remaining space -->
+      <div class="grid grid-cols-1 h-full w-fit">
+        <!-- Table wrapper to center the columns relative to the middle oval -->
+        <div class="grid grid-cols-3 justify-center items-center">
+          <!-- Left column with blue background and white text -->
+          <div
+            class="bg-blue-600     mt-3 w-full lg:h-6/12 md:h-8/12 flex flex-col items-center text-white text-base font-normal  rounded-none  md:rounded-l-4xl">
+            <div class="border-b border-blue-500 py-0  w-full text-start  h-18 flex items-center justify-center">
+              <p>Potency</p>
+            </div>
+            <div class="border-b border-blue-500 py-3 w-full px-4 text-start h-18 flex items-center justify-center">
+              <p>Strain Diversity</p>
+            </div>
+            <div class="border-b border-blue-500 py-3 w-full px-4 text-start h-18 flex items-center justify-center">
+              <p>Proprietary Strains</p>
+            </div>
+            <div class="border-b border-blue-500 py-3 w-full px-4 text-start h-18 flex items-center justify-center">
+              <p>Organic Prebiotics</p>
+            </div>
+            <div class="border-b border-blue-500 py-3 w-full px-4 text-start h-18 flex items-center justify-center">
+              <p>Delayed-Release Capsules</p>
+            </div>
+            <div class="border-b border-blue-500 py-3 w-full  px-4 text-start h-18 flex items-center justify-center">
+              <p>Dairy-Free</p>
+            </div>
+            <div class=" py-3 w-full  px-4 text-start h-18 flex items-center justify-center">
+              <p>Vegan</p>
+            </div>
+          </div>
+
+          <!-- Middle column with oval shape -->
+          <div
+            class="relative bg-white border-2  border-blue-600 w-full flex flex-col text-blue-700 text-sm font-normal rounded-b-none rounded-t-full  md:rounded-full  ">
+            <!-- style="clip-path: ellipse(100% 75% at 50% 50%); border-radius: 9999px;"> -->
+            <div class="flex justify-center -mt-12 h-fit">
+              <img alt="Vital Flora Probiotics box and bottle" class=" object-cover" src="../images/GoldBox.png" />
+            </div>
+            <div class="font-semibold text-center pt-2 mt-2 text-base text-blue-700">
+              <p> Vital Flora Probiotics</p>
+            </div>
+            <div class="border-t border-gray-200 py-3 px-4 text-center h-18 flex items-center justify-center">
+              <p>60 Billion Live Cultures</p>
+            </div>
+            <div class="border-t border-gray-200 py-3 px-4 text-center h-18 flex items-center justify-center">
+              <p>60 Powerful Strains</p>
+            </div>
+            <div class="border-t border-gray-200 py-3 px-4 text-center h-18 flex items-center justify-center">
+              <p>60 Clinically Researched</p>
+            </div>
+            <div class="border-t border-gray-200 py-3 px-4 text-center h-18 flex items-center justify-center">
+              <p>7 Organic</p>
+            </div>
+            <div class="border-t border-gray-200 py-3 px-4 text-center h-18 flex items-center justify-center">
+              <p>Yes</p>
+            </div>
+            <div class="border-t border-gray-200 py-3 px-4 text-center h-18 flex items-center justify-center">
+              <p>Yes</p>
+            </div>
+            <div class="border-t border-gray-200 py-3 px-4 text-center h-28 flex items-center justify-center">
+              <p>Yes</p>
+            </div>
+          </div>
+
+          <!-- Right column with white background and rounded right corners -->
+          <div
+            class="bg-white   w-full mt-4  h-8/12   flex flex-col text-blue-700 text-base font-normal rounded-none  md:rounded-r-4xl">
+            <div class="py-4 px-4 border-b border-gray-200 text-center h-18 flex items-center justify-center">
+              <span class="font-semibold">Leading Retail Brand</span>
+            </div>
+            <div class="py-4 px-4 border-b border-gray-200 text-center h-18 flex items-center justify-center">
+              <span>40-50 Billion</span>
+            </div>
+            <div class="py-4 px-4 border-b border-gray-200 text-center h-18 flex items-center justify-center">
+              <span>6-12</span>
+            </div>
+            <div class="py-4 px-4 border-b border-gray-200 text-center h-18 flex items-center justify-center">
+              <span>10-33</span>
+            </div>
+            <div class="py-4 px-4 border-b border-gray-200 text-center h-18 flex items-center justify-center">
+              <span>Non-organic</span>
+            </div>
+            <div class="py-4 px-4 border-b border-gray-200 text-center h-18 flex items-center justify-center">
+              <span>No</span>
+            </div>
+            <div class="py-4 px-4 border-b border-gray-200 text-center h-18 flex items-center justify-center">
+              <span>No</span>
+            </div>
+            <div class="py-4 px-4 text-center h-18 flex items-center justify-center ">
+              <span>No</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Simple Steps to Gut Health Glory section -->
+  <section class="w-full bg-white py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 items-center">
+
+        <!-- Text Content -->
+        <div class="flex flex-col gap-6 text-[#404D6A] sm:order-1 order-2">
+          <h1 class="text-3xl sm:text-4xl font-medium text-center sm:text-left">
+            The Simple Steps to Gut Health Glory
+          </h1>
+          <div class="space-y-4 text-base text-center sm:text-left">
+            <p>
+              Unleash the power of probiotics by popping one of our capsules daily. And as for timing? It can be taken
+              at any time because our capsules are delayed release, so you're the boss.
+            </p>
+            <p>
+              Mealtime is a great anchor, but if your schedule says otherwise, that's okay too.
+            </p>
+            <p>
+              Keep this bottle stashed in a cool, dry place. No fridge? No problem.
+            </p>
+            <p>
+              Consistency is key, my friend. Make these probiotics a part of your everyday ritual. They are the
+              multi-vitamin for the gut.
+            </p>
+            <p>
+              Water isn't just for fish! Drink plenty to aid digestion and absorption. And, hey, while you're at it,
+              don't forget to eat well, move often, and chill out – for optimal health outcomes, of course.
+            </p>
+          </div>
+        </div>
+
+        <!-- Image -->
+        <div class="sm:order-2 order-1 w-full flex justify-center">
+          <img src="../images/Health_Glory_women.png" alt="Gut Health Glory"
+            class="w-full max-w-[543px] h-auto rounded-2xl object-cover">
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- END The Simple Steps to Gut Health Glory section -->
+
+
+  <!-- BUNDLE SECTION -->
+  <section class="bg-gradient-to-r from-white via-[#b5c4cf] to-[#b6c4ce] py-8 px-4 sm:px-0">
+    <div class="container mx-auto max-w-6xl">
+      <!-- Title -->
+      <h1 class="text-3xl sm:text-4xl font-semibold text-center text-[#404D6A] mb-6 px-2">
+        The Power Trio for Ultimate Gut Health
+      </h1>
+
+      <!-- Main Content Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-6">
+        <!-- Left Text Content -->
+        <div class="flex flex-col gap-4 text-[#404D6A]">
+          <!-- Item 1 -->
+          <div class="flex items-start gap-4 bg-white rounded-2xl p-4">
+            <img src="../images/Vital_Gut_Renew.png" alt="Vital Gut Renew" class="w-20 h-20 object-contain" />
+            <p class="text-base">
+              Let's talk bundles! <span class="font-bold">Our Vital Gut Renew</span> is designed to be your gut's best
+              friend. It's a potent mix of natural ingredients to soothe, repair, and restore your gut lining. Imagine
+              less inflammation and a more comfortable you.
+            </p>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="flex items-start gap-4 bg-white rounded-2xl p-4">
+            <img src="../images/Vital_Fiber.png" alt="Vital Fiber" class="w-20 h-20 object-contain" />
+            <p class="text-base">
+              Now, meet <span class="font-bold">Vital Fiber</span>, your gut's secret weapon. This premium, organic
+              fiber supplement fuels your gut, aids digestion, and keeps things moving. Think less bloat, more energy.
+              And zero calories.
+            </p>
+          </div>
+
+          <!-- Extra Text Desktop -->
+          <div class="hidden sm:block text-sm">
+            <p class="mb-2">
+              For every gram of Vital Fiber you take, you're ridding yourself of seven calories. Multiply that by 35
+              grams daily and that’s 250 fewer calories—about the same as jogging 30 minutes on a treadmill.
+            </p>
+            <p>
+              Together, these supplements supercharge the benefits of <span class="font-bold">Vital Flora Women's
+                Daily 55+</span>. They're the wellness trifecta your body will thank you for.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Image & Visual Content -->
+        <div class="flex flex-col items-center">
+          <!-- Icons -->
+          <div
+            class="grid grid-cols-5 gap-4 items-center bg-white text-[#404D6A] rounded-2xl p-4 w-full max-w-[450px] mb-6">
+            <!-- Item 1 -->
+            <div class="flex flex-col items-start gap-1">
+              <img src="../images/Vital_Gut_Renew_lill_img.png" alt="" />
+              <span class="text-sm text-center">Vital Gut Renew</span>
+            </div>
+
+            <!-- Plus -->
+            <div class="flex justify-center">
+              <svg width="40" height="40" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24.5" cy="24" r="22.36" stroke="#214695" stroke-width="2.5" />
+                <path d="M33 25H26V33H23V25H16V22H23V15H26V22H33V25Z" fill="#214695" />
+              </svg>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="flex flex-col items-start gap-1">
+              <img src="../images/Vital_Fiber_lill_img.png" alt="" />
+              <span class="text-sm text-center">Women's Daily 55+</span>
+            </div>
+
+            <!-- Plus -->
+            <div class="flex justify-center">
+              <svg width="40" height="40" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24.5" cy="24" r="22.36" stroke="#214695" stroke-width="2.5" />
+                <path d="M33 25H26V33H23V25H16V22H23V15H26V22H33V25Z" fill="#214695" />
+              </svg>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="flex flex-col items-start gap-1">
+              <img src="../images/vital_flora_lill_img.png" alt="" />
+              <span class="text-sm text-center">Vital Fiber</span>
+            </div>
+          </div>
+
+          <!-- Bundle Image -->
+          <div class="relative flex flex-col items-center ">
+            <!-- BUNDLE text behind the image -->
+            <h1
+              class="text-9xl font-semibold leading-24  font-bebas   absolute  uppercase text-center text-white transform ">
+              BUNDLE
+            </h1>
+
+            <!-- Product image -->
+            <img src="../images/pack_img.png" class="-scale-z-200 pt-10 w-[476px]" alt="">
+          </div>
+
+
+        </div>
+      </div>
+
+      <!-- Mobile Extra Text -->
+      <div class="block sm:hidden text-xs text-[#404D6A] space-y-2 mb-6">
+        <p>
+          For every gram of Vital Fiber you take, you're ridding yourself of seven calories. Multiply that by 35 grams
+          daily and that's 250 fewer calories—like jogging 30 minutes!
+        </p>
+        <p>
+          Together, these supplements supercharge the benefits of <span class="font-bold">Vital Flora Women's Daily
+            55+</span>. They're the wellness trifecta your body will thank you for.
+        </p>
+      </div>
+
+      <!-- Bottom Section: Guarantee, Shipping, Button -->
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 md:max-w-4xl mx-auto py-4">
+        <!-- Guarantees -->
+        <div class="flex gap-4 text-gray-600">
+          <div class="flex items-center gap-2">
+            <img src="../images/money_back_icon.svg" alt="" class="w-6 h-6" />
+            <p class="text-xs">30 Day Money-Back Guarantee</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <img src="../images/shipping_truck_icon.svg" alt="" class="w-6 h-6" />
+            <p class="text-xs">Free Shipping</p>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <form
+          class="flex flex-col sm:flex-row items-center bg-white shadow-lg md:rounded-full rounded-xl p-2 gap-4 w-full md:w-[380px]  mt-4 sm:mt-0">
+          <select id="time"
+            class="flex-1 text-sm sm:text-base text-[#404D6A] bg-white rounded-full p-3 text-center sm:text-left">
+            <option selected>One time purchase</option>
+            <option value="1">1 day</option>
+            <option value="2">2 days</option>
+            <option value="3">3 days</option>
+            <option value="4">4 days</option>
+          </select>
+          <button type="submit"
+            class="flex items-center justify-center bg-[#39B54A] hover:bg-[#73cd7fda] text-white text-xs sm:text-base font-medium uppercase p-3 rounded-full w-full sm:w-auto">
+            <span class="whitespace-nowrap">Buy Now</span>
+            <svg width="14" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+              <path d="M2 2L11 10.5L2 19" stroke="white" stroke-width="2" />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- END BUNDLE SECTION -->
+
+  <!--  product's bio  -->
+  <div class="relative overflow-hidden py-10 ">
+    <div class="block not-xl:hidden  ">
+
+      <img src="../images/client-1.png" class=" absolute top-20  -left-20" alt="">
+      <img src="../images/client-2.png" class=" absolute bottom-10    left-14 " alt="">
+      <img src="../images/client-3.png" class=" absolute -right-32 bottom-10    " alt="">
+    </div>
+    <div class="mx-auto p-4  md:w-4xl w-full py-6 text-[#404D6A] ">
+      <h1 class="sm:text-3xl text-2xl font-semibold my-2 text-center">Experience Vital Planet <br> A Trusted Name in
+        Digestive Health and Well-Being</h1>
+
+      <div class="flex flex-col  mx-auto text-center gap-4 items-center justify-center">
+        <img src="../images/logo.png" alt="">
+        <p class="sm:text-base font-medium ">For over 50 years, our founders have been crafting the highest potency,
+          all-natural supplements and digestive aids, nourishing health and wellness for individuals worldwide. Led by
+          New York Times best-selling author and PBS health and nutrition expert Brenda Watson, we have become a
+          foremost authority on digestive health.</p>
+        <p class="sm:text-base font-medium ">
+          In addition to delivering the highest quality all-natural supplements, we are dedicated to giving back to
+          the
+          community and environment. Our in-house hydroponic garden produces fruits and vegetables that are donated to
+          local food banks in Florida, and we proudly support Mandy's Mission, a non-profit organization focused on
+          curing Mitral Valve disease in dogs.</p>
+        <p class="sm:text-base font-medium ">
+          Our exceptional products have earned much recognition, featured in several PBS TV show specials, such as Gut
+          Check: HOPE for Ultimate Health in 2023. Here at Vital Planet, we're firmly committed to helping individuals
+          on their journey to optimal health and well-being.</p>
+      </div>
+    </div>
+
+  </div>
+  <!--  END product's bio  -->
+
+  <!-- Accordion section -->
+  <section class="bg-[#EDF3FF] p-4 bg-[url(../images/Dots-White.svg)] bg-no-repeat w-full bg-left object-left">
+    <div class="mt-4 mx-auto ">
+      <h1 class="text-3xl text-center font-bold text-[#404D6A]">Frequently Asked Questions</h1>
+      <div class="divide-y divide-gray-100 py-4 flex flex-col gap-2 p-2">
+        <!-- item 1 -->
+        <details class="group bg-white p-2 rounded-md" close>
+          <summary
+            class="flex cursor-pointer list-none items-center justify-start gap-4 sm:py-4 py-2 text-[#404D6A] sm:text-xl text-base font-medium group-open:text-primary-500">
+            <div class="flex items-center gap-2 justify-between text-[#404D6A] font-normal">
+              <div class="flex flex-col items-center justify-between">
+                <svg width="18" height="10" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L9 9L17 1" stroke="#989898" stroke-width="1.5" class="block h-5 w-5 group-open:hidden" />
+                </svg>
+                <svg width="18" height="10" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17 10L9 2L1 10" stroke="#989898" stroke-width="1.5"
+                    class="hidden h-5 w-5 group-open:block" />
+                </svg>
+              </div>
+            </div>
+            So, how potent is this Vital Flora Women's Daily Probiotic?
+          </summary>
+          <div class="pb-4 text-gray-400 text-base">
+            A: Yes, our baby wet wipes are designed to moisturize dry skin, including skin with conditions like
+            eczema.
+          </div>
+        </details>
+
+        <!-- item 2 -->
+        <details class="group bg-white p-2 rounded-md" close>
+          <summary
+            class="flex cursor-pointer list-none items-center justify-start gap-4 sm:py-4 py-2 text-[#404D6A] sm:text-xl text-base font-medium group-open:text-primary-500">
+            <div class="flex items-center gap-2 justify-between text-gray-400 font-normal">
+              <div class="flex flex-col items-center justify-between">
+                <svg width="18" height="10" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L9 9L17 1" stroke="#989898" stroke-width="1.5" class="block h-5 w-5 group-open:hidden" />
+                </svg>
+                <svg width="18" height="10" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17 10L9 2L1 10" stroke="#989898" stroke-width="1.5"
+                    class="hidden h-5 w-5 group-open:block" />
+                </svg>
+              </div>
+            </div>
+            Why is strain diversity important?
+          </summary>
+          <div class="pb-4 text-gray-400 text-base">
+            A: Yes, our baby wet wipes are designed to moisturize dry skin, including skin with conditions like
+            eczema.
+          </div>
+        </details>
+
+        <!-- item 3 -->
+        <details class="group bg-white p-2 rounded-md" close>
+          <summary
+            class="flex cursor-pointer list-none items-center justify-start gap-4 sm:py-4 py-2 text-[#404D6A] sm:text-xl text-base font-medium group-open:text-primary-500">
+            <div class="flex items-center gap-2 justify-between text-gray-400 font-normal">
+              <div class="flex flex-col items-center justify-between">
+                <svg width="18" height="10" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L9 9L17 1" stroke="#989898" stroke-width="1.5" class="block h-5 w-5 group-open:hidden" />
+                </svg>
+                <svg width="18" height="10" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17 10L9 2L1 10" stroke="#989898" stroke-width="1.5"
+                    class="hidden h-5 w-5 group-open:block" />
+                </svg>
+              </div>
+            </div>
+            Hang on, do I need to give this probiotic bottle a fancy fridge stay?
+          </summary>
+          <div class="pb-4 text-gray-400 text-base">
+            A: Yes, our baby wet wipes are designed to moisturize dry skin, including skin with conditions like
+            eczema.
+          </div>
+        </details>
+
+        <!-- item 4 -->
+        <details class="group bg-white p-2 rounded-md" close>
+          <summary
+            class="flex cursor-pointer list-none items-center justify-start gap-4 sm:py-4 py-2 text-[#404D6A] sm:text-xl text-base font-medium group-open:text-primary-500">
+            <div class="flex items-center gap-2 justify-between text-gray-400 font-normal">
+              <div class="flex flex-col items-center justify-between">
+                <svg width="18" height="10" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L9 9L17 1" stroke="#989898" stroke-width="1.5" class="block h-5 w-5 group-open:hidden" />
+                </svg>
+                <svg width="18" height="10" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17 10L9 2L1 10" stroke="#989898" stroke-width="1.5"
+                    class="hidden h-5 w-5 group-open:block" />
+                </svg>
+              </div>
+            </div>
+            What's in this Vital Fiber?
+          </summary>
+          <div class="pb-4 text-gray-400 text-base">
+            A: Yes, our baby wet wipes are designed to moisturize dry skin, including skin with conditions like
+            eczema.
+          </div>
+        </details>
+
+        <!-- item 5 -->
+        <details class="group bg-white p-2 rounded-md" close>
+          <summary
+            class="flex cursor-pointer list-none items-center justify-start gap-4 sm:py-4 py-2 text-[#404D6A] sm:text-xl text-base font-medium group-open:text-primary-500">
+            <div class="flex items-center gap-2 justify-between text-gray-400 font-normal">
+              <div class="flex flex-col items-center justify-between">
+                <svg width="18" height="10" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L9 9L17 1" stroke="#989898" stroke-width="1.5" class="block h-5 w-5 group-open:hidden" />
+                </svg>
+                <svg width="18" height="10" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17 10L9 2L1 10" stroke="#989898" stroke-width="1.5"
+                    class="hidden h-5 w-5 group-open:block" />
+                </svg>
+              </div>
+            </div>
+            Why should I pick Vital Flora over some other probiotic?
+          </summary>
+          <div class="pb-4 text-gray-400 text-base">
+            A: Yes, our baby wet wipes are designed to moisturize dry skin, including skin with conditions like
+            eczema.
+          </div>
+        </details>
+
+        <!-- item 6 -->
+        <details class="group bg-white p-2 rounded-md" close>
+          <summary
+            class="flex cursor-pointer list-none items-center justify-start gap-4 sm:py-4 py-2 text-[#404D6A] sm:text-xl text-base font-medium group-open:text-primary-500">
+            <div class="flex items-center gap-2 justify-between text-gray-400 font-normal">
+              <div class="flex flex-col items-center justify-between">
+                <svg width="18" height="10" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L9 9L17 1" stroke="#989898" stroke-width="1.5" class="block h-5 w-5 group-open:hidden" />
+                </svg>
+                <svg width="18" height="10" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17 10L9 2L1 10" stroke="#989898" stroke-width="1.5"
+                    class="hidden h-5 w-5 group-open:block" />
+                </svg>
+              </div>
+            </div>
+            I've got some dietary needs. Can I still join the Vital Flora party?
+          </summary>
+          <div class="pb-4 text-gray-400 text-base">
+            A: Yes, our baby wet wipes are designed to moisturize dry skin, including skin with conditions like
+            eczema.
+          </div>
+        </details>
+
+      </div>
+  </section>
+
+
+  <!-- Related Products section -->
+  <section class="py-4">
+    <h1 class="text-[#404D6A] sm:text-4xl text-2xl text-center font-semibold">Related Products</h1>
+    <div
+      class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 max-w-screen-xl items-center justify-center mx-auto px-4">
+
+      <!-- product 1 -->
+      <div class="flex flex-col items-center gap-6 bg-white text-[#404D6A] rounded-2xl p-4">
+        <img src="../images/Dragon_blod_product.png" alt="" class="w-fit object-contain" />
+        <div class="flex flex-col gap-4 ">
+          <h2 class="text-black sm:text-lg text-base text-center">Drago's Blood Resin Extract</h2>
+          <p class="text-xs text-center">
+            Soothe, repair, and rejuvenate your skin and digestive tract with the highest ORAC value...
+          </p>
+          <button
+            class="flex items-center justify-center w-full  cursor-pointer sm:text-base text-xs sm:font-medium uppercase p-2 rounded-4xl text-white bg-[#39B54A] hover:bg-[#73cd7fda]">
+            <p class="text-wrap">View product</p>
+            <svg width="14" height="14" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 2L11 10.5L2 19" stroke="white" stroke-width="2" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- product 2 -->
+      <div class="flex flex-col items-center gap-4 bg-white text-[#404D6A] rounded-2xl p-4">
+        <img src="../images/vital_flora.png" alt="" class=" object-contain" />
+        <div class="flex flex-col gap-2 ">
+          <h2 class="text-black sm:text-lg text-base text-center">Vital Flora Women's Daily Probiotic</h2>
+          <p class="text-xs text-center">
+            Change your gut microbiome and experience a New Level of energy and happiness ...
+          </p>
+          <button
+            class="flex items-center justify-center mt-2 w-full   cursor-pointer sm:text-base text-xs sm:font-medium uppercase p-2 rounded-4xl text-white bg-[#39B54A] hover:bg-[#73cd7fda]">
+            <p class="text-wrap">View product</p>
+            <svg width="14" height="14" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 2L11 10.5L2 19" stroke="white" stroke-width="2" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- product 3 -->
+      <div class="flex flex-col items-center gap-4 bg-white text-[#404D6A] rounded-2xl p-4">
+        <img src="../images/vital_flora_2.png" alt="" class=" object-contain" />
+        <div class="flex flex-col gap-4">
+          <h2 class="text-black sm:text-lg text-base text-center">Vital Flora Women Daily 55+ Probiotic</h2>
+          <p class="text-xs text-center">
+            Make the first step towards a balanced digestion.
+          </p>
+          <button
+            class="flex items-center justify-center w-full  cursor-pointer sm:text-base text-xs sm:font-medium uppercase p-2 rounded-4xl text-white bg-[#39B54A] hover:bg-[#73cd7fda]">
+            <p class="text-wrap">View product</p>
+            <svg width="14" height="14" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 2L11 10.5L2 19" stroke="white" stroke-width="2" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- END Related Products section -->
+
+
+  <!-- Desktop footer (Image 1) -->
+  <footer class="hidden md:block border-b border-gray-200">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <!-- Left Navigation -->
+        <nav class="flex items-center space-x-8">
+          <a href="#" class="text-gray-700 hover:text-gray-900 text-sm">The Capsule</a>
+          <a href="#" class="text-gray-700 hover:text-gray-900 text-sm">Reviews</a>
+          <a href="#" class="text-gray-700 hover:text-gray-900 text-sm">Compare</a>
+        </nav>
+
+        <!-- Center Logo -->
+        <div class="absolute left-1/2 transform -translate-x-1/2">
+          <a href="#" class="flex flex-col items-center">
+            <!-- <div class="text-xs text-green-700 font-semibold -mb-1">Natural Wellness</div> -->
+            <div class="flex items-center">
+              <!-- <span class="vital-purple text-2xl font-bold">VITAL</span> -->
+              <div class="  w-1/2 mx-auto h-fit">
+                <div class=" rounded-full  globe-shadow"></div>
+                <img src="../images/logo.png" alt="Globe" class=" w rounded-full" />
+              </div>
+              <!-- <span class="vital-purple text-2xl font-bold">PLANET<span class="text-sm align-top">®</span></span> -->
+            </div>
+          </a>
+        </div>
+
+        <!-- Right Navigation -->
+        <div class="flex items-center space-x-8">
+          <a href="#" class="text-gray-700 hover:text-gray-900 text-sm">Privacy Policy</a>
+          <a href="#" class="text-gray-700 hover:text-gray-900 text-sm">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Blue Bar -->
+  <div class="bg-blue-900 hidden md:block h-2"></div>
+
+
+  <!-- Mobile View (Image 2) -->
+  <div class="md:hidden">
+    <!-- Mobile Header -->
+    <div class="flex flex-col items-center py-4 border-b border-gray-200">
+      <a href="#" class="flex flex-col items-center">
+        <!-- <div class="text-xs text-green-700 font-semibold -mb-1">Natural Wellness</div> -->
+        <div class="flex items-center">
+          <!-- <span class="vital-purple text-2xl font-bold">VITAL</span> -->
+          <div class="w-fit h-fit  ">
+            <div class=" rounded-full globe-shadow"></div>
+            <img src="../images/logo.png" alt="Globe" class="  rounded-full" />
+          </div>
+          <!-- <span class="vital-purple text-2xl font-bold">PLANET<span class="text-sm align-top">®</span></span> -->
+        </div>
+      </a>
+    </div>
+
+    <!-- Blue Bar -->
+    <div class="md:hidden block bg-blue-900 h-2"></div>
+
+    <!-- Mobile Navigation -->
+    <div class="px-4 py-4">
+      <div class="flex justify-center space-x-8 text-sm text-gray-700 mb-4">
+        <a href="#" class="hover:text-gray-900">The Capsule</a>
+        <a href="#" class="hover:text-gray-900">Reviews</a>
+        <a href="#" class="hover:text-gray-900">Compare</a>
+      </div>
+      <div class="flex justify-center space-x-8 text-sm text-gray-700">
+        <a href="#" class="hover:text-gray-900">Privacy Policy</a>
+        <a href="#" class="hover:text-gray-900">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
