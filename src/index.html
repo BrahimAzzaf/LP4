@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <!-- box icon -->
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <!-- END box icon -->
@@ -18,11 +19,11 @@
   <!-- Pre Header -->
   <div class="w-full bg-[#2147a8] py-3"></div>
   <!-- Header -->
-  <header class="container mx-auto px-4 md:px-6 lg:px-8 relative z-50">
-    <div class="flex items-center justify-between gap-2 h-16 relative">
+  <header class=" mx-auto px-4 md:px-6 lg:px-8 relative border border-amber-400 z-50">
+    <div class="flex items-center justify-between gap-2  relative md:h-16 h-12">
 
       <!-- Desktop Navigation -->
-      <nav class="hidden sm:flex md:gap-4 text-base font-medium text-[#343947]">
+      <nav class="hidden sm:flex  md:gap-4 text-base font-medium text-[#343947]">
         <a href="#" class="hover:text-gray-700 transition">The Capsule</a>
         <a href="#" class="hover:text-gray-700 transition">Reviews</a>
         <a href="#" class="hover:text-gray-700 transition">Compare</a>
@@ -100,11 +101,11 @@
 
 
   <!--  Product section  -->
-  <div class="container  mx-auto sm:flex   justify-between gap-8  w-full  my-8 border-t border-[#C0CFF1]">
+  <section class=" mx-auto lg:flex   justify-between gap-8  w-full   border-t border-[#C0CFF1]">
 
     <!-- Gallery Column -->
-    <div id="product-gallery" class="w-full pt-8" data-carousel data-carousel-arrows="true" data-carousel-thumbs="true"
-      data-carousel-drag="true">
+    <div id="product-gallery" class= w-full pt-8" data-carousel data-carousel-arrows="true"
+      data-carousel-thumbs="true" data-carousel-drag="true">
       <!-- Main viewport with aria roles for accessibility -->
       <div class="relative overflow-hidden rounded-lg" role="region" aria-roledescription="carousel"
         aria-label="Product images">
@@ -112,40 +113,71 @@
         <div class="carousel-inner flex transition-transform duration-300 ease-out" aria-live="polite">
           <!-- slides with proper loading attributes -->
           <img src="../images/thumbnail1.svg"
-            class="carousel-slide w-full flex-shrink-0 border border-gray-100 object-cover h-[400px] lg:h-full"
-            alt="Product view 1" loading="eager" data-index="0" />
+            class="carousel-slide  flex-shrink-0  object-cover h-[400px]  w-full lg:h-full" alt="Product view 1"
+            loading="eager" data-index="0" />
           <img src="../images/thumbnail2.svg"
-            class="carousel-slide w-full flex-shrink-0 border border-gray-100 object-cover h-[400px] lg:h-full"
-            alt="Product view 2" loading="lazy" data-index="1" />
+            class="carousel-slide  flex-shrink-0  object-cover h-[400px]  w-full lg:h-full" alt="Product view 2"
+            loading="lazy" data-index="1" />
           <img src="../images/thumbnail3.svg"
-            class="carousel-slide w-full flex-shrink-0 border border-gray-100 object-cover h-[400px] lg:h-full"
-            alt="Product view 3" loading="lazy" data-index="2" />
+            class="carousel-slide  flex-shrink-0  object-cover h-[400px]  w-full lg:h-full" alt="Product view 3"
+            loading="lazy" data-index="2" />
           <img src="../images/thumbnail4.svg"
-            class="carousel-slide w-full flex-shrink-0 border border-gray-100 object-cover h-[400px] lg:h-full"
-            alt="Product view 4" loading="lazy" data-index="3" />
+            class="carousel-slide  flex-shrink-0  object-cover h-[400px]  w-full lg:h-full" alt="Product view 4"
+            loading="lazy" data-index="3" />
           <img src="../images/thumbnail5.svg"
-            class="carousel-slide w-full flex-shrink-0 border border-gray-100 object-cover h-[400px] lg:h-full"
-            alt="Product view 5" loading="lazy" data-index="4" />
+            class="carousel-slide  flex-shrink-0  object-cover h-[400px]  w-full lg:h-full" alt="Product view 5"
+            loading="lazy" data-index="4" />
+          <img src="../images/thumbnail6.svg"
+            class="carousel-slide  flex-shrink-0  object-cover h-[400px]  w-full lg:h-full" alt="Product view 5"
+            loading="lazy" data-index="5" />
         </div>
 
         <!-- Navigation arrows with improved accessibility -->
         <button
-          class="hidden absolute top-1/2 -translate-y-1/2 left-2 bg-white p-3 rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400 hover:bg-gray-100"
+          class="hidden absolute top-1/2 -translate-y-1/2 left-2 p-3 bg-transparent rounded-full  focus:outline-none  cursor-pointer "
           data-carousel-prev aria-label="Previous slide">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd"
-              d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-              clip-rule="evenodd" />
+          <svg width="39" height="84" viewBox="0 0 39 84" class="md:block hidden" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d_1_31881)">
+              <path d="M38.1719 1.5332L2.17188 43.5332L38.1719 81.5332" stroke="black" stroke-width="2" />
+            </g>
+            <defs>
+              <filter id="filter0_d_1_31881" x="0.826172" y="0.882416" width="38.1045" height="82.3385"
+                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha" />
+                <feOffset dy="1" />
+                <feComposite in2="hardAlpha" operator="out" />
+                <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" />
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_31881" />
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_31881" result="shape" />
+              </filter>
+            </defs>
           </svg>
+
         </button>
         <button
-          class="hidden absolute top-1/2 -translate-y-1/2 right-2 bg-white p-3 rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400 hover:bg-gray-100"
+          class="hidden absolute top-1/2 -translate-y-1/2 right-2  p-3 rounded-full  focus:outline-none cursor-pointer "
           data-carousel-next aria-label="Next slide">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd"
-              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-              clip-rule="evenodd" />
+          <svg width="39" height="84" viewBox="0 0 39 84" fill="none" class="md:block hidden" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d_1_31880)">
+              <path d="M1 1.5332L37 43.5332L1 81.5332" stroke="black" stroke-width="2" />
+            </g>
+            <defs>
+              <filter id="filter0_d_1_31880" x="0.241211" y="0.882416" width="38.1045" height="82.3385"
+                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha" />
+                <feOffset dy="1" />
+                <feComposite in2="hardAlpha" operator="out" />
+                <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" />
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_31880" />
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_31880" result="shape" />
+              </filter>
+            </defs>
           </svg>
+
         </button>
 
         <!-- Progress indicator -->
@@ -163,20 +195,23 @@
         class="mt-4 flex items-center justify-start gap-4 overflow-x-auto scroll-smooth hide-scrollbar py-2 w-full px-2"
         data-carousel-thumbnails role="tablist" aria-label="Product thumbnails">
         <img src="../images/thumbnail1.svg"
-          class="thumbnail w-14 h-14 object-cover rounded cursor-pointer ring-2 ring-transparent hover:ring-blue-400 opacity-60 transition-all"
-          data-carousel-index="0" alt="Thumbnail 1" role="tab" tabindex="0" />
+          class="thumbnail w-26 h-14 object-cover   cursor-pointer   opacity-60 transition-all" data-carousel-index="0"
+          alt="Thumbnail 1" role="tab" tabindex="0" />
         <img src="../images/thumbnail2.svg"
-          class="thumbnail w-14 h-14 object-cover rounded cursor-pointer ring-2 ring-transparent hover:ring-blue-400 opacity-60 transition-all"
-          data-carousel-index="1" alt="Thumbnail 2" role="tab" tabindex="0" />
+          class="thumbnail w-14 h-14 object-cover  cursor-pointer   opacity-60 transition-all" data-carousel-index="1"
+          alt="Thumbnail 2" role="tab" tabindex="0" />
         <img src="../images/thumbnail3.svg"
-          class="thumbnail w-14 h-14 object-cover rounded cursor-pointer ring-2 ring-transparent hover:ring-blue-400 opacity-60 transition-all"
-          data-carousel-index="2" alt="Thumbnail 3" role="tab" tabindex="0" />
+          class="thumbnail w-14 h-14 object-cover  cursor-pointer   opacity-60 transition-all" data-carousel-index="2"
+          alt="Thumbnail 3" role="tab" tabindex="0" />
         <img src="../images/thumbnail4.svg"
-          class="thumbnail w-14 h-14 object-cover rounded cursor-pointer ring-2 ring-transparent hover:ring-blue-400 opacity-60 transition-all"
-          data-carousel-index="3" alt="Thumbnail 4" role="tab" tabindex="0" />
+          class="thumbnail w-14 h-14 object-cover  cursor-pointer   opacity-60 transition-all" data-carousel-index="3"
+          alt="Thumbnail 4" role="tab" tabindex="0" />
         <img src="../images/thumbnail5.svg"
-          class="thumbnail w-14 h-14 object-cover rounded cursor-pointer ring-2 ring-transparent hover:ring-blue-400 opacity-60 transition-all"
-          data-carousel-index="4" alt="Thumbnail 5" role="tab" tabindex="0" />
+          class="thumbnail w-14 h-14 object-cover  cursor-pointer   opacity-60 transition-all" data-carousel-index="4"
+          alt="Thumbnail 5" role="tab" tabindex="0" />
+        <img src="../images/thumbnail6.svg"
+          class="thumbnail w-14 h-14 object-cover  cursor-pointer   opacity-60 transition-all" data-carousel-index="4"
+          alt="Thumbnail 6" role="tab" tabindex="0" />
       </div>
 
       <style>
@@ -339,7 +374,7 @@
                 // First thumbnail should be active
                 if (i === 0) {
                   thumb.classList.add('opacity-100');
-                  thumb.classList.add('ring-blue-400');
+                  thumb.classList.add('ring-[#39B54A]');
                   thumb.setAttribute('aria-selected', 'true');
                 } else {
                   thumb.setAttribute('aria-selected', 'false');
@@ -802,11 +837,11 @@
                 // Toggle active state
                 if (i === this.idx) {
                   thumb.classList.add('opacity-100');
-                  thumb.classList.add('ring-blue-400');
+                  thumb.classList.add('ring-[#39B54A]');
                   thumb.setAttribute('aria-selected', 'true');
                 } else {
                   thumb.classList.remove('opacity-100');
-                  thumb.classList.remove('ring-blue-400');
+                  thumb.classList.remove('ring-[#39B54A]');
                   thumb.setAttribute('aria-selected', 'false');
                 }
               });
@@ -1014,7 +1049,7 @@
                 .thumbnail[aria-selected="true"] {
                     opacity: 1 !important;
                     transform: scale(1.1);
-                    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+                    box-shadow: 0 0 0 2px rgb(57, 181, 74);
                 }
             </style>
             `);
@@ -1024,13 +1059,11 @@
 
 
 
-
-
-    <div class="flex flex-col gap-4   sm:w-[604px] p-4 text-[#404D6A]">
-      <div class="font-madani ">
-        <h1 class="sm:text-4xl pb-4  text-xl font-bold  capitalize">Command Your Gut Health And Rule Your Life with
+    <div class="flex flex-col gap-4   p-4 lg:items-start items-center text-[#404D6A]">
+      <div class="font-madani flex flex-col lg:items-start items-center ">
+        <h1 class="lg:text-4xl pb-4  text-2xl lg:text-start text-center font-bold  capitalize">Command Your Gut Health And Rule Your Life with
           Women's Daily 55+ Probiotic</h1>
-        <span class="text-base inline-flex gap-2 font-semibold uppercase">
+        <span class="text-base inline-flex gap-2 font-semibold uppercase ">
           <svg width="19" height="29" viewBox="0 0 19 29" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M0.277344 14.2151V21.6178H18.7842V14.2151H0.277344ZM11.3814 18.8418H10.4561V19.7671C10.4561 20.0126 10.3586 20.2479 10.1851 20.4215C10.0115 20.595 9.77618 20.6925 9.53076 20.6925C9.28535 20.6925 9.04998 20.595 8.87645 20.4215C8.70291 20.2479 8.60542 20.0126 8.60542 19.7671V18.8418H7.68008C7.43466 18.8418 7.1993 18.7443 7.02576 18.5708C6.85223 18.3972 6.75474 18.1619 6.75474 17.9165C6.75474 17.671 6.85223 17.4357 7.02576 17.2621C7.1993 17.0886 7.43466 16.9911 7.68008 16.9911H8.60542V16.0658C8.60542 15.8204 8.70291 15.585 8.87645 15.4115C9.04998 15.2379 9.28535 15.1404 9.53076 15.1404C9.77618 15.1404 10.0115 15.2379 10.1851 15.4115C10.3586 15.585 10.4561 15.8204 10.4561 16.0658V16.9911H11.3814C11.6269 16.9911 11.8622 17.0886 12.0358 17.2621C12.2093 17.4357 12.3068 17.671 12.3068 17.9165C12.3068 18.1619 12.2093 18.3972 12.0358 18.5708C11.8622 18.7443 11.6269 18.8418 11.3814 18.8418Z"
@@ -1058,40 +1091,40 @@
           <img class="inline-block h-10 w-10 rounded-full border-2 border-white" src="../images/person3.png" alt="user">
           <img class="inline-block h-10 w-10 rounded-full border-2 border-white" src="../images/person4.png" alt="user">
         </div>
-        <p class="text-sm  gap-1"><span class="font-bold flex capitalize gap-2">rated<span
+        <p class="text-sm  gap-1   "><span class="font-bold flex capitalize gap-2">rated<span
               class="flex items-center gap-2 text-xs font-medium px-1 rounded-lg bg-[#EACB27] text-white "><box-icon
                 name='star' type='solid' color='#ffffff' class="size-[18px]"></box-icon>4.8</span></span> by 3546 Happy
           customers</p>
       </div>
       <div class="">
-        <p class="text-[#404D6A]">Make the first step towards a balanced digestion</p>
+        <p class="text-[#404D6A] md:text-start text-center">Make the first step towards a balanced digestion</p>
       </div>
 
-      <div class="grid lg:grid-cols-2    gap-2 py-2 ">
+      <div class="grid grid-cols-2       gap-2 py-2 ">
         <div class="">
           <ul class="sm:text-base text-sm  font-normal   text-[#373D51] sm:text-medium    ">
-            <li class="flex mb-2 items-center gap-2 w-[190px]">
-              <img src="../images/icon1.png" alt="Icon"><span class="text-wrap px-3">60 billion live cultures</span>
+            <li class="flex mb-2 md:items-center gap-2 md:w-[190px] w-full">
+              <img src="../images/icon1.png" alt="Icon"><span class="text-wrap truncate px-1 md:px-3">60 billion live cultures</span>
             </li>
-            <li class="flex mb-2 items-center gap-2 w-[190px]">
-              <img src="../images/icon2.png" alt="Icon"><span class="text-wrap px-3">7 plant-based prebiotics</span>
+            <li class="flex mb-2 items-center md:gap-2 md:w-[190px] w-full">
+              <img src="../images/icon2.png" alt="Icon"><span class="text-wrap truncate md:px-3 px-1">7 plant-based prebiotics</span>
             </li>
-            <li class="flex mb-2 items-center gap-2 w-[190px]">
-              <img src="../images/icon3.png" alt="Icon"><span class="text-wrap px-3">Immune Health Support </span>
+            <li class="flex mb-2 items-center md:gap-2 md:w-[190px] w-full">
+              <img src="../images/icon3.png" alt="Icon"><span class="text-wrap truncate md:px-3 px-1">Immune Health Support </span>
             </li>
           </ul>
         </div>
         <div class="">
 
           <ul class="sm:text-base text-sm  font-normal   text-[#373D51] sm:text-medium     ">
-            <li class="flex mb-2 items-center gap-2   w-[190px]">
-              <img src="../images/icon1.png" alt="Icon"><span class="text-wrap px-3">60 strains of probiotics</span>
+            <li class="flex mb-2 items-center md:gap-2   md:w-[190px] w-full">
+              <img src="../images/icon1.png" alt="Icon"><span class="text-wrap truncate md:px-3 px-1">60 strains of probiotics</span>
             </li>
-            <li class="flex mb-2 items-center gap-2 w-[190px]">
-              <img src="../images/icon2.png" alt="Icon"><span class="text-wrap px-3">Digestive Balance</span>
+            <li class="flex mb-2 items-center md:gap-2 md:w-[190px] w-full">
+              <img src="../images/icon2.png" alt="Icon"><span class="text-wrap truncate md:px-3 px-1">Digestive Balance</span>
             </li>
-            <li class="flex mb-2 items-center gap-2 w-[190px]">
-              <img src="../images/icon3.png" alt="Icon"><span class="text-wrap px-3">Vaginal Health </span>
+            <li class="flex mb-2 items-center md:gap-2 md:w-[190px] w-full">
+              <img src="../images/icon3.png" alt="Icon"><span class="text-wrap truncate md:px-3 px-1">Vaginal Health </span>
             </li>
           </ul>
         </div>
@@ -1102,21 +1135,21 @@
       <div class="  mb-4 bg-[#FAFCFF]   rounded-2xl border-2 border-[#C0CFF1] divide-y-2 divide-[#C0CFF1]">
         <div class="p-4">
           <div class="">
-            <input id="default-radio-1" type="radio" value="" name="default-radio"
+            <input id="default-radio-1" checked type="radio" value="" name="default-radio"
               class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
             <label for="default-radio-1" class="ms-2 text-sm font-medium text-gray-900 ">One time purchase</label>
           </div>
 
-          <div class="gap-4 my-4 flex flex-col items-center ">
-            <div class="lg:w-full w-fit py-2">
-              <div class="flex justify-between items-center   gap-6 w-fit ">
+          <div class="gap-4 my-4 flex flex-col  md:items-start items-center ">
+            <div class="lg:w-full w-fit  py-2">
+              <div class="flex justify-between   md:gap-6 gap-20  w-full ">
                 <p class="text-xl font-semibold text-wrap flex flex-col  ">$47.99
                   <span class="font-normal">60 tablets</span>
                 </p>
-                <label class="flex gap-2  pb-4 items-center  ">
+                <label class="flex gap-2  pb-4 items-center   ">
                   <div class=" "> QTY</div>
                   <select
-                    class="block py-1 px-3 rounded-md border  border-[#D6D6D6] shadow-sm focus:border-gray-500 focus:ring focus:ring-gray-200 focus:ring-opacity-50">
+                    class="block py-2 md:px-3 px-6  rounded-md border  border-[#D6D6D6] shadow-sm focus:border-gray-500 focus:ring focus:ring-gray-200 focus:ring-opacity-50">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -1126,7 +1159,7 @@
               </div>
             </div>
             <button
-              class="flex items-center justify-around  sm:mt-0 mt-2 lg:w-full w-fit  cursor-pointer   mx-auto  sm:text-base text-xs sm:font-medium   uppercase    p-4  rounded-4xl text-white bg-[#39B54A] hover:bg-[#73cd7fda]">
+              class="flex items-center justify-around  sm:mt-0 mt-2 w-full   cursor-pointer   mx-auto  md:text-xl  text-base font-bold    uppercase    p-4   rounded-4xl text-white bg-[#39B54A] hover:bg-[#73cd7fda]">
               <p class="text-wrap">
                 Boost Your Immunity Today
               </p>
@@ -1136,18 +1169,18 @@
               </svg>
             </button>
           </div>
-          <div class="grid lg:grid-cols-3 grid-cols-2  gap-1 w-full">
-            <div class="flex items-center   gap-2 text-gray-500     justify-evenly p-2">
+          <div class="grid grid-cols-3  gap-1 w-full">
+            <div class="flex items-center   gap-2 text-gray-500     justify-evenly ">
               <img src="../images/money_back_icon.svg" alt="">
               <p class="text-xs">30 Day Money-Back Guarantee</p>
             </div>
 
-            <div class="flex items-center   gap-4 text-gray-500     justify-evenly p-2">
+            <div class="flex items-center   gap-2 text-gray-500     justify-evenly ">
               <img src="../images/shipping_truck_icon.svg" alt="">
               <p class="text-xs">Free shipping</p>
             </div>
 
-            <div class="flex items-center   gap-2 text-gray-500     justify-evenly p-2">
+            <div class="flex items-center   gap-2 text-gray-500     justify-evenly ">
               <img src="../images/support_icon.svg" alt="">
               <p class="text-xs">Customer support</p>
             </div>
@@ -1158,7 +1191,7 @@
 
 
         <div class="flex items-center p-4  bg-[#FFFFFF] rounded-2xl">
-          <input checked id="default-radio-2" type="radio" value="" name="default-radio"
+          <input  id="default-radio-2" type="radio" value="" name="default-radio"
             class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
           <label for="default-radio-2" class="ms-2 text-sm font-medium text-gray-900 ">Checked state</label>
         </div>
@@ -1192,13 +1225,13 @@
 
 
     </div>
-  </div>
+  </section>
 
   <!-- END Product section  -->
 
   <!-- Desktop Version -->
   <div
-    class="hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 w-full bg-[#E8EDF8] p-4 rounded-md container mx-auto">
+    class="hidden  sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 w-full bg-[#E8EDF8] p-4 rounded-md container mx-auto ">
     <!-- Feature Item -->
     <div class="flex items-center gap-3 text-[#404D6A]">
       <img src="../images/glutten_free_icon.svg" alt="Gluten-Free" class="w-8 h-8" />
@@ -1227,7 +1260,7 @@
   </div>
 
   <!-- Mobile Version (Slider) -->
-  <div class="sm:hidden bg-[#E8EDF8] p-4 rounded-md container mx-auto">
+  <div class="sm:hidden bg-[#E8EDF8]  p-4 rounded-md container mx-auto">
     <div id="mobileSlider" class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar scroll-smooth">
       <!-- Slide Group -->
       <div class="min-w-full flex justify-between gap-4 snap-center px-2">
@@ -1296,21 +1329,21 @@
   </div>
 
   <!-- ABOUT THE PRODUCT -->
-  <section class="w-full px-4 py-8">
+  <section class="w-full  py-8">
     <!-- Heading and Mobile Image -->
-    <div class="flex flex-col sm:flex-row items-center gap-4">
-      <img src="../images/product_packaging.png" alt="" class="sm:hidden block w-[153px] h-auto" />
-      <div class="text-center sm:text-left lg:px-10">
+    <div class="flex  items-center gap-1">
+      <img src="../images/product_packaging.png" alt="" class="md:hidden block w-[153px] h-auto" />
+      <div class="text-left lg:px-10">
         <p
-          class="text-3xl sm:text-4xl font-semibold italic uppercase bg-gradient-to-r from-blue-900 via-blue-700 to-green-700 bg-clip-text text-transparent">
+          class="text-xl md:text-4xl font-semibold italic uppercase bg-gradient-to-r from-blue-900 via-blue-700 to-green-700 bg-clip-text text-transparent">
           Start Your
         </p>
         <p
-          class="text-3xl sm:text-4xl font-semibold italic uppercase bg-gradient-to-r from-green-500 to-green-500 bg-clip-text text-transparent">
+          class="text-xl md:text-4xl font-semibold italic uppercase bg-gradient-to-r from-green-500 to-green-500 bg-clip-text text-transparent">
           Journey
         </p>
         <p
-          class="text-2xl sm:text-4xl font-extrabold italic uppercase bg-gradient-to-r from-blue-900 via-blue-700 to-green-700 bg-clip-text text-transparent">
+          class="text-xl md:text-4xl font-extrabold italic uppercase bg-gradient-to-r from-blue-900 via-blue-700 to-green-700 bg-clip-text text-transparent">
           to a Comfo<span class="bg-gradient-to-r from-green-500 to-green-500 bg-clip-text text-transparent">rtable
             Life</span>
         </p>
@@ -1355,12 +1388,12 @@
   </section>
 
   <!-- Container Section -->
-  <section class="w-full px-4 py-8">
+  <section class="w-full  md:p-0 p-8">
     <div class="grid sm:grid-cols-2 grid-cols-1 gap-6 items-center">
       <!-- Image -->
       <div>
         <img src="../images/happy_senior_woman_laughing.png" alt="Happy Senior Woman"
-          class="w-full h-auto object-cover rounded-md" />
+          class="md:block hidden w-full h-auto object-cover rounded-md" />
       </div>
 
       <!-- Features List -->
@@ -1407,7 +1440,7 @@
 
 
   <!--  Gut Health Champion Section  -->
-  <section class="bg-[#214695]">
+  <section class="bg-[#214695] p-2">
     <div class=" pt-[30px] pb-[20px]
             flex flex-col lg:flex-row">
 
@@ -1416,8 +1449,8 @@
               lg:pl-[110px] pt-[40px] text-white 
               bg-[url('/images/Left.svg')] bg-no-repeat bg-left-top 
               bg-[length:140px] sm:bg-[length:200px] md:bg-[length:260px] mx-auto">
-        <div class="pb-10 sm:w-xs sm:px-10">
-          <h1 class="text-3xl font-semibold sm:text-start text-center text-white">The Science Behind Your Gut Health
+        <div class="pb-10 sm:w-xs md:px-8">
+          <h1 class="md:text-3xl text-2xl font-semibold sm:text-start text-center text-white">The Science Behind Your Gut Health
             Champion</h1>
         </div>
 
@@ -1505,7 +1538,7 @@ lg:bg-[length:260px]">
           <!-- Boost Button -->
           <div class="pt-5">
             <button class="mt-6 flex items-center justify-center gap-3 mx-auto
-  w-fit px-4 h-[50.52px] text-[16px]
+  w-full px-4 h-[50.52px] text-[16px]
   md:w-[412.225px] md:h-[58.275px] md:text-[18.5px]
   lg:w-[487.45px] lg:h-[66.03px] lg:text-[21px]
   bg-gradient-to-b from-[#39B54A] to-[#35A244] 
@@ -1536,7 +1569,7 @@ lg:bg-[length:260px]">
           Unveiling the Superior
           Probiotic Choice
         </h2>
-        <div class=" w-full justify-end hidden md:block">
+        <div class=" w-full justify-end hidden lg:block">
           <img alt="Hand holding a Vital Flora probiotic bottle" class=" object-contain  " src="../images/Back.png" />
         </div>
       </div>
@@ -1639,12 +1672,12 @@ lg:bg-[length:260px]">
 
   <!-- The Simple Steps to Gut Health Glory section -->
   <section class="w-full bg-white py-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto   md:px-8">
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 items-center">
 
         <!-- Text Content -->
-        <div class="flex flex-col gap-6 text-[#404D6A] sm:order-1 order-2">
-          <h1 class="text-3xl sm:text-4xl font-medium text-center sm:text-left">
+        <div class="flex flex-col gap-6 text-[#404D6A] sm:order-1 md:px-0 px-8 order-2">
+          <h1 class="text-[22px]  sm:text-4xl md:font-medium  font-bold text-center sm:text-left">
             The Simple Steps to Gut Health Glory
           </h1>
           <div class="space-y-4 text-base text-center sm:text-left">
@@ -1672,7 +1705,7 @@ lg:bg-[length:260px]">
         <!-- Image -->
         <div class="sm:order-2 order-1 w-full flex justify-center">
           <img src="../images/Health_Glory_women.png" alt="Gut Health Glory"
-            class="w-full max-w-[543px] h-auto rounded-2xl object-cover">
+            class="w-full max-w-[543px] h-auto sm:rounded-2xl object-cover">
         </div>
 
       </div>
@@ -1683,7 +1716,7 @@ lg:bg-[length:260px]">
 
   <!-- BUNDLE SECTION -->
   <section class="bg-gradient-to-r from-white via-[#b5c4cf] to-[#b6c4ce] py-8 px-4 sm:px-0">
-    <div class="container mx-auto max-w-6xl">
+    <div class="container mx-auto max-w-6xl px-4">
       <!-- Title -->
       <h1 class="text-3xl sm:text-4xl font-semibold text-center text-[#404D6A] mb-6 px-2">
         The Power Trio for Ultimate Gut Health
@@ -1730,7 +1763,7 @@ lg:bg-[length:260px]">
         <div class="flex flex-col items-center">
           <!-- Icons -->
           <div
-            class="grid grid-cols-5 gap-4 items-center bg-white text-[#404D6A] rounded-2xl p-4 w-full max-w-[450px] mb-6">
+            class="grid grid-cols-5 gap-2   items-center bg-white text-[#404D6A] rounded-2xl p-4 w-fit max-w-[450px] mb-6">
             <!-- Item 1 -->
             <div class="flex flex-col items-start gap-1">
               <img src="../images/Vital_Gut_Renew_lill_img.png" alt="" />
@@ -1745,7 +1778,7 @@ lg:bg-[length:260px]">
               </svg>
             </div>
 
-            <!-- Item 2 -->
+            <!-- Item 2  -->
             <div class="flex flex-col items-start gap-1">
               <img src="../images/Vital_Fiber_lill_img.png" alt="" />
               <span class="text-sm text-center">Women's Daily 55+</span>
@@ -1770,12 +1803,12 @@ lg:bg-[length:260px]">
           <div class="relative flex flex-col items-center ">
             <!-- BUNDLE text behind the image -->
             <h1
-              class="text-9xl font-semibold leading-24  font-bebas   absolute  uppercase text-center text-white transform ">
+              class="md:text-7xl text-5xl font-semibold leading-24  font-bebas   absolute  uppercase text-center text-white transform ">
               BUNDLE
             </h1>
 
             <!-- Product image -->
-            <img src="../images/pack_img.png" class="-scale-z-200 pt-10 w-[476px]" alt="">
+            <img src="../images/pack_img.png" class="-scale-z-200 pt-10 w-10/12 md:w-[476px]" alt="">
           </div>
 
 
@@ -1794,7 +1827,7 @@ lg:bg-[length:260px]">
         </p>
       </div>
 
-      <!-- Bottom Section: Guarantee, Shipping, Button -->
+      <!-- Bottom Section: Guarantee, Shipping, Button  -->
       <div class="flex flex-col md:flex-row items-center justify-between gap-4 md:max-w-4xl mx-auto py-4">
         <!-- Guarantees -->
         <div class="flex gap-4 text-gray-600">
@@ -1810,61 +1843,134 @@ lg:bg-[length:260px]">
 
         <!-- Form -->
         <form
-          class="flex flex-col sm:flex-row items-center bg-white shadow-lg md:rounded-full rounded-xl p-2 gap-4 w-full md:w-[380px]  mt-4 sm:mt-0">
-          <select id="time"
-            class="flex-1 text-sm sm:text-base text-[#404D6A] bg-white rounded-full p-3 text-center sm:text-left">
-            <option selected>One time purchase</option>
-            <option value="1">1 day</option>
-            <option value="2">2 days</option>
-            <option value="3">3 days</option>
-            <option value="4">4 days</option>
-          </select>
+          class="flex flex-col md:flex-row items-center w-full max-w-md mx-auto bg-transparent md:bg-white rounded-xl md:rounded-full p-2 gap-3 md:shadow-lg transition-all duration-300">
+          <div class="relative w-full">
+            <select id="time"
+              class="appearance-none w-full text-sm md:text-base text-[#404D6A] bg-white rounded-full py-3 px-4 text-center md:text-left cursor-pointer shadow-md md:shadow-none focus:outline-none">
+              <option selected>One time purchase</option>
+              <option value="1">1 day</option>
+              <option value="2">2 days</option>
+              <option value="3">3 days</option>
+              <option value="4">4 days</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-4 flex items-center">
+              <svg class="h-4 w-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+          </div>
           <button type="submit"
-            class="flex items-center justify-center bg-[#39B54A] hover:bg-[#73cd7fda] text-white text-xs sm:text-base font-medium uppercase p-3 rounded-full w-full sm:w-auto">
+            class="flex items-center justify-center bg-[#4DB539] hover:bg-[#2da33d] text-white gap-2 text-base font-medium uppercase py-3 px-6 rounded-full w-full md:w-auto shadow-md transition-colors duration-300">
             <span class="whitespace-nowrap">Buy Now</span>
-            <svg width="14" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
-              <path d="M2 2L11 10.5L2 19" stroke="white" stroke-width="2" />
+            <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.17578 0.778809L7.07959 6.68262L1.17578 12.5864" stroke="white" stroke-width="2" />
             </svg>
           </button>
         </form>
       </div>
     </div>
   </section>
-  <!-- END BUNDLE SECTION -->
+  <!-- END BUNDLE SECTION  -->
 
-  <!--  product's bio  -->
-  <div class="relative overflow-hidden py-10 ">
-    <div class="block not-xl:hidden  ">
+  <div class="relative overflow-hidden py-10 bg-white">
+    <!-- Main content container -->
+    <div class="mx-auto   w-full">
+      <!-- Heading - stays similar on all devices -->
+      <h1 class="lg:text-4xl md:text-3xl text-2xl font-semibold mb-6 text-center text-[#404D6A]">
+        Experience Vital Planet<br>
+        <span class="lg:block">A Trusted Name in Digestive Health and Well-Being</span>
+      </h1>
 
-      <img src="../images/client-1.png" class=" absolute top-20  -left-20" alt="">
-      <img src="../images/client-2.png" class=" absolute bottom-10    left-14 " alt="">
-      <img src="../images/client-3.png" class=" absolute -right-32 bottom-10    " alt="">
-    </div>
-    <div class="mx-auto p-4  md:w-4xl w-full py-6 text-[#404D6A] ">
-      <h1 class="sm:text-3xl text-2xl font-semibold my-2 text-center">Experience Vital Planet <br> A Trusted Name in
-        Digestive Health and Well-Being</h1>
+      <!-- Desktop layout (lg screens and up) -->
+      <div class="hidden xl:block relative">
+        <!-- Content positioned with relative/absolute -->
+        <div class="relative pb-8">
+          <!-- Left top circular image -->
+          <div class="absolute top-0 -left-22">
+            <div class="rounded-full overflow-hidden w-80 h-80 border-4 border-[#f5f5f5]">
+              <img src="../images/client-1.png" class="w-full h-full object-cover" alt="Client with product">
+            </div>
+          </div>
+          
+          <!-- Left bottom circular image -->
+          <div class="absolute top-75 left-25">
+            <div class="rounded-full overflow-hidden w-48 h-48 border-4 border-[#f5f5f5]">
+              <img src="../images/client-2.png" class="w-full h-full object-cover" alt="Client testimonial">
+            </div>
+          </div>
+          
+          <!-- Right product image -->
+          <div class="absolute top-20 -right-20">
+            <div class="rounded-full overflow-hidden w-96 h-96">
+              <img src="../images/client-3.png" class="w-full h-auto" alt="Vital Flora Product">
+            </div>
+          </div>
+          
+          <!-- Center content with logo -->
+          <div class="mx-auto" style="width: 600px; min-height: 700px;">
+            <div class="flex flex-col items-center mt-16">
+              <img src="../images/logo.png" alt="Vital Planet Logo" class="w-64 mb-6">
+              
+              <!-- Text content -->
+              <div class="text-center text-[#404D6A] mt-4 " >
+                <p class="mb-4 text-base  leading-7">
+                  For over 50 years, our founders have been crafting the highest potency, all-natural supplements
+                  and digestive aids, nourishing health and wellness for individuals worldwide. Led by New York Times
+                  best-selling author and PBS health and nutrition expert Brenda Watson, we have become a foremost
+                  authority on digestive health.
+                </p>
 
-      <div class="flex flex-col  mx-auto text-center gap-4 items-center justify-center">
-        <img src="../images/logo.png" alt="">
-        <p class="sm:text-base font-medium ">For over 50 years, our founders have been crafting the highest potency,
-          all-natural supplements and digestive aids, nourishing health and wellness for individuals worldwide. Led by
-          New York Times best-selling author and PBS health and nutrition expert Brenda Watson, we have become a
-          foremost authority on digestive health.</p>
-        <p class="sm:text-base font-medium ">
-          In addition to delivering the highest quality all-natural supplements, we are dedicated to giving back to
-          the
-          community and environment. Our in-house hydroponic garden produces fruits and vegetables that are donated to
-          local food banks in Florida, and we proudly support Mandy's Mission, a non-profit organization focused on
-          curing Mitral Valve disease in dogs.</p>
-        <p class="sm:text-base font-medium ">
-          Our exceptional products have earned much recognition, featured in several PBS TV show specials, such as Gut
-          Check: HOPE for Ultimate Health in 2023. Here at Vital Planet, we're firmly committed to helping individuals
-          on their journey to optimal health and well-being.</p>
+                <p class="mb-4 text-base">
+                  In addition to delivering the highest quality all-natural supplements, we are dedicated to giving back to the
+                  community and environment. Our in-house hydroponic garden produces fruits and vegetables that are donated to
+                  local food banks in Florida, and we proudly support Mandy's Mission, a non-profit organization focused on
+                  curing Mitral Valve disease in dogs.
+                </p>
+
+                <p class="text-base">
+                  Our exceptional products have earned much recognition, featured in several PBS TV show specials,
+                  such as Gut Check: HOPE for Ultimate Health in 2023. Here at Vital Planet, we're firmly committed to helping
+                  individuals on their journey to optimal health and well-being.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile/Tablet layout (md screens and down) -->
+      <div class="lg:hidden block">
+        <!-- Logo for mobile -->
+        <div class="flex justify-center mb-4">
+          <img src="../images/logo.png" alt="Vital Planet Logo" class="w-48">
+        </div>
+        
+        <!-- Text content for mobile -->
+        <div class="text-center text-[#404D6A] mt-6">
+          <p class="mb-4 text-sm">
+            For over 50 years, our founders have been crafting the highest potency, all-natural supplements
+            and digestive aids, nourishing health and wellness for individuals worldwide. Led by New York Times
+            best-selling author and PBS health and nutrition expert Brenda Watson, we have become a foremost
+            authority on digestive health.
+          </p>
+
+          <p class="mb-4 text-sm">
+            In addition to delivering the highest quality all-natural supplements, we are dedicated to giving back to the
+            community and environment. Our in-house hydroponic garden produces fruits and vegetables that are donated to
+            local food banks in Florida, and we proudly support Mandy's Mission, a non-profit organization focused on
+            curing Mitral Valve disease in dogs.
+          </p>
+
+          <p class="text-sm">
+            Our exceptional products have earned much recognition, featured in several PBS TV show specials,
+            such as Gut Check: HOPE for Ultimate Health in 2023. Here at Vital Planet, we're firmly committed to helping
+            individuals on their journey to optimal health and well-being.
+          </p>
+        </div>
       </div>
     </div>
-
   </div>
-  <!--  END product's bio  -->
+
 
   <!-- Accordion section -->
   <section class="bg-[#EDF3FF] p-4 bg-[url(../images/Dots-White.svg)] bg-no-repeat w-full bg-left object-left">
@@ -2010,10 +2116,10 @@ lg:bg-[length:260px]">
         </details>
 
       </div>
-  </section>
+      </section> 
 
 
-  <!-- Related Products section -->
+      <!-- Related Products section -->
   <section class="py-4">
     <h1 class="text-[#404D6A] sm:text-4xl text-2xl text-center font-semibold">Related Products</h1>
     <div
@@ -2075,14 +2181,14 @@ lg:bg-[length:260px]">
 
     </div>
   </section>
-  <!-- END Related Products section -->
+  <!-- END Related Products section  -->
 
 
-  <!-- Desktop footer (Image 1) -->
+      <!-- Desktop footer (Image 1) -->
   <footer class="hidden md:block border-b border-gray-200">
     <div class="container mx-auto px-4">
       <div class="flex items-center justify-between h-16">
-        <!-- Left Navigation -->
+        <!-- Left Navigation  -->
         <nav class="flex items-center space-x-8">
           <a href="#" class="text-gray-700 hover:text-gray-900 text-sm">The Capsule</a>
           <a href="#" class="text-gray-700 hover:text-gray-900 text-sm">Reviews</a>
@@ -2092,19 +2198,16 @@ lg:bg-[length:260px]">
         <!-- Center Logo -->
         <div class="absolute left-1/2 transform -translate-x-1/2">
           <a href="#" class="flex flex-col items-center">
-            <!-- <div class="text-xs text-green-700 font-semibold -mb-1">Natural Wellness</div> -->
             <div class="flex items-center">
-              <!-- <span class="vital-purple text-2xl font-bold">VITAL</span> -->
               <div class="  w-1/2 mx-auto h-fit">
                 <div class=" rounded-full  globe-shadow"></div>
                 <img src="../images/logo.png" alt="Globe" class=" w rounded-full" />
               </div>
-              <!-- <span class="vital-purple text-2xl font-bold">PLANET<span class="text-sm align-top">®</span></span> -->
             </div>
           </a>
         </div>
 
-        <!-- Right Navigation -->
+        <!-- Right Navigation  -->
         <div class="flex items-center space-x-8">
           <a href="#" class="text-gray-700 hover:text-gray-900 text-sm">Privacy Policy</a>
           <a href="#" class="text-gray-700 hover:text-gray-900 text-sm">Terms of Use</a>
@@ -2113,31 +2216,28 @@ lg:bg-[length:260px]">
     </div>
   </footer>
 
-  <!-- Blue Bar -->
+  <!-- Blue Bar  -->
   <div class="bg-blue-900 hidden md:block h-2"></div>
 
 
-  <!-- Mobile View (Image 2) -->
+  <!-- Mobile View (Image 2)  -->
   <div class="md:hidden">
-    <!-- Mobile Header -->
+    <!-- Mobile Header  -->
     <div class="flex flex-col items-center py-4 border-b border-gray-200">
       <a href="#" class="flex flex-col items-center">
-        <!-- <div class="text-xs text-green-700 font-semibold -mb-1">Natural Wellness</div> -->
         <div class="flex items-center">
-          <!-- <span class="vital-purple text-2xl font-bold">VITAL</span> -->
           <div class="w-fit h-fit  ">
             <div class=" rounded-full globe-shadow"></div>
             <img src="../images/logo.png" alt="Globe" class="  rounded-full" />
           </div>
-          <!-- <span class="vital-purple text-2xl font-bold">PLANET<span class="text-sm align-top">®</span></span> -->
         </div>
       </a>
     </div>
 
-    <!-- Blue Bar -->
+    <!-- Blue Bar  -->
     <div class="md:hidden block bg-blue-900 h-2"></div>
 
-    <!-- Mobile Navigation -->
+    <!-- Mobile Navigation  -->
     <div class="px-4 py-4">
       <div class="flex justify-center space-x-8 text-sm text-gray-700 mb-4">
         <a href="#" class="hover:text-gray-900">The Capsule</a>
@@ -2152,7 +2252,7 @@ lg:bg-[length:260px]">
   </div>
 
 
-  <script src="./script.js"></script>
+      <script src="./script.js"></script>
 </body>
 
 </html>
