@@ -1,0 +1,1037 @@
+<!-- Pre Header -->
+  <div class="bg-[#2147a8] py-3"></div>
+  <!-- Header-->
+  <header class=" mx-auto px-4 md:px-6 lg:px-8 relative  z-50">
+    <div class="flex items-center justify-between gap-2  relative md:h-16 py-2">
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden sm:flex  md:gap-4 text-base font-medium text-[#343947]">
+        <a href="#" class="hover:text-gray-700 transition">The Capsule</a>
+        <a href="#" class="hover:text-gray-700 transition">Reviews</a>
+        <a href="#" class="hover:text-gray-700 transition">Compare</a>
+      </nav>
+
+      <!-- Logo -->
+      <div class="absolute left-1/2 transform -translate-x-1/2 sm:static sm:translate-x-0 sm:left-0">
+        <img src="../images/logo.png" alt="Vital Planet Logo" class="md:h-20 h-full   cursor-pointer" />
+      </div>
+
+      <!-- Desktop Right Section -->
+      <div class="hidden sm:flex items-center gap-6 text-base font-medium text-[#343947]">
+        <a href="#" class="hover:text-gray-700 transition">Compare</a>
+        <button
+          class="border border-[#C0D2FF] px-4 py-1 rounded-full hover:bg-[#C0D2FF]/10 transition cursor-pointer">Buy
+          Now</button>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button id="hamburgerBtn" class="sm:hidden z-50 relative focus:outline-none ml-auto" aria-label="Toggle Menu"
+        aria-expanded="false">
+        <svg id="hamburgerIcon" class="block" width="30" height="18" viewBox="0 0 30 18" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <rect x="9" width="21" height="2" rx="1" fill="#414042" />
+          <rect y="8" width="30" height="2" rx="1" fill="#414042" />
+          <rect x="9" y="16" width="21" height="2" rx="1" fill="#414042" />
+        </svg>
+        <svg id="closeIcon" class="hidden" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 5L12 12M12 12L19 5M12 12L5 19M12 12L19 19" stroke="black" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </button>
+      <!-- Mobile Menu -->
+      <div id="mobileMenu"
+        class="sm:hidden hidden absolute top-full left-0 w-full bg-white shadow-md p-6 z-40 transition-all duration-300 ease-in-out">
+        <nav class="flex flex-col items-center gap-4 text-base font-medium text-[#343947]">
+          <a href="#" class="hover:text-gray-700 transition">The Capsule</a>
+          <a href="#" class="hover:text-gray-700 transition">Reviews</a>
+          <a href="#" class="hover:text-gray-700 transition">Compare</a>
+          <button class="border border-[#C0D2FF] w-full px-4 py-1 rounded-full hover:bg-[#C0D2FF]/10 transition">Buy
+            Now</button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Script -->
+  <script>
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const hamburgerIcon = document.getElementById('hamburgerIcon');
+    const closeIcon = document.getElementById('closeIcon');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    function toggleMenu() {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      hamburgerIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+      hamburgerBtn.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+    }
+
+    hamburgerBtn.addEventListener('click', toggleMenu);
+
+    // Optional: Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!hamburgerBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+        if (!mobileMenu.classList.contains('hidden')) {
+          toggleMenu();
+        }
+      }
+    });
+  </script>
+
+
+
+
+
+  <!--  Product section -->
+  <section class=" mx-auto grid md:grid-cols-2  grid-cols-1 mt-0       w-full   border-t border-[#C0CFF1]">
+
+    <!-- Gallery Column .-->
+    <div id="product-gallery" class="w-full " data-carousel data-carousel-arrows="true" data-carousel-thumbs="true"
+      data-carousel-drag="true">
+      <!-- Main viewport with aria roles for accessibility -->
+      <div class="relative overflow-hidden rounded-lg" role="region" aria-roledescription="carousel"
+        aria-label="Product images">
+        <!-- Main image container with proper preloading .-->
+        <div class="carousel-inner flex transition-transform duration-300 ease-out" aria-live="polite">
+          <!-- slides with proper loading attributes .-->
+          <img src="../images/thumbnail1.svg" class="carousel-slide  flex-shrink-0  object-cover   w-full lg:h-full"
+            alt="Product view 1" loading="eager" data-index="0" />
+          <img src="../images/thumbnail2.svg" class="carousel-slide  flex-shrink-0  object-cover   w-full lg:h-full"
+            alt="Product view 2" loading="lazy" data-index="1" />
+          <img src="../images/thumbnail3.svg" class="carousel-slide  flex-shrink-0  object-cover   w-full lg:h-full"
+            alt="Product view 3" loading="lazy" data-index="2" />
+          <img src="../images/thumbnail4.svg" class="carousel-slide  flex-shrink-0  object-cover   w-full lg:h-full"
+            alt="Product view 4" loading="lazy" data-index="3" />
+          <img src="../images/thumbnail5.svg" class="carousel-slide  flex-shrink-0  object-cover   w-full lg:h-full"
+            alt="Product view 5" loading="lazy" data-index="4" />
+          <img src="../images/thumbnail6.svg" class="carousel-slide  flex-shrink-0  object-cover   w-full lg:h-full"
+            alt="Product view 5" loading="lazy" data-index="5" />
+        </div>
+
+        <!-- Navigation arrows with improved accessibility .-->
+        <button
+          class="hidden absolute top-1/2 -translate-y-1/2 left-2 p-3 bg-transparent rounded-full  focus:outline-none  cursor-pointer "
+          data-carousel-prev aria-label="Previous slide">
+          <svg width="39" height="84" viewBox="0 0 39 84" class="md:block hidden" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d_1_31881)">
+              <path d="M38.1719 1.5332L2.17188 43.5332L38.1719 81.5332" stroke="black" stroke-width="2" />
+            </g>
+            <defs>
+              <filter id="filter0_d_1_31881" x="0.826172" y="0.882416" width="38.1045" height="82.3385"
+                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha" />
+                <feOffset dy="1" />
+                <feComposite in2="hardAlpha" operator="out" />
+                <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" />
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_31881" />
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_31881" result="shape" />
+              </filter>
+            </defs>
+          </svg>
+
+        </button>
+        <button
+          class="hidden absolute top-1/2 -translate-y-1/2 right-2  p-3 rounded-full  focus:outline-none cursor-pointer "
+          data-carousel-next aria-label="Next slide">
+          <svg width="39" height="84" viewBox="0 0 39 84" fill="none" class="md:block hidden"
+            xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d_1_31880)">
+              <path d="M1 1.5332L37 43.5332L1 81.5332" stroke="black" stroke-width="2" />
+            </g>
+            <defs>
+              <filter id="filter0_d_1_31880" x="0.241211" y="0.882416" width="38.1045" height="82.3385"
+                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha" />
+                <feOffset dy="1" />
+                <feComposite in2="hardAlpha" operator="out" />
+                <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" />
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_31880" />
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_31880" result="shape" />
+              </filter>
+            </defs>
+          </svg>
+
+        </button>
+
+        <!-- Progress indicator .-->
+        <div class="absolute bottom-6 left-0 right-0 flex justify-center gap-1">
+          <span class="carousel-indicator bg-gray-300 rounded-full w-2 h-2" data-active="true"></span>
+          <span class="carousel-indicator bg-gray-300 rounded-full w-2 h-2"></span>
+          <span class="carousel-indicator bg-gray-300 rounded-full w-2 h-2"></span>
+          <span class="carousel-indicator bg-gray-300 rounded-full w-2 h-2"></span>
+          <span class="carousel-indicator bg-gray-300 rounded-full w-2 h-2"></span>
+        </div>
+      </div>
+
+      <!-- Thumbnails with proper keyboard navigation and hover effects .-->
+      <div class=" flex items-center justify-start gap-4 overflow-x-auto scroll-smooth hide-scrollbar py-2 w-full px-2"
+        data-carousel-thumbnails role="tablist" aria-label="Product thumbnails">
+        <img src="../images/thumbnail1.svg"
+          class="thumbnail md:w-[90px] w-[60px]   object-cover   cursor-pointer   opacity-70 transition-all"
+          data-carousel-index="0" alt="Thumbnail 1" role="tab" tabindex="0" />
+        <img src="../images/thumbnail2.svg"
+          class="thumbnail md:w-[90px] w-[60px]   object-cover  cursor-pointer   opacity-70 transition-all"
+          data-carousel-index="1" alt="Thumbnail 2" role="tab" tabindex="0" />
+        <img src="../images/thumbnail3.svg"
+          class="thumbnail md:w-[90px] w-[60px]   object-cover  cursor-pointer   opacity-70 transition-all"
+          data-carousel-index="2" alt="Thumbnail 3" role="tab" tabindex="0" />
+        <img src="../images/thumbnail4.svg"
+          class="thumbnail md:w-[90px] w-[60px]   object-cover  cursor-pointer   opacity-70 transition-all"
+          data-carousel-index="3" alt="Thumbnail 4" role="tab" tabindex="0" />
+        <img src="../images/thumbnail5.svg"
+          class="thumbnail md:w-[90px] w-[60px]   object-cover  cursor-pointer   opacity-70 transition-all"
+          data-carousel-index="4" alt="Thumbnail 5" role="tab" tabindex="0" />
+        <img src="../images/thumbnail6.svg"
+          class="thumbnail md:w-[90px] w-[60px]   object-cover  cursor-pointer   opacity-70 transition-all"
+          data-carousel-index="4" alt="Thumbnail 6" role="tab" tabindex="0" />
+      </div>
+
+      <style>
+        /* Hide scrollbar while maintaining scroll functionality */
+        .hide-scrollbar {
+          /* For Firefox */
+          scrollbar-width: none;
+          /* For IE and Edge */
+          -ms-overflow-style: none;
+        }
+
+        /* For Chrome, Safari, and newer Edge */
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
+          width: 0;
+          height: 0;
+        }
+      </style>
+
+      <script>
+        class Carousel {
+          constructor(root) {
+            try {
+              // Core elements
+              this.root = root;
+              this.inner = root.querySelector('.carousel-inner');
+              this.slides = Array.from(root.querySelectorAll('.carousel-slide'));
+              this.prevBtn = root.querySelector('[data-carousel-prev]');
+              this.nextBtn = root.querySelector('[data-carousel-next]');
+              this.thumbs = Array.from(root.querySelectorAll('.thumbnail'));
+              this.indicators = Array.from(root.querySelectorAll('.carousel-indicator'));
+              this.loader = root.querySelector('.carousel-loader');
+
+              // Validate required elements
+              if (!this.inner || this.slides.length === 0) {
+                throw new Error('Carousel requires .carousel-inner and at least one .carousel-slide');
+              }
+
+              // State
+              this.total = this.slides.length;
+              this.idx = 0;
+              this.animating = false;
+              this.touchStartX = 0;
+              this.touchEndX = 0;
+              this.swipeThreshold = 50;
+              this.autoplayTimer = null;
+              this.slideWidth = 0;
+              this.resizeObserver = null;
+
+              // Configuration from data attributes
+              this.options = {
+                arrows: root.dataset.carouselArrows === 'true',
+                thumbs: root.dataset.carouselThumbs === 'true',
+                drag: root.dataset.carouselDrag === 'true',
+                autoplay: root.dataset.carouselAutoplay === 'true',
+                autoplaySpeed: parseInt(root.dataset.carouselSpeed || '5000', 10),
+                transitionDuration: parseInt(root.dataset.carouselTransition || '300', 10),
+                loop: root.dataset.carouselLoop !== 'false',
+                keyboard: true,
+                a11y: true,
+                lazyLoad: root.dataset.carouselLazyLoad !== 'false',
+                preloadCount: parseInt(root.dataset.carouselPreload || '2', 10)
+              };
+
+              // Check if Internet Explorer or old Edge for special handling
+              this.isOldBrowser = /MSIE|Trident|Edge\/(?:12|13|14|15|16|17)/.test(navigator.userAgent);
+
+              // Initialize
+              this._setup();
+              this._bindEvents();
+              this.goto(0, false); // No animation on init
+
+              // Add to window resize handling
+              this._setupResizeObserver();
+
+              // Preload adjacent images
+              if (this.options.lazyLoad) {
+                this._preloadAdjacentImages(0);
+              }
+
+              // Start autoplay if configured
+              if (this.options.autoplay) {
+                this._startAutoplay();
+              }
+
+              // Signal initialization complete
+              this.root.classList.add('carousel-ready');
+
+              // Register for cleanup on page unload
+              window.addEventListener('beforeunload', () => this.destroy());
+            } catch (error) {
+              console.error('Carousel initialization error:', error);
+              this._showFallback();
+            }
+          }
+
+          // Setup DOM elements
+          _setup() {
+            // Prepare container
+            this.root.classList.add('carousel-initialized');
+            this.inner.style.transition = `transform ${this.options.transitionDuration}ms ease-out`;
+
+            // Set up slides
+            this.slides.forEach((slide, i) => {
+              slide.setAttribute('aria-hidden', i !== 0);
+              slide.setAttribute('tabindex', i === 0 ? '0' : '-1');
+
+              if (this.options.a11y) {
+                slide.setAttribute('role', 'tabpanel');
+                slide.setAttribute('aria-roledescription', 'slide');
+                slide.setAttribute('aria-label', `Slide ${i + 1} of ${this.total}`);
+              }
+
+              // Show only the first slide initially
+              slide.style.opacity = i === 0 ? '1' : '0.4';
+
+              // Handle image loading
+              if (i > this.options.preloadCount) {
+                const src = slide.getAttribute('src');
+                slide.setAttribute('data-src', src);
+                slide.removeAttribute('src');
+              }
+
+              // Set default transform
+              if (this.isOldBrowser) {
+                slide.style.display = i === 0 ? 'block' : 'none';
+              }
+            });
+
+            // Set up navigation arrows
+            if (this.options.arrows) {
+              if (this.prevBtn) {
+                this.prevBtn.classList.remove('hidden');
+                if (this.options.a11y) {
+                  this.prevBtn.setAttribute('aria-label', 'Previous slide');
+                  this.prevBtn.setAttribute('role', 'button');
+                }
+              }
+
+              if (this.nextBtn) {
+                this.nextBtn.classList.remove('hidden');
+                if (this.options.a11y) {
+                  this.nextBtn.setAttribute('aria-label', 'Next slide');
+                  this.nextBtn.setAttribute('role', 'button');
+                }
+              }
+            }
+
+            // Set up thumbnails
+            if (!this.options.thumbs) {
+              const thumbsContainer = this.root.querySelector('[data-carousel-thumbnails]');
+              if (thumbsContainer) thumbsContainer.classList.add('hidden');
+            } else if (this.thumbs.length > 0) {
+              // Set up thumbnails
+              this.thumbs.forEach((thumb, i) => {
+                if (!thumb.dataset.carouselIndex) {
+                  thumb.dataset.carouselIndex = i.toString();
+                }
+
+                // First thumbnail should be active
+                if (i === 0) {
+                  thumb.classList.add('opacity-100');
+                  thumb.classList.add('ring-[#39B54A]');
+                  thumb.setAttribute('aria-selected', 'true');
+                } else {
+                  thumb.setAttribute('aria-selected', 'false');
+                }
+
+                if (this.options.a11y) {
+                  thumb.setAttribute('role', 'tab');
+                  thumb.setAttribute('aria-label', `Go to slide ${i + 1}`);
+                  thumb.setAttribute('tabindex', '0');
+                }
+              });
+            }
+
+            // Set up indicators
+            if (this.indicators.length > 0) {
+              this.indicators[0].classList.add('bg-blue-500');
+              this.indicators[0].classList.remove('bg-gray-300');
+              this.indicators[0].setAttribute('data-active', 'true');
+            }
+
+            // Ensure container has proper position for absolute positioning
+            if (getComputedStyle(this.root).position === 'static') {
+              this.root.style.position = 'relative';
+            }
+
+            // Calculate slide widths for accurate positioning
+            this._updateSlideWidth();
+          }
+
+          // Bind all event handlers
+          _bindEvents() {
+            // Navigation buttons
+            if (this.options.arrows) {
+              if (this.prevBtn) {
+                this.prevBtn.addEventListener('click', e => {
+                  e.preventDefault();
+                  this.prev();
+                });
+              }
+
+              if (this.nextBtn) {
+                this.nextBtn.addEventListener('click', e => {
+                  e.preventDefault();
+                  this.next();
+                });
+              }
+            }
+
+            // Thumbnail navigation
+            if (this.options.thumbs && this.thumbs.length) {
+              this.thumbs.forEach(thumb => {
+                // Click handler
+                thumb.addEventListener('click', e => {
+                  e.preventDefault();
+                  const index = parseInt(e.currentTarget.dataset.carouselIndex, 10);
+                  if (!isNaN(index)) {
+                    this.goto(index);
+                  }
+                });
+
+                // Keyboard navigation
+                thumb.addEventListener('keydown', e => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    const index = parseInt(e.currentTarget.dataset.carouselIndex, 10);
+                    if (!isNaN(index)) {
+                      this.goto(index);
+                    }
+                  } else if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    const nextThumb = this.thumbs[Math.min(parseInt(e.currentTarget.dataset.carouselIndex, 10) + 1, this.total - 1)];
+                    if (nextThumb) nextThumb.focus();
+                  } else if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    const prevThumb = this.thumbs[Math.max(parseInt(e.currentTarget.dataset.carouselIndex, 10) - 1, 0)];
+                    if (prevThumb) prevThumb.focus();
+                  }
+                });
+              });
+            }
+
+            // Touch/drag functionality
+            if (this.options.drag) {
+              this._bindTouchEvents();
+            }
+
+            // Keyboard navigation
+            if (this.options.keyboard) {
+              this.root.setAttribute('tabindex', '0');
+              this.root.addEventListener('keydown', e => {
+                if (document.activeElement === this.root || this.root.contains(document.activeElement)) {
+                  if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    this.prev();
+                  } else if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    this.next();
+                  } else if (e.key === 'Home') {
+                    e.preventDefault();
+                    this.goto(0);
+                  } else if (e.key === 'End') {
+                    e.preventDefault();
+                    this.goto(this.total - 1);
+                  }
+                }
+              });
+            }
+
+            // Focus handling
+            this.root.addEventListener('focusin', () => {
+              if (this.autoplayTimer) {
+                this._pauseAutoplay();
+              }
+            });
+
+            this.root.addEventListener('focusout', e => {
+              if (!this.root.contains(e.relatedTarget) && this.options.autoplay) {
+                this._startAutoplay();
+              }
+            });
+
+            // Visibility change handling
+            document.addEventListener('visibilitychange', () => {
+              if (document.hidden && this.autoplayTimer) {
+                this._pauseAutoplay();
+              } else if (!document.hidden && this.options.autoplay) {
+                this._startAutoplay();
+              }
+            });
+
+            // Image load error handling
+            this.slides.forEach(slide => {
+              slide.addEventListener('error', () => {
+                slide.src = 'path/to/fallback-image.svg'; // Replace with actual fallback
+                slide.classList.add('carousel-error');
+              });
+
+              slide.addEventListener('load', () => {
+                slide.classList.add('carousel-loaded');
+              });
+            });
+
+            // Handle click on indicators
+            this.indicators.forEach((indicator, i) => {
+              indicator.addEventListener('click', () => {
+                this.goto(i);
+              });
+            });
+          }
+
+          // Touch and swipe handling
+          _bindTouchEvents() {
+            // Common handler for touch and mouse events
+            const handleStart = (e) => {
+              if (this.animating) return;
+
+              this.touchStartX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
+              this.touchStartY = e.type.includes('touch') ? e.touches[0].clientY : e.clientY;
+
+              // Reset transition during drag
+              this.inner.style.transition = 'none';
+
+              // Pause autoplay during interaction
+              if (this.autoplayTimer) {
+                this._pauseAutoplay();
+              }
+            };
+
+            const handleMove = (e) => {
+              if (this.animating || this.touchStartX === 0) return;
+
+              const clientX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
+              const clientY = e.type.includes('touch') ? e.touches[0].clientY : e.clientY;
+
+              // Calculate horizontal and vertical distance
+              const xDiff = this.touchStartX - clientX;
+              const yDiff = this.touchStartY - clientY;
+
+              // Detect if scrolling vertically (don't interfere with page scroll)
+              if (Math.abs(yDiff) > Math.abs(xDiff)) {
+                return;
+              }
+
+              // Prevent default to stop page scroll during swipe
+              e.preventDefault();
+
+              // Calculate drag position
+              const dragOffset = -this.idx * this.slideWidth + (-xDiff);
+
+              // Apply transform with boundaries if not looping
+              if (!this.options.loop) {
+                if (dragOffset > 0 || dragOffset < -((this.total - 1) * this.slideWidth)) {
+                  return; // Don't allow dragging past ends
+                }
+              }
+
+              this.inner.style.transform = `translateX(${dragOffset}px)`;
+            };
+
+            const handleEnd = (e) => {
+              if (this.animating || this.touchStartX === 0) return;
+
+              // Restore transition
+              this.inner.style.transition = `transform ${this.options.transitionDuration}ms ease-out`;
+
+              const clientX = e.type.includes('touch') ?
+                (e.changedTouches && e.changedTouches[0] ? e.changedTouches[0].clientX : this.touchStartX) :
+                e.clientX;
+
+              const diff = this.touchStartX - clientX;
+
+              // Detect swipe direction if it exceeds threshold
+              if (Math.abs(diff) > this.swipeThreshold) {
+                if (diff > 0) {
+                  this.next();
+                } else {
+                  this.prev();
+                }
+              } else {
+                // Not enough movement, snap back to current slide
+                this.goto(this.idx);
+              }
+
+              // Reset touch coordinates
+              this.touchStartX = 0;
+              this.touchStartY = 0;
+
+              // Restart autoplay if needed
+              if (this.options.autoplay) {
+                this._startAutoplay();
+              }
+            };
+
+            // Touch events
+            this.inner.addEventListener('touchstart', handleStart, { passive: true });
+            this.inner.addEventListener('touchmove', handleMove, { passive: false });
+            this.inner.addEventListener('touchend', handleEnd);
+
+            // Mouse events
+            this.inner.addEventListener('mousedown', handleStart);
+            document.addEventListener('mousemove', handleMove);
+            document.addEventListener('mouseup', handleEnd);
+          }
+
+          // Update slide width on resize
+          _updateSlideWidth() {
+            if (this.inner) {
+              this.slideWidth = this.inner.offsetWidth;
+
+              // Update transform for current position
+              if (!this.isOldBrowser) {
+                this.inner.style.transform = `translateX(${-this.idx * this.slideWidth}px)`;
+              }
+            }
+          }
+
+          // Handle responsive resize
+          _setupResizeObserver() {
+            // Use ResizeObserver if available for better performance
+            if (window.ResizeObserver) {
+              this.resizeObserver = new ResizeObserver(this._debounce(() => {
+                this._updateSlideWidth();
+                this.updatePosition(false);
+              }, 200));
+
+              this.resizeObserver.observe(this.root);
+            } else {
+              // Fallback to window resize
+              this._handleResize = this._debounce(() => {
+                this._updateSlideWidth();
+                this.updatePosition(false);
+              }, 200);
+
+              window.addEventListener('resize', this._handleResize);
+            }
+          }
+
+          // Preload adjacent images
+          _preloadAdjacentImages(currentIndex) {
+            // Determine which slides should be preloaded
+            const preloadIndexes = [];
+
+            // Current slide + next slides up to preloadCount
+            for (let i = currentIndex; i < Math.min(currentIndex + this.options.preloadCount + 1, this.slides.length); i++) {
+              preloadIndexes.push(i);
+            }
+
+            // Previous slides up to preloadCount
+            for (let i = Math.max(currentIndex - this.options.preloadCount, 0); i < currentIndex; i++) {
+              preloadIndexes.push(i);
+            }
+
+            // Preload the determined slides
+            preloadIndexes.forEach(index => {
+              const slide = this.slides[index];
+              if (slide && slide.hasAttribute('data-src') && !slide.hasAttribute('src')) {
+                slide.setAttribute('src', slide.getAttribute('data-src'));
+                slide.removeAttribute('data-src');
+              }
+            });
+          }
+
+          // Show loading state
+          _showLoading() {
+            if (this.loader) {
+              this.loader.classList.remove('hidden');
+            }
+          }
+
+          // Hide loading state
+          _hideLoading() {
+            if (this.loader) {
+              this.loader.classList.add('hidden');
+            }
+          }
+
+          // Fallback in case of error
+          _showFallback() {
+            // Show just the first slide and hide the carousel controls
+            if (this.slides && this.slides.length > 0) {
+              this.slides.forEach((slide, i) => {
+                slide.style.display = i === 0 ? 'block' : 'none';
+              });
+            }
+
+            // Hide controls
+            if (this.prevBtn) this.prevBtn.style.display = 'none';
+            if (this.nextBtn) this.nextBtn.style.display = 'none';
+
+            const thumbsContainer = this.root.querySelector('[data-carousel-thumbnails]');
+            if (thumbsContainer) thumbsContainer.style.display = 'none';
+
+            // Show error message
+            const error = document.createElement('div');
+            error.className = 'text-red-500 p-4 text-center';
+            console.log() = 'There was an issue loading the image gallery. Please refresh the page.';
+
+            if (this.root) {
+              this.root.appendChild(error);
+            }
+          }
+
+          // Update carousel position
+          updatePosition(animate = true) {
+            if (!this.inner || this.isDestroyed) return;
+
+            try {
+              // Update slide width in case it changed
+              this._updateSlideWidth();
+
+              // Set transition only if animating
+              this.inner.style.transition = animate ?
+                `transform ${this.options.transitionDuration}ms ease-out` : 'none';
+
+              if (this.isOldBrowser) {
+                // For IE and old Edge, use display:none/block instead of transform
+                this.slides.forEach((slide, i) => {
+                  slide.style.display = i === this.idx ? 'block' : 'none';
+                });
+              } else {
+                // Modern browsers use transform
+                const offset = -this.idx * this.slideWidth;
+                this.inner.style.transform = `translateX(${offset}px)`;
+              }
+
+              // Update slide opacity for smooth transitions
+              this.slides.forEach((slide, i) => {
+                slide.style.opacity = i === this.idx ? '1' : '0.4';
+                slide.setAttribute('aria-hidden', i !== this.idx);
+              });
+
+              // Update accessibility attributes
+              this._updateA11y();
+
+              // Highlight the active thumbnail
+              this._highlightThumb();
+
+              // Update indicators
+              this._updateIndicators();
+
+              // Preload adjacent images if lazy loading is enabled
+              if (this.options.lazyLoad) {
+                this._preloadAdjacentImages(this.idx);
+              }
+
+              // Emit custom event that can be listened to
+              this.root.dispatchEvent(new CustomEvent('carousel:slide', {
+                detail: { index: this.idx, total: this.total }
+              }));
+            } catch (error) {
+              console.error('Error updating carousel position:', error);
+              this._showFallback();
+            }
+          }
+
+          // Update indicators
+          _updateIndicators() {
+            if (this.indicators && this.indicators.length) {
+              this.indicators.forEach((indicator, i) => {
+                if (i === this.idx) {
+                  indicator.classList.add('bg-blue-500');
+                  indicator.classList.remove('bg-gray-300');
+                  indicator.setAttribute('data-active', 'true');
+                } else {
+                  indicator.classList.remove('bg-blue-500');
+                  indicator.classList.add('bg-gray-300');
+                  indicator.setAttribute('data-active', 'false');
+                }
+              });
+            }
+          }
+
+          // Update ARIA attributes
+          _updateA11y() {
+            if (!this.options.a11y) return;
+
+            // Update slides
+            this.slides.forEach((slide, i) => {
+              const isActive = i === this.idx;
+              slide.setAttribute('aria-hidden', !isActive);
+              slide.setAttribute('tabindex', isActive ? '0' : '-1');
+            });
+
+            // Update navigation state
+            if (this.prevBtn) {
+              const isDisabled = !this.options.loop && this.idx === 0;
+              this.prevBtn.setAttribute('aria-disabled', isDisabled);
+              this.prevBtn.setAttribute('tabindex', isDisabled ? '-1' : '0');
+
+              if (isDisabled) {
+                this.prevBtn.classList.add('opacity-50', 'cursor-default');
+              } else {
+                this.prevBtn.classList.remove('opacity-50', 'cursor-default');
+              }
+            }
+
+            if (this.nextBtn) {
+              const isDisabled = !this.options.loop && this.idx === this.total - 1;
+              this.nextBtn.setAttribute('aria-disabled', isDisabled);
+              this.nextBtn.setAttribute('tabindex', isDisabled ? '-1' : '0');
+
+              if (isDisabled) {
+                this.nextBtn.classList.add('opacity-50', 'cursor-default');
+              } else {
+                this.nextBtn.classList.remove('opacity-50', 'cursor-default');
+              }
+            }
+
+            // Update the carousel's live region to announce the slide change
+            this.root.setAttribute('aria-live', 'polite');
+            this.root.setAttribute('aria-atomic', 'true');
+          }
+
+          // Highlight the active thumbnail
+          _highlightThumb() {
+            if (!this.options.thumbs || !this.thumbs.length || this.isDestroyed) return;
+
+            try {
+              this.thumbs.forEach((thumb, i) => {
+                // Toggle active state
+                if (i === this.idx) {
+                  thumb.classList.add('opacity-100');
+                  thumb.classList.add('ring-[#39B54A]');
+                  thumb.setAttribute('aria-selected', 'true');
+                } else {
+                  thumb.classList.remove('opacity-100');
+                  thumb.classList.remove('ring-[#39B54A]');
+                  thumb.setAttribute('aria-selected', 'false');
+                }
+              });
+            } catch (error) {
+              console.error('Error highlighting thumbnail:', error);
+            }
+          }
+
+          // Autoplay controls
+          _startAutoplay() {
+            if (!this.options.autoplay || this.isDestroyed) return;
+
+            this._pauseAutoplay(); // Clear any existing timer
+
+            this.autoplayTimer = setInterval(() => {
+              this.next();
+            }, this.options.autoplaySpeed);
+          }
+
+          _pauseAutoplay() {
+            if (this.autoplayTimer) {
+              clearInterval(this.autoplayTimer);
+              this.autoplayTimer = null;
+            }
+          }
+
+          // Utility: Debounce function
+          _debounce(func, wait) {
+            let timeout;
+            return function (...args) {
+              clearTimeout(timeout);
+              timeout = setTimeout(() => func.apply(this, args), wait);
+            };
+          }
+
+          // Public navigation methods
+          goto(n, animate = true) {
+            if (this.animating || this.isDestroyed) return;
+
+            try {
+              // Show loading state
+              this._showLoading();
+
+              // Handle looping
+              if (n < 0) {
+                n = this.options.loop ? this.total - 1 : 0;
+              } else if (n >= this.total) {
+                n = this.options.loop ? 0 : this.total - 1;
+              }
+
+              // Set current index
+              this.idx = n;
+
+              // If animating, set a flag to prevent rapid clicking
+              if (animate) {
+                this.animating = true;
+                setTimeout(() => {
+                  this.animating = false;
+                  this._hideLoading();
+                }, this.options.transitionDuration + 50);
+              } else {
+                this._hideLoading();
+              }
+
+              // Update the carousel visually
+              this.updatePosition(animate);
+            } catch (error) {
+              console.error('Error navigating to slide:', error);
+              this._hideLoading();
+              this._showFallback();
+            }
+          }
+
+          prev(animate = true) {
+            this.goto(this.idx - 1, animate);
+          }
+
+          next(animate = true) {
+            this.goto(this.idx + 1, animate);
+          }
+
+          // Control methods
+          play() {
+            if (this.isDestroyed) return;
+
+            this._startAutoplay();
+            this.root.dataset.carouselAutoplay = 'true';
+            this.options.autoplay = true;
+          }
+
+          pause() {
+            if (this.isDestroyed) return;
+
+            this._pauseAutoplay();
+            this.root.dataset.carouselAutoplay = 'false';
+            this.options.autoplay = false;
+          }
+
+          // Reset to initial state
+          reset() {
+            if (this.isDestroyed) return;
+
+            this.goto(0, false);
+            this.pause();
+            this._updateSlideWidth();
+          }
+
+          // Refresh carousel (e.g., after DOM changes)
+          refresh() {
+            if (this.isDestroyed) return;
+
+            // Re-cache elements
+            this.slides = Array.from(this.root.querySelectorAll('.carousel-slide'));
+            this.thumbs = Array.from(this.root.querySelectorAll('.thumbnail'));
+            this.total = this.slides.length;
+
+            // Ensure current index is valid
+            if (this.idx >= this.total) {
+              this.idx = Math.max(0, this.total - 1);
+            }
+
+            // Re-setup
+            this._setup();
+            this.updatePosition(false);
+          }
+
+          // Destroy and clean up
+          destroy() {
+            if (this.isDestroyed) return;
+
+            // Mark as destroyed to prevent further operations
+            this.isDestroyed = true;
+
+            // Stop autoplay
+            this._pauseAutoplay();
+
+            // Remove ResizeObserver
+            if (this.resizeObserver) {
+              this.resizeObserver.disconnect();
+              this.resizeObserver = null;
+            } else {
+              window.removeEventListener('resize', this._handleResize);
+            }
+
+            // Reset styles
+            if (this.inner) {
+              this.inner.style.transform = '';
+              this.inner.style.transition = '';
+            }
+
+            // Remove classes
+            if (this.root) {
+              this.root.classList.remove('carousel-initialized', 'carousel-ready');
+            }
+
+            // Could remove event listeners here but not strictly necessary
+            // as they will be garbage collected when elements are removed
+          }
+        }
+
+        // Initialize carousels on DOMContentLoaded
+        document.addEventListener('DOMContentLoaded', () => {
+          try {
+            // Find all carousel elements
+            const carousels = document.querySelectorAll('[data-carousel]');
+
+            // Log how many were found
+            if (carousels.length) {
+              console.log(`Initializing ${carousels.length} carousels`);
+            }
+
+            // Initialize each carousel
+            carousels.forEach(el => {
+              try {
+                new Carousel(el);
+              } catch (err) {
+                console.error(`Error initializing carousel:`, err);
+              }
+            });
+          } catch (err) {
+            console.error('Error in carousel initialization:', err);
+          }
+        });
+
+        // Add styles for carousel transitions
+        document.head.insertAdjacentHTML('beforeend', `
+            <style>
+                .carousel-slide {
+                    transition: opacity 0.3s ease-out;
+                }
+                
+                .carousel-indicator[data-active="true"] {
+                    transform: scale(1.2);
+                    transition: all 0.3s ease;
+                }
+                
+                .thumbnail {
+                    transition: opacity 0.3s ease, transform 0.2s ease;
+                }
+                
+                .thumbnail:hover {
+                    transform: scale(1.05);
+                }
+                
+                .thumbnail[aria-selected="true"] {
+                    opacity: 1 !important;
+                    transform: scale(1.1);
+                    box-shadow: 0 0 0 2px rgb(57, 181, 74);
+                }
+            </style>
+            `);
+      </script>
+    </div>
+  </section>
