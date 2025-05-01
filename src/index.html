@@ -19,7 +19,7 @@
   <!-- Pre Header -->
   <div class="bg-[#2147a8] py-3"></div>
   <!-- Header-->
-  <header class="container mx-auto px-4 lg:px-8 relative  z-50">
+  <header class="border-b border-gray-300 mx-auto px-4 lg:px-8 relative  z-50">
     <div class="flex items-center  justify-around gap-2  relative md:h-14 py-2">
 
       <!-- Desktop Navigation -->
@@ -103,11 +103,10 @@
 
 
   <!--  Product section -->
-  <section
-    class="xl:container  mx-auto grid lg:grid-cols-2 gap-6  grid-cols-1 mt-0       w-full   border-t border-[#C0CFF1]">
+  <section class="2xl:container  mx-auto grid lg:grid-cols-2 gap-2  grid-cols-1 mt-0       w-full   ">
 
     <!-- Gallery Column .-->
-    <div id="product-gallery" class="md:w-[647px] md:h-[731px] -z-0  " data-carousel data-carousel-arrows="true"
+    <div id="product-gallery" class="w-full md:h-full -z-0  " data-carousel data-carousel-arrows="true"
       data-carousel-thumbs="true" data-carousel-drag="true">
       <!-- Main viewport with aria roles for accessibility -->
       <div class="relative overflow-hidden rounded-lg" role="region" aria-roledescription="carousel"
@@ -190,26 +189,27 @@
       </div>
 
       <!-- Thumbnails with proper keyboard navigation and hover effects .-->
-      <div class=" flex items-center justify-start gap-4 overflow-x-auto scroll-smooth hide-scrollbar py-2 w-fit px-2"
+      <div
+        class=" grid grid-cols-6 gap-4 items-center justify-start  overflow-x-auto scroll-smooth hide-scrollbar py-2 w-full px-2"
         data-carousel-thumbnails role="tablist" aria-label="Product thumbnails">
         <img src="../images/thumbnail1.svg"
-          class="thumbnail md:w-[90px] w-[60px]   object-cover   cursor-pointer   opacity-70 transition-all"
-          data-carousel-index="0" alt="Thumbnail 1" role="tab" tabindex="0" />
+          class="thumbnail    object-cover   cursor-pointer   opacity-70 transition-all" data-carousel-index="0"
+          alt="Thumbnail 1" role="tab" tabindex="0" />
         <img src="../images/thumbnail2.svg"
-          class="thumbnail md:w-[90px] w-[60px]   object-cover  cursor-pointer   opacity-70 transition-all"
-          data-carousel-index="1" alt="Thumbnail 2" role="tab" tabindex="0" />
+          class="thumbnail    object-cover  cursor-pointer   opacity-70 transition-all" data-carousel-index="1"
+          alt="Thumbnail 2" role="tab" tabindex="0" />
         <img src="../images/thumbnail3.svg"
-          class="thumbnail md:w-[90px] w-[60px]   object-cover  cursor-pointer   opacity-70 transition-all"
-          data-carousel-index="2" alt="Thumbnail 3" role="tab" tabindex="0" />
+          class="thumbnail    object-cover  cursor-pointer   opacity-70 transition-all" data-carousel-index="2"
+          alt="Thumbnail 3" role="tab" tabindex="0" />
         <img src="../images/thumbnail4.svg"
-          class="thumbnail md:w-[90px] w-[60px]   object-cover  cursor-pointer   opacity-70 transition-all"
-          data-carousel-index="3" alt="Thumbnail 4" role="tab" tabindex="0" />
+          class="thumbnail    object-cover  cursor-pointer   opacity-70 transition-all" data-carousel-index="3"
+          alt="Thumbnail 4" role="tab" tabindex="0" />
         <img src="../images/thumbnail5.svg"
-          class="thumbnail md:w-[90px] w-[60px]   object-cover  cursor-pointer   opacity-70 transition-all"
-          data-carousel-index="4" alt="Thumbnail 5" role="tab" tabindex="0" />
+          class="thumbnail    object-cover  cursor-pointer   opacity-70 transition-all" data-carousel-index="4"
+          alt="Thumbnail 5" role="tab" tabindex="0" />
         <img src="../images/thumbnail6.svg"
-          class="thumbnail md:w-[90px] w-[60px]   object-cover  cursor-pointer   opacity-70 transition-all"
-          data-carousel-index="4" alt="Thumbnail 6" role="tab" tabindex="0" />
+          class="thumbnail    object-cover  cursor-pointer   opacity-70 transition-all" data-carousel-index="4"
+          alt="Thumbnail 6" role="tab" tabindex="0" />
       </div>
     </div>
 
@@ -1058,14 +1058,14 @@
 
 
 
-    <section
-      class="xl:container mx-auto flex flex-col gap-2  pt-4 md:px-14 px-1   lg:items-start items-center text-[#404D6A] py-5.5">
+    <section class=" flex flex-col gap-2  pt-4 md:px-14 px-1     lg:items-start items-center text-[#404D6A] py-5.5">
       <div class="font-madani flex flex-col  lg:items-start items-center ">
-        <h1 class="lg:text-4xl pb-4  text-2xl lg:text-start text-center font-bold leading-11  capitalize">Command Your
+        <h1 class="lg:text-5xl py-4   text-2xl lg:text-start text-center font-bold lg:leading-11  capitalize">
+          Command Your
           Gut Health
           And Rule Your Life with
           Women's Daily 55+ Probiotic</h1>
-        <span class="text-base font-montserrat inline-flex gap-2 font-semibold uppercase ">
+        <span class="text-lg font-montserrat gap-2 font-semibold uppercase flex items-enter ">
           <svg width="19" height="29" viewBox="0 0 19 29" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M0.277344 14.2151V21.6178H18.7842V14.2151H0.277344ZM11.3814 18.8418H10.4561V19.7671C10.4561 20.0126 10.3586 20.2479 10.1851 20.4215C10.0115 20.595 9.77618 20.6925 9.53076 20.6925C9.28535 20.6925 9.04998 20.595 8.87645 20.4215C8.70291 20.2479 8.60542 20.0126 8.60542 19.7671V18.8418H7.68008C7.43466 18.8418 7.1993 18.7443 7.02576 18.5708C6.85223 18.3972 6.75474 18.1619 6.75474 17.9165C6.75474 17.671 6.85223 17.4357 7.02576 17.2621C7.1993 17.0886 7.43466 16.9911 7.68008 16.9911H8.60542V16.0658C8.60542 15.8204 8.70291 15.585 8.87645 15.4115C9.04998 15.2379 9.28535 15.1404 9.53076 15.1404C9.77618 15.1404 10.0115 15.2379 10.1851 15.4115C10.3586 15.585 10.4561 15.8204 10.4561 16.0658V16.9911H11.3814C11.6269 16.9911 11.8622 17.0886 12.0358 17.2621C12.2093 17.4357 12.3068 17.671 12.3068 17.9165C12.3068 18.1619 12.2093 18.3972 12.0358 18.5708C11.8622 18.7443 11.6269 18.8418 11.3814 18.8418Z"
@@ -1100,41 +1100,56 @@
       </div>
 
       <div class="mt-4">
-        <p class="text-slate-600 leading-7 font-medium md:text-start text-center">Make the first step towards a balanced
+        <p class="text-slate-600 lg:leading-7 font-medium md:text-start text-center">Make the first step towards a
+          balanced
           digestion
         </p>
       </div>
 
-      <div class="grid grid-cols-2       gap-2 py-2 ">
+      <div class="grid grid-cols-2       gap-8 py-2 ">
         <div class="">
-          <ul class="sm:text-base text-sm  font-normal   text-slate-600 leading-snug md:text-medium    ">
-            <li class="flex mb-2 items-center md:gap-4 gap-2 md:w-[190px] w-full">
-              <img src="../images/icon1.png" alt="Icon"><span class="text-wrap truncate  ">60 billion live
+          <ul class="md:text-base text-sm  font-normal   text-slate-600 leading-snug text-medium    ">
+            <li class="flex mb-4 items-center md:gap-4 gap-2 md:w-[190px] w-full">
+              <img src="../images/icon1.png" class="md:w-11 w-9 h-9 md:h-11" alt="Icon"><span
+                class="text-wrap truncate  ">60
+                billion
+                live
                 cultures</span>
             </li>
-            <li class="flex mb-2 items-center md:gap-4 gap-2 md:w-[190px] w-full">
-              <img src="../images/icon2.png" alt="Icon"><span class="text-wrap truncate  ">7 plant-based
+            <li class="flex mb-4 items-center md:gap-4 gap-2 md:w-[190px] w-full">
+              <img src="../images/icon2.png" class="md:w-11 w-9 h-9 md:h-11" alt="Icon"><span
+                class="text-wrap truncate  ">7
+                plant-based
                 prebiotics</span>
             </li>
-            <li class="flex mb-2 items-center md:gap-4 gap-2 md:w-[190px] w-full">
-              <img src="../images/icon3.png" alt="Icon"><span class="text-wrap truncate  ">Immune Health
+            <li class="flex mb-4 items-center md:gap-4 gap-2 md:w-[190px] w-full">
+              <img src="../images/icon3.png" class="md:w-11 w-9 h-9 md:h-11" alt="Icon"><span
+                class="text-wrap truncate  ">Immune
+                Health
                 Support </span>
             </li>
           </ul>
         </div>
         <div class="">
 
-          <ul class="sm:text-base text-sm  font-normal   text-[#373D51] md:text-medium     ">
-            <li class="flex mb-2 items-center md:gap-4 gap-2  md:w-[190px] w-full">
-              <img src="../images/icon1.png" alt="Icon"><span class="text-wrap truncate  ">60 strains of
+          <ul class="md:text-base text-sm  font-normal   text-[#373D51] text-medium     ">
+            <li class="flex mb-4 items-center md:gap-4 gap-2  md:w-[190px] w-full">
+              <img src="../images/icon1.png" class="md:w-11 w-9 h-9 md:h-11" alt="Icon"><span
+                class="text-wrap truncate  ">60
+                strains
+                of
                 probiotics</span>
             </li>
-            <li class="flex mb-2 items-center md:gap-4 gap-2 md:w-[190px] w-full">
-              <img src="../images/icon2.png" alt="Icon"><span class="text-wrap truncate  ">Digestive
+            <li class="flex mb-4 items-center md:gap-4 gap-2 md:w-[190px] w-full">
+              <img src="../images/icon2.png" class="md:w-11 w-9 h-9 md:h-11" alt="Icon"><span
+                class="text-wrap truncate  ">Digestive
+                <br>
                 Balance</span>
             </li>
-            <li class="flex mb-2 items-center md:gap-4 gap-2 md:w-[190px] w-full">
-              <img src="../images/icon3.png" alt="Icon"><span class="text-wrap truncate  ">Vaginal <br>
+            <li class="flex mb-4 items-center md:gap-4 gap-2 md:w-[190px] w-full">
+              <img src="../images/icon3.png" class="md:w-11 w-9 h-9 md:h-11" alt="Icon"><span
+                class="text-wrap truncate  ">Vaginal
+                <br>
                 Health
               </span>
             </li>
@@ -1146,7 +1161,7 @@
 
       <div
         class="  mb-4 ml-1 bg-slate-50   rounded-2xl border-2 border-indigo-200 md:w-[480px] divide-y-2 divide-[#C0CFF1]">
-        <div class="p-5">
+        <div class="md:p-5 p-2">
 
           <div class="flex items-center   bg-[#FFFFFF] rounded-2xl">
             <input id="default-radio-1" checked type="radio" value="" name="default-radio"
@@ -1184,20 +1199,22 @@
               </svg>
             </button>
           </div>
-          <div class="grid grid-cols-3   gap-1 pl-2  text-slate-600">
+
+          <div class="flex    gap-4 px-4  text-slate-600">
+
             <div class="flex items-center   gap-2       ">
-              <img src="../images/money_back_icon.svg" class="w-8 h-8" alt="">
-              <p class="text-sm">30 Day Money-Back Guarantee</p>
+              <img src="../images/money_back_icon.svg" class="w-6 h-7" alt="">
+              <p class="text-sm">30 Day Money- <br> Back Guarantee</p>
             </div>
 
-            <div class="flex items-center   gap-2 ml-2  ">
-              <img src="../images/shipping_truck_icon.svg" class="w-8 h-8" alt="">
+            <div class="flex items-center   gap-2   ">
+              <img src="../images/shipping_truck_icon.svg" class="w-6 h-7" alt="">
               <p class="text-sm">Free <br> shipping</p>
             </div>
 
             <div class="flex items-center   gap-2       ">
-              <img src="../images/support_icon.svg" class="w-8 h-8" alt="">
-              <p class="text-sm">Customer support</p>
+              <img src="../images/support_icon.svg" class="w-6 h-7" alt="">
+              <p class="text-sm">Customer <br> support</p>
             </div>
 
           </div>
@@ -1317,7 +1334,8 @@
 
   </section>
   <!--  -->
-  <div class="mx-auto  border-b border-gray-200 lg:w-[1100px] w-fit text-justify">
+
+  <div class="mx-auto   lg:w-[1100px] w-full text-justify">
     <div class="flex flex-col md:flex-row items-center gap-4 py-4">
 
       <!-- Image -->
@@ -1326,7 +1344,7 @@
 
       <!-- Testimonial Text -->
       <p
-        class="flex flex-col md:items-start items-center md:text-start text-center justify-start text-slate-600 text-base font-medium font-montserrat leading-normal md:px-0 px-2">
+        class=" md:items-start items-center md:text-start text-center justify-start text-slate-600 text-base font-medium font-montserrat leading-normal md:px-0 px-2">
         “I have tried cheaper probiotics with lower potency with no noticeable difference in how I feel. Then my
         friend
         recommended Vital Flora, The owner recommended it. I was hesitant due to the price, but I tried it. This is
@@ -1351,11 +1369,13 @@
   </div>
   </div>
 
+  <div class="bg-gray-300  w-full h-0.4"></div>
+
   <!-- ABOUT THE PRODUCT -->
-  <section class="xl:container mx-auto w-full  py-8">
+  <section class="2xl:container mx-auto lg:w-[1200px] relative w-full   pt-4">
     <!-- Heading and Mobile Image -->
-    <div class="flex  items-center gap-1">
-      <img src="../images/product_packaging.png" alt="" class="md:hidden block w-[155.37px] h-auto" />
+    <div class="flex  items-center gap-1 ">
+      <img src="../images/product_packaging.png" alt="" class="md:hidden block w-[140.37px] h-auto" />
       <div class="text-left lg:px-10 px-2">
         <p
           class="text-xl md:text-4xl font-semibold italic uppercase bg-gradient-to-r from-blue-900 via-blue-700 to-green-700 bg-clip-text text-transparent">
@@ -1376,9 +1396,9 @@
 
   <!-- Features Section -->
   <section
-    class="xl:container mx-auto grid lg:grid-cols-2 grid-cols-1  overflow-hidden justify-between items-center gap-1 mt-6 bg-no-repeat md:bg-[url('../images/bg_product_packaging.png')] bg-right-top">
+    class="2xl:container  mx-auto grid lg:grid-cols-2 grid-cols-1 lg:w-[1170px] relative w-full overflow-hidden justify-between items-center gap-1 mt-6 bg-no-repeat md:bg-[url('../images/bg_product_packaging.png')] bg-right-top">
     <!-- Text Content -->
-    <div class="flex flex-col gap-4 lg:pl-6 px-0">
+    <div class="flex flex-col gap-4 lg:pl-6 md:px-0 px-4">
       <!-- Feature 1 -->
       <div class="flex items-start gap-4 w-full p-2 bg-[#F4F7FF] rounded-md shadow-sm py-6">
         <img src="../images/Bloating_img.svg" alt="" class="w-[69px] h-[69px] rounded-full object-cover" />
@@ -1409,53 +1429,64 @@
     </div>
     <!-- Desktop Image -->
     <div class="hidden lg:block ">
-      <img src="../images/product_packaging.png" alt="Product Packaging" class="w-[574.37px] h-[497.51px] " />
+      <img src="../images/product_packaging.png" alt="Product Packaging"
+        class="w-[574.37px]  absolute top-0 bottom-0 right-0 h-[497.51px] " />
     </div>
     </div>
   </section>
 
   <!-- Container Section -->
-  <section class="xl:container mx-auto w-full  py-4">
-    <div class="grid lg:grid-cols-2 grid-cols-1 gap-0 ">
+  <section class="2xl:container  relative w-full  mx-auto   pt-4">
+    <div class="grid lg:grid-cols-2 grid-cols-1 gap-0 md:px-0 px-4 items-center">
       <!-- Image -->
-      <div class="hidden lg:flex  item-end">
-        <img src="../images/happy_senior_woman_laughing.png" alt="Happy Senior Woman" class="h-[600px]  w-[400px] " />
+      <div class="hidden lg:block  ">
+        <img src="../images/happy_senior_woman_laughing.png" alt="Happy Senior Woman"
+          class="w-[486.48px] h-[735.13px]    " />
 
       </div>
 
       <!-- Features List -->
-      <div class="flex flex-col gap-4 md:mt-14 md:px-6 text-base   text-slate-600">
+      <div class="flex flex-col gap-4 md:mt-14 md:px-6 text-base relative  text-slate-600">
 
         <!-- Feature 1 -->
-        <div class="flex items-start gap-2 p-2 bg-[#F4F7FF] rounded-md shadow-sm ">
-          <img src="../images/Insomnia.png" alt="" class="w-28 h-28 rounded-full object-cover" />
-          <p class=" ">
+        <div class="flex items-start gap-4 w-full p-2 bg-[#F4F7FF] rounded-md shadow-sm py-6">
+          <img src="../images/Insomnia.png" alt="" class="w-[69px] h-[69px] rounded-full object-cover" />
+          <p class="text-sm sm:text-base ">
             <span class="font-semibold  text-lg">The Insomnia Chronicles :</span>
             Up all night counting sheep? Been there, done that. Let Vital Flora escort you to
             the land of dreams by improving your gut health. Now that's what we call a bedtime story!
           </p>
         </div>
         <!-- Feature 2 -->
-        <div class="flex items-start gap-2 p-2 bg-[#F4F7FF] rounded-md shadow-sm ">
+        <!-- <div class="flex items-start gap-2 p-2 bg-[#F4F7FF] rounded-md shadow-sm ">
           <img src="../images/Mood_Swings.png" alt="" class="w-28 h-28 rounded-full object-cover" />
           <p class=" ">
             <span class="font-semibold  text-lg">Mood Swings Galore : </span>
             Are you riding the emotional roller coaster a little too often? Vital Flora is like the
             seat belt keeping you steady. It's got your mood covered, and your gut too!
           </p>
+        </div> -->
+        <div class="flex items-start gap-4 w-full p-2 bg-[#F4F7FF] rounded-md shadow-sm py-6">
+          <img src="../images/Mood_Swings.png" alt="" class="w-[69px] h-[69px] rounded-full object-cover" />
+          <p class="text-sm sm:text-base ">
+            <span class="font-semibold  text-lg">Mood Swings Galore : </span>
+            Are you riding the emotional roller coaster a little too often? Vital Flora is like the
+            seat belt keeping you steady. It's got your mood covered, and your gut too!
+          </p>
         </div>
         <!-- Feature 3 -->
-        <div class="flex items-start gap-2 p-2 bg-[#F4F7FF] rounded-md shadow-sm ">
-          <img src="../images/Weight_Loss.png" alt="" class="w-28 h-28 rounded-full object-cover" />
-          <p class=" ">
+        <div class="flex items-start gap-4 w-full p-2 bg-[#F4F7FF] rounded-md shadow-sm py-6">
+          <img src="../images/Weight_Loss.png" alt="" class="w-[69px] h-[69px] rounded-full object-cover" />
+          <p class="text-sm sm:text-base ">
             <span class="font-semibold  text-lg">Weight Loss Rebellion : </span> When it feels like every
             pound is staging a sit-in protest on your belly, it's time to call in the cavalry. Vital Flora, charge!
           </p>
         </div>
+
         <!-- Feature 4 -->
         <div class="flex items-start gap-2 p-2 bg-[#F4F7FF] rounded-md shadow-sm ">
-          <img src="../images/Skin_Trouble.png" alt="" class="w-28 h-28 rounded-full object-cover" />
-          <p class=" ">
+          <img src="../images/Skin_Trouble.png" alt="" class="w-[69px] h-[69px] rounded-full object-cover" />
+          <p class="text-sm sm:text-base ">
             <span class="font-semibold  text-lg">Skin Trouble Central : </span>
             If your skin is more rebellious teenager than a dewy goddess, it might be time for a
             gut check. With Vital Flora, you'll be beaming that healthy skin glow in no time!
@@ -1468,16 +1499,18 @@
 
   <!--  Gut Health Champion Section  -->
   <section class="bg-[#214695] xl:container mx-auto md:p-2 ">
-    <div class=" pt-[30px] pb-[20px]
-            flex flex-col lg:flex-row">
+    <div class=" 
+            flex flex-col  lg:flex-row">
 
       <!-- Left Section -->
-      <div class="w-full lg:w-[45%] flex flex-col items-start 
-              lg:pl-[110px] pt-[40px] text-white 
-              bg-[url('/images/Left.svg')] bg-no-repeat bg-left-top 
-              bg-[length:140px] sm:bg-[length:200px] md:bg-[length:260px] mx-auto">
-        <div class="pb-10 sm:w-xs md:px-8">
-          <h1 class="md:text-3xl text-2xl font-semibold sm:text-start text-center text-white">The Science Behind Your
+
+      <div class="w-full lg:w-[45%] flex flex-col lg:items-start items-center mx-auto  
+              lg:pl-[110px] pt-[40px] text-white
+lg:bg-[url('../images/Right.svg')] 
+lg:bg-no-repeat lg:bg-left-top 
+lg:bg-[length:260px]">
+        <div class="pb-10 sm:w-xs md:px-8 px-2">
+          <h1 class="md:text-xl text-lg font-semibold md:text-start text-center text-white">The Science Behind Your
             Gut Health
             Champion</h1>
         </div>
@@ -1504,24 +1537,30 @@ lg:bg-no-repeat lg:bg-right-top
 lg:bg-[length:260px]">
 
         <!-- Right content goes here -->
-        <div class="flex flex-col space-y-7 md:space-y-6 lg:space-y-5 p-2 md:p-8 lg:p-8 text-white ">
+        <div
+          class="flex flex-col space-y-7 md:space-y-6 lg:space-y-5 p-2 md:p-8 lg:items-start items-center  text-white ">
           <!-- Item 1 -->
-          <div class="flex items-start lg:items-center gap-4">
+          <div class="flex items-start lg:items-center gap-9 w-full p-2  rounded-md  py-6">
             <img src="../images/Vector.svg" alt="Icon 1"
               class="h-[41.07px] md:w-[47.38px] md:h-[47.38px] lg:w-[53.69px] lg:h-[53.69px]" />
-            <p class="text-[14px] md:text-[16px] lg:text-[18px]">
-              <span class="text-[14px] md:text-[18px] lg:text-[20px] font-bold">Harness the power of 60 billion live
-                cultures</span>
-              It's like having an army of friendly bacteria ready to protect your gut. A healthy gut,a healthy you.
-            </p>
+            <div class=" justify-start ">
+              <p class="text-white text-lg font-medium  ">
+                <span class="text-white text-xl font-semibold  ">Harness the power of 60
+                  billion live cultures</span>
+                It's like having an
+                army of
+                friendly bacteria ready to protect your gut. A healthy gut, a healthy you.
+              </p>
+            </div>
           </div>
 
           <!-- Item 2 -->
-          <div class="flex items-start lg:items-center gap-4">
+          <div class="flex items-start lg:items-center gap-9">
             <img src="../images/Vector-1.svg" alt="Icon 2"
               class="w-[41.07px] h-[41.07px] md:w-[47.38px] md:h-[47.38px] lg:w-[53.69px] lg:h-[53.69px]" />
-            <p class="text-[14px] md:text-[16px] lg:text-[18px]">
-              <span class="text-[14px] md:text-[18px] lg:text-[20px] font-bold">The perfect variety of strains you
+
+            <p class="text-white text-lg font-medium  ">
+              <span class="text-white text-xl font-semibold  ">The perfect variety of strains you
                 need</span>
               With 60 different clinically researched strains, your digestive system won't know what hit it. And guess
               what? It's going to love it.
@@ -1529,22 +1568,24 @@ lg:bg-[length:260px]">
           </div>
 
           <!-- Item 3 -->
-          <div class="flex items-start lg:items-center gap-4">
+          <div class="flex items-start lg:items-center gap-9">
             <img src="../images/Vector-2.svg" alt="Icon 3"
               class="w-[41.07px] h-[41.07px] md:w-[47.38px] md:h-[47.38px] lg:w-[53.69px] lg:h-[53.69px]" />
-            <p class="text-[14px] md:text-[16px] lg:text-[18px]">
-              <span class="text-[14px] md:text-[18px] lg:text-[20px] font-bold">In our unique formula</span> we have
+
+            <p class="text-white text-lg font-medium  ">
+              <span class="text-white text-xl font-semibold  ">In our unique formula</span> we have
               included lactobacillus strains to support your immunity and urinary tract health, and Bifido strains for
               colon health and functioning of the gut-to-brain connection.
             </p>
           </div>
 
           <!-- Item 4 -->
-          <div class="flex items-start lg:items-center gap-4">
+          <div class="flex items-start lg:items-center gap-9">
             <img src="../images/Vector-3.svg" alt="Icon 4"
               class="w-[41.07px] h-[41.07px] md:w-[47.38px] md:h-[47.38px] lg:w-[53.69px] lg:h-[53.69px]" />
-            <p class="text-[14px] md:text-[16px] lg:text-[18px]">
-              <span class="text-[14px] md:text-[18px] lg:text-[20px] font-bold">With non-GMO, gluten-free, vegan
+
+            <p class="text-white text-lg font-medium  ">
+              <span class="text-white text-xl font-semibold  ">With non-GMO, gluten-free, vegan
                 ingredients, your lifestyle and diet preferences are respected</span> A perfect companion for your
               healthy
               lifestyle.
@@ -1552,11 +1593,12 @@ lg:bg-[length:260px]">
           </div>
 
           <!-- Item 5 -->
-          <div class="flex items-start lg:items-center gap-4">
+          <div class="flex items-start lg:items-center gap-9">
             <img src="../images/Vector-4.svg" alt="Icon 5"
               class="pl-2 md:pl-4 lg:pl-4 w-[41.07px] h-[41.07px] md:w-[47.38px] md:h-[47.38px] lg:w-[53.69px] lg:h-[53.69px]" />
-            <p class="text-[14px] md:text-[16px] lg:text-[18px]">
-              <span class="text-[14px] md:text-[18px] lg:text-[20px] font-bold">Convenience and effectiveness wrapped
+
+            <p class="text-white text-lg font-medium  ">
+              <span class="text-white text-xl font-semibold  ">Convenience and effectiveness wrapped
                 in
                 one.</span> No need for refrigeration, and designed for easy use. Vital Flora understands your busy
               life.
@@ -1565,21 +1607,8 @@ lg:bg-[length:260px]">
 
           <!-- Boost Button -->
           <div class="pt-5">
-            <!-- <button class="mt-6 flex items-center justify-center gap-3 mx-auto
-  w-full px-4 h-[50.52px] text-[16px]
-  md:w-[412.225px] md:h-[58.275px] md:text-[18.5px]
-  lg:w-[487.45px] lg:h-[66.03px] lg:text-[21px]
-  bg-gradient-to-b from-[#39B54A] to-[#35A244] 
-  text-white font-bold leading-[153.9%] rounded-full
-  shadow-[0px_4px_4px_rgba(0,0,0,0.25)]">
-
-                Boost Your Immunity Today
-
-                Icon: visible only on tablet and desktop
-                <img src="../images/Butt.svg" alt="Icon" class="hidden md:block w-6 h-6" />
-              </button> -->
             <button
-              class="flex items-center    gap-4  md:mt-0 mt-2   cursor-pointer   mx-auto  md:text-xl  text-base font-bold    uppercase   px-8  h-14   rounded-full text-white  bg-gradient-to-b from-green-500 to-green-600">
+              class="flex items-center     gap-4  md:mt-0 mt-2   cursor-pointer   mx-auto  md:text-xl  text-base font-bold    uppercase   px-8  h-14   rounded-full text-white  bg-gradient-to-b from-green-500 to-green-600">
               <p class="text-wrap">
                 Boost Your Immunity Today
               </p>
@@ -1599,10 +1628,10 @@ lg:bg-[length:260px]">
   </section>
   <!-- END  Gut Health Champion Section  -->
 
-  <section class="bg-indigo-50 w-full  py-4 xl:container mx-auto">
-    <div class="lg:flex md:flex-row  mx-auto w-full">
+  <section class="2xl:container w-full  lg:pt-4 xl:container mx-auto">
+    <div class="lg:flex md:flex-row  mx-auto w-full  bg-indigo-50">
       <!-- Left side with title and hand image -->
-      <div class=" flex flex-col  items-center pt-8  md:w-2/5 w-full justify-between md:gap-9">
+      <div class=" flex flex-col  items-center pt-8  lg:w-2/5 w-full justify-between md:gap-9">
         <h2 class="text-slate-600 text-xl text-left lg:text-4xl font-semibold md:pl-26 p-4  leading-10  ">
           Unveiling the Superior
           Probiotic Choice
@@ -1613,12 +1642,12 @@ lg:bg-[length:260px]">
       </div>
 
       <!-- Table container - takes up remaining space -->
-      <div class="grid grid-cols-1 h-full mt-8">
+      <div class="grid grid-cols-1 h-full lg:mt-8 mt-4 pb-4">
         <!-- Table wrapper to center the columns relative to the middle oval -->
         <div class="grid grid-cols-3 justify-center items-center">
           <!-- Left column with blue background and white text -->
           <div
-            class="bg-blue-600     mt-3 w-full lg:h-6/12 md:h-8/12 flex flex-col items-center text-white text-base font-normal  rounded-none  md:rounded-l-4xl">
+            class="bg-blue-600     md:mt-3 mt-54 w-full lg:h-6/12 md:h-8/12 flex flex-col items-center text-white text-base font-normal  rounded-none  md:rounded-l-4xl">
             <div class="border-b border-blue-500 py-0  w-full text-start  h-18 flex items-center justify-center">
               <p>Potency</p>
             </div>
@@ -1645,7 +1674,7 @@ lg:bg-[length:260px]">
           <!-- Middle column with oval shape -->
           <div
             class="relative bg-white border-2  border-blue-600 w-full flex flex-col text-black text-sm font-normal rounded-b-none rounded-t-full  md:rounded-full  ">
-            <div class="flex justify-center -mt-19 ">
+            <div class="flex justify-center md:-mt-19 ">
               <img alt="Vital Flora Probiotics box and bottle" class=" object-cover" src="../images/GoldBox.png" />
             </div>
             <div class="font-semibold text-center py-3   text-xl text-black">
@@ -1675,7 +1704,7 @@ lg:bg-[length:260px]">
           </div>
 
           <!-- Right column with white background and rounded right corners -->
-          <div class="bg-white   w-full mt-4  h-8/12   flex flex-col text-black
+          <div class="bg-white   w-full md:mt-4  mt-50 h-8/12   flex flex-col text-black
  text-base font-normal rounded-none  md:rounded-r-4xl">
             <div class="py-4 px-4 border-b border-gray-200 text-center h-18 flex items-center justify-center">
               <span class="font-semibold">Leading Retail Brand</span>
@@ -1708,13 +1737,13 @@ lg:bg-[length:260px]">
   </section>
 
   <!-- The Simple Steps to Gut Health Glory section -->
-  <section class="w-full bg-white py-8 xl:container mx-auto">
+  <section class="w-full bg-white py-8 2xl:container mx-auto">
     <div class="max-w-6xl mx-auto   md:px-4">
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 items-center">
 
         <!-- Text Content -->
-        <div class="flex flex-col gap-4.5 text-slate-600  sm:order-1  order-2">
-          <h1 class="text-[22px]  md:text-4xl font-medium   text-center pr-15 md:text-left">
+        <div class="flex flex-col gap-4.5 px-4 text-slate-600  sm:order-1  order-2">
+          <h1 class="  md:text-4xl  text-xl font-semibold   text-center pr-15 md:text-left">
             The Simple Steps to Gut Health Glory
           </h1>
           <p class=" text-xl text-center md:text-left font-medium ">
@@ -1745,7 +1774,7 @@ lg:bg-[length:260px]">
         <!-- Image -->
         <div class="sm:order-2 order-1 w-full flex justify-center">
           <img src="../images/Health_Glory_women.png" alt="Gut Health Glory"
-            class="md:w-[463px]  w-fit h-auto sm:rounded-2xl object-cover">
+            class="lg:w-[463px]  w-full h-auto sm:rounded-2xl object-cover">
         </div>
 
       </div>
@@ -1755,7 +1784,7 @@ lg:bg-[length:260px]">
 
 
   <!-- BUNDLE SECTION -->
-  <section class="bg-gradient-to-r from-[#b5c4cfc8] via-[#b5c4cf] to-[#b6c4ce] py-8 px-4 xl:container mx-auto md:px-0">
+  <section class="bg-gradient-to-r from-[#b5c4cfc8] via-[#b5c4cf] to-[#b6c4ce] py-8 px-4 2xl:container mx-auto md:px-0">
     <div class="mx-auto  md:px-14">
       <!-- Title -->
       <h1 class="text-3xl md:text-4xl font-semibold leading-10 text-center text-slate-600 mb-6 px-2">
@@ -1763,11 +1792,11 @@ lg:bg-[length:260px]">
       </h1>
 
       <!-- Main Content Grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
+      <div class="grid grid-cols-1 xl:grid-cols-2 items-center  gap-4 mb-6">
         <!-- Left Text Content -->
         <div class="flex flex-col gap-4 text-slate-600 text-base leading-7">
           <!-- Item 1 -->
-          <div class="flex items-start   w-full  lg:w-[606px] gap-2 bg-white rounded-2xl py-2 px-2">
+          <div class="flex items-start   w-full  xl:w-[606px] gap-2 bg-white rounded-2xl py-2 px-2">
             <img src="../images/Vital_Gut_Renew.png" alt="Vital Gut Renew" class="w-22   " />
             <p class="font-medium">
               Let's talk bundles! <span class="font-bold ">Our Vital Gut Renew</span> is designed to be your
@@ -1778,7 +1807,7 @@ lg:bg-[length:260px]">
           </div>
 
           <!-- Item 2 -->
-          <div class="flex  items-start      lg:w-[606px]    gap-4 bg-white rounded-2xl py-2 px-2">
+          <div class="flex  items-start      xl:w-[606px]    gap-4 bg-white rounded-2xl py-2 px-2">
             <img src="../images/Vital_Fiber.png" alt="Vital Fiber" class="w-22  " />
             <p class="text-base">
               Now, meet <span class="font-bold">Vital Fiber</span>, your gut's secret weapon. This premium, organic
@@ -1788,7 +1817,7 @@ lg:bg-[length:260px]">
           </div>
 
           <!-- Extra Text Desktop -->
-          <div class="hidden md:block text-base mt-3 w-[630px]">
+          <div class="hidden md:block text-base mt-3 xl:w-[630px] w-full text-center">
             <p class="mb-2 font-medium">
               For every gram of Vital Fiber you take, you're ridding yourself of seven calories. If you multiply that
               by 35 grams taken daily that's a reduction of 250 calories per day… about the same as jogging 30 minutes
@@ -1858,7 +1887,7 @@ lg:bg-[length:260px]">
       </div>
 
       <!-- Mobile Extra Text -->
-      <div class="block sm:hidden text-xs text-[#404D6A] space-y-2 mb-6 text-center">
+      <div class="block md:hidden text-xs text-[#404D6A] space-y-2 mb-6 text-center">
         <p>
           For every gram of Vital Fiber you take, you're ridding yourself of seven calories. Multiply that by 35 grams
           daily and that's 250 fewer calories—like jogging 30 minutes!
@@ -2172,19 +2201,20 @@ lg:bg-[length:260px]">
 
 
   <!-- Related Products section . -->
-  <section class="pt-4 xl:container mx-auto">
+  <section class="pt-4 mx-auto">
     <h1 class="text-[#404D6A] sm:text-4xl text-2xl text-center font-semibold">Related Products</h1>
     <div
-      class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4  items-center justify-center mx-auto md:px-4">
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4  items-center justify-center mx-auto md:px-4">
 
       <!-- product 1 -->
-      <div class="flex  items-center gap-6 bg-white text-[#404D6A] rounded-2xl p-4">
+      <div class="flex  items-center gap-4 bg-white text-[#404D6A] rounded-2xl md:p-4 ">
         <img src="../images/Dragon_blod_product.png" alt="" class="w-fit object-contain" />
-        <div class="flex flex-col gap-4 ">
-          <h2 class="text-black md:text-lg text-base md:text-start text-center">Drago's Blood Resin Extract</h2>
-          <p class="text-xs text-center">
-            Soothe, repair, and rejuvenate your skin and digestive tract with the highest ORAC value...
-          </p>
+        <div class="flex flex-col gap-4">
+
+          <div class="md:w-52 w-full justify-start text-slate-600 md:text-xl text-base font-semibold leading-normal">
+            Dragon's Blood Resin Extract</div>
+          <div class="md:w-52 w-full md:h-16 justify-start text-slate-600 text-base font-medium  leading-normal">
+            Soothe, repair, and rejuvenate your skin and digestive tract with the highest ORAC valu...</div>
           <button
             class="flex items-center justify-center w-full  cursor-pointer sm:text-base text-xs sm:font-medium uppercase p-2 rounded-4xl text-white bg-[#39B54A] hover:bg-[#73cd7fda]">
             <p class="text-nowrap">View product</p>
@@ -2196,14 +2226,14 @@ lg:bg-[length:260px]">
       </div>
 
       <!-- product 2 -->
-      <div class="flex  items-center gap-4 bg-white text-[#404D6A] rounded-2xl p-4">
+      <div class="flex  items-center gap-4 bg-white text-[#404D6A] rounded-2xl md:p-4 ">
         <img src="../images/vital_flora.png" alt="" class=" object-contain" />
-        <div class="flex flex-col gap-2 ">
-          <h2 class="text-black md:text-lg text-base md:text-start text-center">Vital Flora Women's Daily Probiotic
-          </h2>
-          <p class="text-xs text-center">
-            Change your gut microbiome and experience a New Level of energy and happiness ...
-          </p>
+        <div class="flex flex-col gap-4">
+          <div class="md:w-52 w-full justify-start text-slate-600 md:text-xl text-base font-semibold leading-normal">
+            Vital
+            Flora Women's Daily Probiotic</div>
+          <div class="md:w-52 w-full md:h-16 justify-start text-slate-600 text-base font-medium  leading-normal">
+            Change your gut microbiome and experience a New Level of energy and happiness ...</div>
           <button
             class="flex items-center justify-center mt-2 w-full   cursor-pointer sm:text-base text-xs sm:font-medium uppercase p-2 rounded-4xl text-white bg-[#39B54A] hover:bg-[#73cd7fda]">
             <p class="text-nowrap">View product</p>
@@ -2215,14 +2245,16 @@ lg:bg-[length:260px]">
       </div>
 
       <!-- product 3 -->
-      <div class="flex  items-center gap-4 bg-white text-[#404D6A] rounded-2xl p-4">
+      <div class="flex  items-center gap-4 bg-white text-[#404D6A] rounded-2xl md:p-4 ">
         <img src="../images/vital_flora_2.png" alt="" class=" object-contain" />
         <div class="flex flex-col gap-4">
-          <h2 class="text-black md:text-lg text-base md:text-start text-center">Vital Flora Women Daily 55+ Probiotic
-          </h2>
-          <p class="text-xs text-center">
-            Make the first step towards a balanced digestion.
-          </p>
+          <div class="md:w-52 w-full justify-start text-slate-600 md:text-xl text-base font-semibold leading-normal">
+            Vital
+            Flora
+            Women Daily 55+ Probiotic</div>
+
+          <div class="md:w-52 w-full md:h-16 justify-start text-slate-600 text-base font-medium  leading-normal">
+            Make the first step towards a balanced digestion</div>
           <button
             class="flex items-center justify-center w-full  cursor-pointer sm:text-base text-xs sm:font-medium uppercase p-2 rounded-4xl text-white bg-[#39B54A] hover:bg-[#73cd7fda]">
             <p class="text-nowrap">View product</p>
